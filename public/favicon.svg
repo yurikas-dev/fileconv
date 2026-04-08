@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <!-- 背景 -->
+  <rect width="36" height="36" rx="9" fill="#2d6a4f"/>
+  <!-- 昆布のウェーブ形 -->
+  <path d="M10 10 Q12 7 14 10 Q17 14 20 10 Q23 7 26 10 L26 26 Q24 29 21 26 Q18 22 15 26 Q12 29 10 26Z" fill="#40916c"/>
+  <!-- 昆布の穴（楕円） -->
+  <ellipse cx="15" cy="18" rx="2.5" ry="4" fill="#2d6a4f"/>
+  <ellipse cx="21" cy="18" rx="2.5" ry="4" fill="#2d6a4f"/>
+</svg>

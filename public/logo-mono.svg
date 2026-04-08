@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48">
+  <!-- アイコン背景（黒） -->
+  <rect width="48" height="48" rx="12" fill="#1a1a1a"/>
+
+  <!-- 昆布（白） -->
+  <path d="M12 11 Q14 8 17 11 Q20 15 23 11 Q26 8 29 11 Q32 15 32 24 Q32 33 29 37 Q26 41 23 37 Q20 33 17 37 Q14 41 12 37 Q9 33 9 24 Q9 15 12 11Z" fill="#ffffff"/>
+
+  <!-- 穴（黒で抜く） -->
+  <ellipse cx="17" cy="24" rx="3" ry="5" fill="#1a1a1a"/>
+  <ellipse cx="24" cy="24" rx="3" ry="5" fill="#1a1a1a"/>
+
+  <!-- テキスト: fileconv -->
+  <text x="58" y="28" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">fileconv</text>
+  <!-- .app（グリーン） -->
+  <text x="148" y="28" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="#2d6a4f" letter-spacing="-0.3">.app</text>
+</svg>

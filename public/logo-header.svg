@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 48">
+  <!-- 昆布アイコン背景 -->
+  <rect width="48" height="48" rx="12" fill="#2d6a4f"/>
+
+  <!-- 昆布の体 -->
+  <path d="M14 12 Q12 16 11 22 Q10 30 12 36 Q14 42 18 44 Q22 46 24 44 Q28 46 30 44 Q34 42 36 36 Q38 30 37 22 Q36 16 34 12 Q30 7 24 7 Q18 7 14 12Z" fill="#40916c"/>
+
+  <!-- 昆布の模様（穴） -->
+  <ellipse cx="20" cy="26" rx="3" ry="5" fill="#2d6a4f"/>
+  <ellipse cx="28" cy="26" rx="3" ry="5" fill="#2d6a4f"/>
+
+  <!-- 目 -->
+  <circle cx="20" cy="17" r="2.5" fill="#fff"/>
+  <circle cx="28" cy="17" r="2.5" fill="#fff"/>
+  <circle cx="21" cy="18" r="1.2" fill="#1b4332"/>
+  <circle cx="29" cy="18" r="1.2" fill="#1b4332"/>
+
+  <!-- ファイルアイコン（右手） -->
+  <rect x="34" y="18" width="11" height="14" rx="2" fill="#e8f4f8" stroke="#185fa5" stroke-width="1.2"/>
+  <line x1="37" y1="23" x2="42" y2="23" stroke="#185fa5" stroke-width="1" stroke-linecap="round"/>
+  <line x1="37" y1="26" x2="42" y2="26" stroke="#185fa5" stroke-width="1" stroke-linecap="round"/>
+  <line x1="37" y1="29" x2="40" y2="29" stroke="#185fa5" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- テキスト: FileConv -->
+  <text x="58" y="32" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#1a1a1a" letter-spacing="-0.5">File<tspan fill="#2d6a4f">Conv</tspan></text>
+</svg>
