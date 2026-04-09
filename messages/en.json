@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "FileConv | Free HEIC to JPG & PNG Converter — No Upload Required",
+    "description": "Convert iPhone HEIC photos to JPG or PNG for free. Files are processed entirely in your browser — never sent to any server. Batch conversion, quality control, and EXIF removal supported."
+  },
+  "hero": {
+    "badge": "Free · No server upload · Fast",
+    "h1": "HEIC Converter",
+    "descPart1": "Convert iPhone photos (.heic) to JPG or PNG.",
+    "descPart2": "Files are processed in your browser — ",
+    "descStrong": "no upload needed",
+    "descEnd": ", completely private."
+  },
+  "converter": {
+    "formatLabel": "Output Format",
+    "qualityLabel": "Quality",
+    "qualityPngNote": "(PNG is lossless — fixed)",
+    "qualityHigh": "High",
+    "qualityMid": "Standard",
+    "qualityLow": "Light",
+    "privacyLabel": "Privacy Settings",
+    "exifTitle": "Remove EXIF data",
+    "exifDesc": "Strips GPS location, timestamp, and camera info from the image",
+    "exifPngNote": "PNG files do not contain EXIF data — this setting does not apply",
+    "dropTitle": "Drop HEIC files here",
+    "dropOr": "or",
+    "dropClick": "click to select",
+    "dropMultiple": "(multiple files supported)",
+    "doneMessage": "All done! Download each file using the button next to it.",
+    "converting": "Converting...",
+    "startConvert": "Start Converting",
+    "privacy": "Files are never sent to a server. All processing happens locally in your browser.",
+    "statFiles": "Selected",
+    "statDone": "Converted",
+    "statSize": "Total Size",
+    "waiting": "Waiting",
+    "save": "Save",
+    "error": "Error"
+  },
+  "howItWorks": {
+    "title": "Why This Tool Is Safe",
+    "subtitle": "What \"no upload required\" really means — here's how it works.",
+    "otherTitle": "Typical converter services",
+    "otherFlow": "File upload ↑↓",
+    "otherDesc": "Converted on server → returned",
+    "otherRisk": "Your photo data may remain on someone else's server",
+    "thisTitle": "FileConv",
+    "thisFlow": "Processed in browser ✓",
+    "thisDesc": "Never reaches a server",
+    "thisBenefit": "Zero network transfer",
+    "feature1Title": "Private by Design",
+    "feature1Desc": "Files are processed in your device's memory only. Nothing is sent externally.",
+    "feature2Title": "Fast",
+    "feature2Desc": "No network transfer means conversion speed is not limited by your connection.",
+    "feature3Title": "Works Offline",
+    "feature3Desc": "Once the page loads, you can convert files without an internet connection."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What is HEIC?",
+        "a": "HEIC (High Efficiency Image Container) is an image format adopted by Apple. iPhones running iOS 11 or later save photos in HEIC by default. It achieves roughly half the file size of JPG at similar quality, but is not natively supported on Windows or Android."
+      },
+      {
+        "q": "Why does iPhone use the HEIC format?",
+        "a": "To save storage space. HEIC maintains the same image quality as JPG at about half the file size — ideal for smartphones that take a lot of photos. However, compatibility issues often make converting to JPG necessary."
+      },
+      {
+        "q": "Are you sure my files are not uploaded?",
+        "a": "Absolutely. This tool uses a JavaScript library called heic2any, and all conversion happens in your browser's memory. You can verify this by opening browser DevTools (F12), going to the Network tab, and watching — no file transfer will appear during conversion."
+      },
+      {
+        "q": "What is EXIF data?",
+        "a": "EXIF (Exchangeable Image File Format) is metadata embedded in photos. It includes the date and time, GPS location, camera model, ISO, and more. Sharing photos online with EXIF data intact can expose your home address, so removing it is recommended."
+      },
+      {
+        "q": "Should I choose JPG or PNG?",
+        "a": "For photos, JPG (at high quality) is usually the best choice — smaller file size, great for web and print. Choose PNG if you need transparency, or if the image contains a lot of text or graphics."
+      },
+      {
+        "q": "Can Live Photos be converted?",
+        "a": "Yes, but only the still image portion is converted to JPG/PNG. The motion (video) part of a Live Photo is not included."
+      }
+    ]
+  },
+  "header": {
+    "blog": "Tips"
+  },
+  "footer": {
+    "tagline": "FileConv — Files never leave your device",
+    "blog": "Tips",
+    "privacy": "Privacy",
+    "contact": "Contact"
+  }
+}

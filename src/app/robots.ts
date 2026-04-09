@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://heic-converter.jp/sitemap.xml', // 本番ドメインに変更
+    sitemap: `${process.env.BASE_URL ?? 'https://fileconv.app'}/sitemap.xml`,
   }
 }

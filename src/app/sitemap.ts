@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog'
 
-const BASE_URL = 'https://heic-converter.jp' // 本番ドメインに変更
+const BASE_URL = process.env.BASE_URL ?? 'https://fileconv.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()

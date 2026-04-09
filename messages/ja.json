@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "FileConv｜無料でHEICをJPG・PNGに変換【サーバー送信なし】",
+    "description": "iPhoneのHEIC写真を無料でJPG・PNGに変換。ファイルはすべてブラウザ内で処理されるので、サーバーに送信されません。複数ファイルの一括変換、画質選択、EXIF削除に対応。"
+  },
+  "hero": {
+    "badge": "無料 · サーバー送信なし · 高速",
+    "h1": "HEIC 変換ツール",
+    "descPart1": "iPhoneの写真（.heic）をJPGやPNGに変換。",
+    "descPart2": "ファイルはブラウザ内で処理されるので、",
+    "descStrong": "アップロード不要で安心",
+    "descEnd": "です。"
+  },
+  "converter": {
+    "formatLabel": "変換形式",
+    "qualityLabel": "画質",
+    "qualityPngNote": "（PNGは可逆圧縮のため固定）",
+    "qualityHigh": "高画質",
+    "qualityMid": "標準",
+    "qualityLow": "軽量",
+    "privacyLabel": "プライバシー設定",
+    "exifTitle": "EXIF情報を削除する",
+    "exifDesc": "撮影場所（GPS）・日時・カメラ情報などの個人情報を除去します",
+    "exifPngNote": "PNGはEXIF情報を含まないため、この設定は適用されません",
+    "dropTitle": "HEICファイルをここにドロップ",
+    "dropOr": "または",
+    "dropClick": "クリックして選択",
+    "dropMultiple": "（複数可）",
+    "doneMessage": "すべて変換完了！各ファイルのダウンロードボタンからご利用ください。",
+    "converting": "変換中...",
+    "startConvert": "変換スタート",
+    "privacy": "ファイルはサーバーに送信されません。すべての処理はお使いのブラウザ内で完結します。",
+    "statFiles": "選択ファイル",
+    "statDone": "変換完了",
+    "statSize": "合計サイズ",
+    "waiting": "待機中",
+    "save": "保存",
+    "error": "エラー"
+  },
+  "howItWorks": {
+    "title": "このツールが安全な理由",
+    "subtitle": "「アップロード不要」とはどういう意味か、仕組みをわかりやすく説明します。",
+    "otherTitle": "一般的な変換サービス",
+    "otherFlow": "ファイルを送信 ↑↓",
+    "otherDesc": "サーバーで変換 → 返却",
+    "otherRisk": "写真データが他者のサーバーに残る可能性あり",
+    "thisTitle": "このツール（FileConv）",
+    "thisFlow": "ブラウザ内で完結 ✓",
+    "thisDesc": "サーバーに到達しない",
+    "thisBenefit": "ネットワーク通信ゼロで変換",
+    "feature1Title": "プライバシー安全",
+    "feature1Desc": "ファイルはあなたのPCのメモリ内で処理。外部には一切送信されません。",
+    "feature2Title": "高速",
+    "feature2Desc": "ネットワーク転送がないため、回線速度に関わらず高速に変換できます。",
+    "feature3Title": "オフライン対応",
+    "feature3Desc": "ページ読み込み後はネット接続がなくても変換可能です。"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "items": [
+      {
+        "q": "HEICとは何ですか？",
+        "a": "HEIC（High Efficiency Image Container）はAppleが採用している画像フォーマットです。iOS 11以降のiPhoneではデフォルトでHEIC形式で写真が保存されます。JPGと比べてほぼ同画質で約半分のファイルサイズを実現できますが、WindowsやAndroidでは標準では開けません。"
+      },
+      {
+        "q": "なぜiPhoneはHEIC形式なのですか？",
+        "a": "ストレージ節約のためです。HEICはJPGの約半分のサイズで同等の画質を維持できます。写真を大量に撮るスマートフォンには理想的なフォーマットですが、互換性の問題からJPGに変換したいケースが多く生じます。"
+      },
+      {
+        "q": "本当にサーバーに送信されませんか？",
+        "a": "はい、確実に送信されません。このツールはheic2anyというJavaScriptライブラリを使用し、変換処理はすべてブラウザのメモリ内で行われます。ブラウザの開発者ツール（F12）のNetworkタブを開いた状態で変換を試みると、ファイルの送信が一切記録されないことで確認できます。"
+      },
+      {
+        "q": "EXIF情報とは何ですか？",
+        "a": "EXIF（Exchangeable Image File Format）は写真に埋め込まれたメタデータです。撮影日時・GPS位置情報・カメラ機種・ISO感度などが含まれます。オンラインで写真を共有すると、EXIFから自宅の住所が特定されるリスクがあるため、削除することをおすすめします。"
+      },
+      {
+        "q": "JPGとPNGどちらを選べばいいですか？",
+        "a": "写真の場合はJPG（高画質設定）がおすすめです。ファイルサイズが小さく、Webや印刷に適しています。透過が必要な場合や文字・図形が多い画像はPNGが向いています。"
+      },
+      {
+        "q": "Live Photoも変換可能ですか？",
+        "a": "Live Photoの場合、静止画部分のみJPG/PNGに変換されます。動画部分（動き）は変換されません。"
+      }
+    ]
+  },
+  "header": {
+    "blog": "記事"
+  },
+  "footer": {
+    "tagline": "FileConv — ファイルはサーバーに送信されません",
+    "blog": "記事",
+    "privacy": "プライバシー",
+    "contact": "お問い合わせ"
+  }
+}
