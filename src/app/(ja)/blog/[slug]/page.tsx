@@ -41,7 +41,7 @@ export default async function BlogPostPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 mb-6 transition-colors">
-          <ArrowLeft className="w-3.5 h-3.5" />ブログ一覧
+          <ArrowLeft className="w-3.5 h-3.5" />記事一覧
         </Link>
         <header className="mb-8">
           <div className="flex flex-wrap items-center gap-2 mb-3">

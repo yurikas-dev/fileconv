@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Header } from '@/components/ui/Header'
-import { Footer } from '@/components/ui/Footer'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fileconv.app'),
+  metadataBase: new URL(process.env.BASE_URL ?? 'https://fileconv.app'),
   title: {
     default: 'FileConv｜無料でHEICをJPG・PNGに変換',
     template: '%s｜FileConv',
@@ -20,17 +18,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+// html/body のみ。Header・Footer は各ロケールのレイアウトで管理する
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja">
+    <html>
       <body className="flex flex-col min-h-screen bg-gray-50">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   )
