@@ -9,8 +9,7 @@ export const metadata: Metadata = {
   robots: { index: false },
 }
 
-// ← Googleフォーム作成後にURLをここに貼り付けてください
-const CONTACT_FORM_URL = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform'
+const CONTACT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfs5i9sBVMfU-LCYe_GfAgeXeFak-z3Qua6hL3YQEDbDxmySg/viewform'
 
 export default function ContactPageEn({ params: { locale } }: Props) {
   setRequestLocale(locale)

@@ -9,8 +9,6 @@
   <ellipse cx="17" cy="24" rx="3" ry="5" fill="#1a1a1a"/>
   <ellipse cx="24" cy="24" rx="3" ry="5" fill="#1a1a1a"/>
 
-  <!-- テキスト: fileconv -->
-  <text x="58" y="28" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">fileconv</text>
-  <!-- .app（グリーン） -->
-  <text x="148" y="28" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="#2d6a4f" letter-spacing="-0.3">.app</text>
+  <!-- テキスト: fileconv.app -->
+  <text x="58" y="28" font-family="'Courier New', monospace" font-size="18" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">fileconv<tspan fill="#2d6a4f">.app</tspan></text>
 </svg>

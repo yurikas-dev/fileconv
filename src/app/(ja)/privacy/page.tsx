@@ -50,6 +50,12 @@ export default function PrivacyPage() {
           </p>
         </section>
         <section>
+          <h2 className="text-base font-semibold text-gray-900 mb-2">お問い合わせフォームの個人情報</h2>
+          <p>
+            お問い合わせフォームでご入力いただいたお名前・メールアドレス等の個人情報は、お問い合わせへの返信目的にのみ使用し、第三者への提供は行いません。
+          </p>
+        </section>
+        <section>
           <h2 className="text-base font-semibold text-gray-900 mb-2">お問い合わせ</h2>
           <p>
             プライバシーに関するご質問は、

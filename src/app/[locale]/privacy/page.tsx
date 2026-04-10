@@ -59,10 +59,17 @@ export default function PrivacyPageEn({ params: { locale } }: Props) {
         </section>
 
         <section>
+          <h2 className="text-base font-semibold text-gray-900 mb-2">Contact Form Data</h2>
+          <p>
+            Personal information submitted via the contact form (such as your name and email address) will be used solely for the purpose of responding to your inquiry and will not be shared with any third parties.
+          </p>
+        </section>
+
+        <section>
           <h2 className="text-base font-semibold text-gray-900 mb-2">Contact</h2>
           <p>
             For privacy-related inquiries, please visit our{' '}
-            <a href="/contact" className="text-brand-600 hover:underline">contact page</a>.
+            <a href="/en/contact" className="text-brand-600 hover:underline">contact page</a>.
           </p>
         </section>
 

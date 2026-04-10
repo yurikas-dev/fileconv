@@ -6,7 +6,7 @@ All files are processed entirely in your browser — nothing is sent to any serv
 iPhoneの写真（HEIC）をJPG・PNGに変換する無料Webツール。  
 ファイルはすべてブラウザ内で処理され、サーバーには送信されません。
 
-![logo](public/logo-mono.svg)
+<img src="public/logo-mono.svg" alt="FileConv" width="200" />
 
 🌐 **Live:** [fileconv.app](https://fileconv.app)
 
