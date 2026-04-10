@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.3",
     "@types/piexifjs": "^1.0.0",
     "gray-matter": "^4.0.3",
     "heic2any": "^0.0.4",
