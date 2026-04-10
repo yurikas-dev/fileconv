@@ -1,3 +1,5 @@
+<img src="public/logo-mono.svg" alt="FileConv" width="300" />
+
 Free web tool to convert iPhone HEIC photos to JPG/PNG.  
 All files are processed entirely in your browser — nothing is sent to any server.
 
