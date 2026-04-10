@@ -2,12 +2,15 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
+
+type FaqItem = { q: string; a: string; link?: string; linkText?: string }
 
 export function Faq() {
   const t = useTranslations('faq')
   const [open, setOpen] = useState<number | null>(null)
-  const items = t.raw('items') as { q: string; a: string }[]
+  const items = t.raw('items') as FaqItem[]
 
   return (
     <section className="mb-10">
@@ -30,6 +33,15 @@ export function Faq() {
             {open === i && (
               <div className="px-5 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
                 {item.a}
+                {item.link && item.linkText && (
+                  <Link
+                    href={item.link}
+                    className="inline-flex items-center gap-1 mt-3 text-brand-600 hover:text-brand-700 font-medium transition-colors"
+                  >
+                    {item.linkText}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                )}
               </div>
             )}
           </div>

@@ -44,4 +44,19 @@
   .prose-custom code {
     @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded text-sm font-mono;
   }
+  .prose-custom table {
+    @apply w-full border-collapse text-sm mb-6;
+  }
+  .prose-custom thead {
+    @apply bg-gray-100;
+  }
+  .prose-custom th {
+    @apply text-left font-semibold text-gray-800 px-4 py-2 border border-gray-200;
+  }
+  .prose-custom td {
+    @apply text-gray-700 px-4 py-2 border border-gray-200;
+  }
+  .prose-custom tbody tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
 }

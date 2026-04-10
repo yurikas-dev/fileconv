@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import { getPost, getAllPosts } from '@/lib/blog'
 import { Clock, ArrowLeft, Tag } from 'lucide-react'
 
@@ -58,7 +59,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </header>
         <article className="prose-custom">
-          <MDXRemote source={post.content} />
+          <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         </article>
         <div className="mt-12 p-6 bg-brand-50 border border-brand-100 rounded-2xl text-center">
           <p className="text-sm font-semibold text-gray-800 mb-2">HEICファイルをすぐに変換する</p>

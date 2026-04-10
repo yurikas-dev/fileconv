@@ -11,6 +11,9 @@ export function LangSwitcher() {
   const jaPath = isEn ? pathname.slice(3) || '/' : pathname
   const enPath = isEn ? pathname : '/en' + (pathname === '/' ? '' : pathname)
 
+  const isBlog = pathname.startsWith('/blog') || pathname.startsWith('/en/blog')
+  if (isBlog) return null
+
   return (
     <div className="flex items-center gap-1 text-gray-400">
       <Globe className="w-3.5 h-3.5" />
