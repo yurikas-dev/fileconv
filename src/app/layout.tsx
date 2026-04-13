@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    images: [{ url: '/logo-header.svg', width: 160, height: 48, alt: 'FileConv' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'FileConv' }],
   },
   robots: { index: true, follow: true },
 }
