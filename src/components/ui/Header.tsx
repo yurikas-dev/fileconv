@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { LangSwitcher } from './LangSwitcher'
+import { NavMenu } from './NavMenu'
 
 type Props = { locale: string }
 
@@ -15,9 +16,10 @@ export async function Header({ locale }: Props) {
         <Link href={locale === 'en' ? '/en' : '/'} className="flex items-center hover:opacity-80 transition-opacity">
           <Image src="/logo-header.svg" alt="FileConv" width={155} height={39} priority />
         </Link>
-        <nav className="flex items-center gap-4">
+        <nav className="flex items-center gap-2">
+          <NavMenu locale={locale} />
           {showBlog && (
-            <Link href="/blog" className="text-sm text-gray-500 hover:text-gray-800 transition-colors">
+            <Link href="/blog" className="text-sm text-gray-500 hover:text-gray-800 hover:bg-gray-100 px-2.5 py-1.5 rounded-lg transition-colors">
               {t('blog')}
             </Link>
           )}

@@ -65,6 +65,7 @@ export async function ConverterPage({
           allowedInputs={allowedInputs}
           allowedOutputs={allowedOutputs}
           defaultOutput={defaultOutput}
+          hideExif={!allowedOutputs.includes('jpg')}
         />
       </div>
     </NextIntlClientProvider>
