@@ -1,7 +1,39 @@
 {
   "meta": {
-    "title": "FileConv | Free HEIC to JPG & PNG Converter — No Upload Required",
-    "description": "Convert iPhone HEIC photos to JPG or PNG for free. Files are processed entirely in your browser — never sent to any server. Batch conversion, quality control, and EXIF removal supported."
+    "title": "FileConv | Free Image Converter — No Upload Required",
+    "description": "Convert HEIC, JPG, PNG, and WebP images for free. All processing happens in your browser — files are never sent to a server."
+  },
+  "home": {
+    "badge": "Free · No server upload · Fast",
+    "h1": "Image Converter",
+    "tagline": "Processed in your browser. No upload needed.",
+    "description": "Free image converter supporting HEIC, JPG, PNG, and WebP. All files are processed locally in your browser — nothing is ever sent to a server.",
+    "toolsTitle": "Conversion Tools",
+    "comingSoon": "Coming soon"
+  },
+  "heicHero": {
+    "badge": "Free · No server upload · Fast",
+    "h1": "HEIC to JPG / PNG Converter",
+    "descPart1": "Convert iPhone HEIC photos to JPG or PNG.",
+    "descPart2": "Files are processed in your browser — ",
+    "descStrong": "no upload needed",
+    "descEnd": ", completely private."
+  },
+  "jpgHero": {
+    "badge": "Free · No server upload · Fast",
+    "h1": "JPG Converter",
+    "descPart1": "Convert JPG images to PNG or WebP.",
+    "descPart2": "Files are processed in your browser — ",
+    "descStrong": "no upload needed",
+    "descEnd": ", completely private."
+  },
+  "pngHero": {
+    "badge": "Free · No server upload · Fast",
+    "h1": "PNG Converter",
+    "descPart1": "Convert PNG images to JPG or WebP.",
+    "descPart2": "Files are processed in your browser — ",
+    "descStrong": "no upload needed",
+    "descEnd": ", completely private."
   },
   "hero": {
     "badge": "Free · No server upload · Fast",
@@ -22,10 +54,12 @@
     "exifTitle": "Remove EXIF data",
     "exifDesc": "Strips GPS location, timestamp, and camera info from the image",
     "exifPngNote": "PNG files do not contain EXIF data — this setting does not apply",
-    "dropTitle": "Drop HEIC files here",
+    "exifNonJpgNote": "EXIF removal applies to JPG output only",
+    "dropTitle": "Drop image files here",
     "dropOr": "or",
     "dropClick": "click to select",
     "dropMultiple": "(multiple files supported)",
+    "dropFormats": "HEIC · JPG · PNG · WebP",
     "doneMessage": "All done! Download each file using the button next to it.",
     "converting": "Converting...",
     "startConvert": "Start Converting",
@@ -81,6 +115,14 @@
       {
         "q": "Can Live Photos be converted?",
         "a": "Yes, but only the still image portion is converted to JPG/PNG. The motion (video) part of a Live Photo is not included."
+      },
+      {
+        "q": "Can I convert formats other than HEIC?",
+        "a": "Yes — FileConv supports conversion between HEIC, JPG, PNG, and WebP. Visit the tool page for your input format to get started."
+      },
+      {
+        "q": "What is WebP?",
+        "a": "WebP is a modern image format developed by Google. It produces smaller file sizes than JPG or PNG at comparable quality, making it ideal for web performance. It is widely supported in modern browsers, though some older software may not support it."
       }
     ]
   },

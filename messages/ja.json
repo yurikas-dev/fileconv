@@ -1,11 +1,43 @@
 {
   "meta": {
-    "title": "FileConv｜無料でHEICをJPG・PNGに変換【サーバー送信なし】",
-    "description": "iPhoneのHEIC写真を無料でJPG・PNGに変換。ファイルはすべてブラウザ内で処理されるので、サーバーに送信されません。複数ファイルの一括変換、画質選択、EXIF削除に対応。"
+    "title": "FileConv｜無料の画像変換ツール【サーバー送信なし】",
+    "description": "HEIC・JPG・PNG・WebPを無料で変換。ファイルはすべてブラウザ内で処理されるので、サーバーに送信されません。"
+  },
+  "home": {
+    "badge": "無料 · サーバー送信なし · 高速",
+    "h1": "画像変換ツール",
+    "tagline": "ブラウザ内で完結。アップロード不要。",
+    "description": "HEIC・JPG・PNG・WebPに対応した無料の画像変換ツールです。ファイルはすべてお使いのブラウザ内で処理されるため、サーバーに送信されません。",
+    "toolsTitle": "変換ツール一覧",
+    "comingSoon": "近日公開"
+  },
+  "heicHero": {
+    "badge": "無料 · サーバー送信なし · 高速",
+    "h1": "HEIC → JPG / PNG 変換",
+    "descPart1": "iPhoneのHEIC写真をJPGやPNGに変換。",
+    "descPart2": "ファイルはブラウザ内で処理されるので、",
+    "descStrong": "アップロード不要で安心",
+    "descEnd": "です。"
+  },
+  "jpgHero": {
+    "badge": "無料 · サーバー送信なし · 高速",
+    "h1": "JPG 変換ツール",
+    "descPart1": "JPG画像をPNGやWebPに変換。",
+    "descPart2": "ファイルはブラウザ内で処理されるので、",
+    "descStrong": "アップロード不要で安心",
+    "descEnd": "です。"
+  },
+  "pngHero": {
+    "badge": "無料 · サーバー送信なし · 高速",
+    "h1": "PNG 変換ツール",
+    "descPart1": "PNG画像をJPGやWebPに変換。",
+    "descPart2": "ファイルはブラウザ内で処理されるので、",
+    "descStrong": "アップロード不要で安心",
+    "descEnd": "です。"
   },
   "hero": {
     "badge": "無料 · サーバー送信なし · 高速",
-    "h1": "HEIC 変換ツール",
+    "h1": "画像変換ツール",
     "descPart1": "iPhoneの写真（.heic）をJPGやPNGに変換。",
     "descPart2": "ファイルはブラウザ内で処理されるので、",
     "descStrong": "アップロード不要で安心",
@@ -22,10 +54,12 @@
     "exifTitle": "EXIF情報を削除する",
     "exifDesc": "撮影場所（GPS）・日時・カメラ情報などの個人情報を除去します",
     "exifPngNote": "PNGはEXIF情報を含まないため、この設定は適用されません",
-    "dropTitle": "HEICファイルをここにドロップ",
+    "exifNonJpgNote": "EXIF削除はJPG出力時のみ適用されます",
+    "dropTitle": "画像ファイルをここにドロップ",
     "dropOr": "または",
     "dropClick": "クリックして選択",
     "dropMultiple": "（複数可）",
+    "dropFormats": "HEIC・JPG・PNG・WebP対応",
     "doneMessage": "すべて変換完了！各ファイルのダウンロードボタンからご利用ください。",
     "converting": "変換中...",
     "startConvert": "変換スタート",
@@ -87,6 +121,14 @@
       {
         "q": "Live Photoも変換可能ですか？",
         "a": "Live Photoの場合、静止画部分のみJPG/PNGに変換されます。動画部分（動き）は変換されません。"
+      },
+      {
+        "q": "HEIC以外の画像も変換できますか？",
+        "a": "はい、HEIC・JPG・PNG・WebPの相互変換に対応しています。各ツールページから変換元の形式を選んでご利用ください。"
+      },
+      {
+        "q": "WebPとは何ですか？",
+        "a": "WebPはGoogleが開発した画像フォーマットです。JPGやPNGと比べてファイルサイズが小さく、Webサイトの表示速度改善に有効です。最新のブラウザでは広くサポートされていますが、一部の古いソフトウェアでは対応していない場合があります。"
       }
     ]
   },

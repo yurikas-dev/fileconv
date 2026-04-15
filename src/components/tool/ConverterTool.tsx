@@ -11,8 +11,50 @@ type FileItem = {
   url: string | null
 }
 
-type Format = 'jpg' | 'png'
+type Format = 'jpg' | 'png' | 'webp'
 type Quality = { label: string; value: number }
+
+type ConverterToolProps = {
+  allowedInputs?: string[]
+  allowedOutputs?: Format[]
+  defaultOutput?: Format
+}
+
+function getInputExt(file: File): string {
+  const name = file.name.toLowerCase()
+  if (name.endsWith('.heic') || name.endsWith('.heif')) return 'heic'
+  if (name.endsWith('.jpg') || name.endsWith('.jpeg')) return 'jpg'
+  if (name.endsWith('.png')) return 'png'
+  if (name.endsWith('.webp')) return 'webp'
+  return 'img'
+}
+
+function isHeic(file: File): boolean {
+  const name = file.name.toLowerCase()
+  return name.endsWith('.heic') || name.endsWith('.heif')
+}
+
+async function convertWithCanvas(file: File, format: Format, quality: number): Promise<Blob> {
+  const bitmap = await createImageBitmap(file)
+  const canvas = document.createElement('canvas')
+  canvas.width = bitmap.width
+  canvas.height = bitmap.height
+  const ctx = canvas.getContext('2d')!
+  if (format === 'jpg') {
+    ctx.fillStyle = '#ffffff'
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+  }
+  ctx.drawImage(bitmap, 0, 0)
+  bitmap.close()
+  const mimeType = format === 'jpg' ? 'image/jpeg' : format === 'png' ? 'image/png' : 'image/webp'
+  return new Promise((resolve, reject) => {
+    canvas.toBlob(
+      blob => blob ? resolve(blob) : reject(new Error('Canvas toBlob failed')),
+      mimeType,
+      format === 'png' ? undefined : quality
+    )
+  })
+}
 
 async function stripExif(dataUrl: string): Promise<Blob> {
   const piexif = (await import('piexifjs')).default
@@ -32,8 +74,14 @@ function blobToDataUrl(blob: Blob): Promise<string> {
   })
 }
 
-export function ConverterTool() {
+export function ConverterTool({
+  allowedInputs,
+  allowedOutputs,
+  defaultOutput = 'jpg',
+}: ConverterToolProps = {}) {
   const t = useTranslations('converter')
+
+  const formats: Format[] = allowedOutputs ?? ['jpg', 'png', 'webp']
 
   const QUALITIES: Quality[] = [
     { label: t('qualityHigh'), value: 0.95 },
@@ -42,21 +90,45 @@ export function ConverterTool() {
   ]
 
   const [files,       setFiles]      = useState<FileItem[]>([])
-  const [format,      setFormat]     = useState<Format>('jpg')
+  const [format,      setFormat]     = useState<Format>(
+    formats.includes(defaultOutput) ? defaultOutput : formats[0]
+  )
   const [quality,     setQuality]    = useState<Quality>(QUALITIES[0])
   const [stripExifOn, setStripExif]  = useState(true)
   const [isDragging,  setIsDragging] = useState(false)
 
+  // Build accept attribute from allowedInputs
+  const acceptAttr = (allowedInputs ?? ['heic', 'jpg', 'png', 'webp'])
+    .flatMap(ext =>
+      ext === 'heic' ? ['.heic', '.heif'] :
+      ext === 'jpg'  ? ['.jpg', '.jpeg'] :
+      [`.${ext}`]
+    )
+    .join(',')
+
+  // Build formats display label for the drop zone
+  const formatsLabel = (allowedInputs ?? ['heic', 'jpg', 'png', 'webp'])
+    .map(ext => ext === 'heic' ? 'HEIC / HEIF' : ext.toUpperCase())
+    .join(' · ')
+
   const addFiles = useCallback((newFiles: File[]) => {
-    const heicFiles = newFiles.filter(f => f.name.toLowerCase().endsWith('.heic'))
+    const allowedExts = allowedInputs ?? ['heic', 'jpg', 'png', 'webp']
+    const accepted = newFiles.filter(f => {
+      const name = f.name.toLowerCase()
+      return allowedExts.some(ext => {
+        if (ext === 'heic') return name.endsWith('.heic') || name.endsWith('.heif')
+        if (ext === 'jpg')  return name.endsWith('.jpg') || name.endsWith('.jpeg')
+        return name.endsWith(`.${ext}`)
+      })
+    })
     setFiles(prev => {
       const existing = new Set(prev.map(x => `${x.file.name}-${x.file.size}`))
-      const toAdd = heicFiles
+      const toAdd = accepted
         .filter(f => !existing.has(`${f.name}-${f.size}`))
         .map(f => ({ file: f, status: 'waiting' as const, progress: 0, url: null }))
       return [...prev, ...toAdd]
     })
-  }, [])
+  }, [allowedInputs])
 
   const removeFile = (index: number) =>
     setFiles(prev => prev.filter((_, i) => i !== index))
@@ -82,20 +154,29 @@ export function ConverterTool() {
         idx === i ? { ...f, status: 'converting', progress: 20 } : f
       ))
       try {
-        const mimeType = format === 'jpg' ? 'image/jpeg' : 'image/png'
-        const result = await heic2any({
-          blob: files[i].file,
-          toType: mimeType,
-          quality: format === 'jpg' ? quality.value : 1,
-        })
-        let blob = Array.isArray(result) ? result[0] : result
+        const mimeType = format === 'jpg' ? 'image/jpeg' : format === 'png' ? 'image/png' : 'image/webp'
+        let blob: Blob
+
+        if (isHeic(files[i].file)) {
+          const result = await heic2any({
+            blob: files[i].file,
+            toType: mimeType,
+            quality: format !== 'png' ? quality.value : 1,
+          })
+          blob = Array.isArray(result) ? result[0] : result
+        } else {
+          blob = await convertWithCanvas(files[i].file, format, quality.value)
+        }
+
         setFiles(prev => prev.map((f, idx) =>
           idx === i ? { ...f, progress: 70 } : f
         ))
+
         if (format === 'jpg' && stripExifOn) {
           const dataUrl = await blobToDataUrl(blob)
           blob = await stripExif(dataUrl)
         }
+
         setFiles(prev => prev.map((f, idx) =>
           idx === i ? { ...f, status: 'done', progress: 100, url: URL.createObjectURL(blob) } : f
         ))
@@ -106,6 +187,21 @@ export function ConverterTool() {
       }
     }
   }
+
+  // Disable same-format output (e.g. JPG→JPG)
+  const allSameType = files.length > 0 && files.every(f => getInputExt(f.file) === getInputExt(files[0].file))
+  const inputType   = allSameType ? getInputExt(files[0].file) : null
+  const disabledFormats: Format[] = (inputType && inputType !== 'heic' && formats.includes(inputType as Format))
+    ? [inputType as Format] : []
+
+  // Auto-switch if current format becomes disabled
+  if (disabledFormats.includes(format)) {
+    const next = formats.find(f => !disabledFormats.includes(f))
+    if (next) setFormat(next)
+  }
+
+  const isQualityDisabled = format === 'png'
+  const isExifDisabled    = format !== 'jpg'
 
   const totalSize  = files.reduce((s, f) => s + f.file.size, 0)
   const doneCount  = files.filter(f => f.status === 'done').length
@@ -119,20 +215,26 @@ export function ConverterTool() {
       <div className="mb-5">
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5">{t('formatLabel')}</p>
         <div className="flex gap-2">
-          {(['jpg', 'png'] as Format[]).map(f => (
-            <button key={f} onClick={() => setFormat(f)}
-              className={`flex-1 py-2.5 rounded-lg border text-sm font-semibold transition-all ${
-                format === f
-                  ? 'border-brand-500 bg-brand-50 text-brand-700 border-2'
-                  : 'border-gray-200 text-gray-500 hover:bg-gray-50'
-              }`}
-            >{f.toUpperCase()}</button>
-          ))}
+          {formats.map(f => {
+            const isDisabled = disabledFormats.includes(f)
+            return (
+              <button key={f} onClick={() => !isDisabled && setFormat(f)}
+                disabled={isDisabled}
+                className={`flex-1 py-2.5 rounded-lg border text-sm font-semibold transition-all ${
+                  isDisabled
+                    ? 'border-gray-100 bg-gray-50 text-gray-300 cursor-not-allowed'
+                    : format === f
+                      ? 'border-brand-500 bg-brand-50 text-brand-700 border-2'
+                      : 'border-gray-200 text-gray-500 hover:bg-gray-50'
+                }`}
+              >{f.toUpperCase()}</button>
+            )
+          })}
         </div>
       </div>
 
       {/* 画質選択 */}
-      <div className={`mb-5 transition-opacity ${format === 'png' ? 'opacity-40 pointer-events-none' : ''}`}>
+      <div className={`mb-5 transition-opacity ${isQualityDisabled ? 'opacity-40 pointer-events-none' : ''}`}>
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5">
           {t('qualityLabel')}
           {format === 'png' && <span className="normal-case font-normal ml-1">{t('qualityPngNote')}</span>}
@@ -151,21 +253,21 @@ export function ConverterTool() {
       </div>
 
       {/* EXIF削除 */}
-      <div className={`mb-5 transition-opacity ${format === 'png' ? 'opacity-40 pointer-events-none' : ''}`}>
+      <div className={`mb-5 transition-opacity ${isExifDisabled ? 'opacity-40 pointer-events-none' : ''}`}>
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2.5">{t('privacyLabel')}</p>
         <button
-          onClick={() => format === 'jpg' && setStripExif(v => !v)}
+          onClick={() => !isExifDisabled && setStripExif(v => !v)}
           className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border transition-all text-left ${
-            stripExifOn && format === 'jpg'
+            stripExifOn && !isExifDisabled
               ? 'border-2 border-teal-400 bg-teal-50'
               : 'border-gray-200 bg-gray-50 hover:bg-gray-100'
           }`}
         >
           <div className={`relative w-9 h-5 rounded-full transition-colors flex-shrink-0 ${
-            stripExifOn && format === 'jpg' ? 'bg-teal-500' : 'bg-gray-300'
+            stripExifOn && !isExifDisabled ? 'bg-teal-500' : 'bg-gray-300'
           }`}>
             <div className={`absolute top-0.5 w-4 h-4 bg-white rounded-full shadow transition-transform ${
-              stripExifOn && format === 'jpg' ? 'translate-x-4' : 'translate-x-0.5'
+              stripExifOn && !isExifDisabled ? 'translate-x-4' : 'translate-x-0.5'
             }`} />
           </div>
           <div className="flex-1 min-w-0">
@@ -175,12 +277,12 @@ export function ConverterTool() {
             </div>
             <p className="text-xs text-gray-500 mt-0.5">{t('exifDesc')}</p>
           </div>
-          {stripExifOn && format === 'jpg' && (
+          {stripExifOn && !isExifDisabled && (
             <span className="text-xs font-semibold text-teal-700 bg-teal-100 px-2 py-0.5 rounded-full flex-shrink-0">ON</span>
           )}
         </button>
-        {format === 'png' && (
-          <p className="text-xs text-gray-400 mt-1.5 pl-1">{t('exifPngNote')}</p>
+        {isExifDisabled && (
+          <p className="text-xs text-gray-400 mt-1.5 pl-1">{t('exifNonJpgNote')}</p>
         )}
       </div>
 
@@ -193,12 +295,13 @@ export function ConverterTool() {
           isDragging ? 'border-brand-400 bg-brand-50' : 'border-gray-200 bg-gray-50 hover:border-brand-300 hover:bg-blue-50/30'
         }`}
       >
-        <input type="file" accept=".heic,.HEIC" multiple onChange={handleFileSelect}
+        <input type="file" accept={acceptAttr} multiple onChange={handleFileSelect}
           className="absolute inset-0 opacity-0 cursor-pointer" />
         <FileImage className="w-10 h-10 mx-auto mb-3 text-gray-300" />
         <p className="text-sm font-semibold text-gray-600 mb-1">{t('dropTitle')}</p>
         <p className="text-xs text-gray-400">
-          {t('dropOr')} <span className="text-brand-600 font-medium">{t('dropClick')}</span>{t('dropMultiple')}
+          {t('dropOr')} <span className="text-brand-600 font-medium">{t('dropClick')}</span>
+          <span className="ml-1 text-gray-300">{formatsLabel}</span>
         </p>
       </div>
 
@@ -260,10 +363,11 @@ type FileRowProps = {
 
 function FileRow({ item, format, onRemove, t }: FileRowProps) {
   const sizeMB = (item.file.size / 1024 / 1024).toFixed(1)
+  const ext = getInputExt(item.file).toUpperCase()
   return (
     <div className="flex items-center gap-3 px-3 py-2.5 bg-gray-50 rounded-xl border border-gray-100">
       <div className="w-9 h-9 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
-        <span className="text-xs font-bold text-brand-600 font-mono">HEIC</span>
+        <span className="text-xs font-bold text-brand-600 font-mono">{ext}</span>
       </div>
       <div className="flex-1 min-w-0">
         <p className="text-xs font-medium text-gray-700 truncate">{item.file.name}</p>
@@ -277,7 +381,7 @@ function FileRow({ item, format, onRemove, t }: FileRowProps) {
       {item.status === 'waiting'    && <span className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">{t('waiting')}</span>}
       {item.status === 'converting' && <Loader2 className="w-4 h-4 text-brand-500 animate-spin flex-shrink-0" />}
       {item.status === 'done' && item.url && (
-        <a href={item.url} download={`${item.file.name.replace(/\.heic$/i, '')}.${format}`}
+        <a href={item.url} download={`${item.file.name.replace(/\.[^.]+$/, '')}.${format}`}
           className="flex items-center gap-1 text-xs font-semibold text-teal-700 bg-teal-50 border border-teal-200 px-2.5 py-1 rounded-full hover:bg-teal-100 transition-colors"
         >
           <Download className="w-3 h-3" />{t('save')}
