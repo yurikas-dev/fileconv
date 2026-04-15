@@ -93,16 +93,17 @@
     "title": "Frequently Asked Questions",
     "items": [
       {
+        "q": "What image formats are supported?",
+        "a": "FileConv supports HEIC, JPG, PNG, and WebP. Visit the tool page for your input format to get started."
+      },
+      {
         "q": "What is HEIC?",
         "a": "HEIC (High Efficiency Image Container) is an image format adopted by Apple. iPhones running iOS 11 or later save photos in HEIC by default. It achieves roughly half the file size of JPG at similar quality, but is not natively supported on Windows or Android."
       },
+
       {
-        "q": "Why does iPhone use the HEIC format?",
-        "a": "To save storage space. HEIC maintains the same image quality as JPG at about half the file size — ideal for smartphones that take a lot of photos. However, compatibility issues often make converting to JPG necessary."
-      },
-      {
-        "q": "Are you sure my files are not uploaded?",
-        "a": "Absolutely. This tool uses a JavaScript library called heic2any, and all conversion happens in your browser's memory. You can verify this by opening browser DevTools (F12), going to the Network tab, and watching — no file transfer will appear during conversion."
+        "q": "What is WebP?",
+        "a": "WebP is a modern image format developed by Google. It produces smaller file sizes than JPG or PNG at comparable quality, making it ideal for web performance. It is widely supported in modern browsers, though some older software may not support it."
       },
       {
         "q": "What is EXIF data?",
@@ -117,12 +118,8 @@
         "a": "Yes, but only the still image portion is converted to JPG/PNG. The motion (video) part of a Live Photo is not included."
       },
       {
-        "q": "Can I convert formats other than HEIC?",
-        "a": "Yes — FileConv supports conversion between HEIC, JPG, PNG, and WebP. Visit the tool page for your input format to get started."
-      },
-      {
-        "q": "What is WebP?",
-        "a": "WebP is a modern image format developed by Google. It produces smaller file sizes than JPG or PNG at comparable quality, making it ideal for web performance. It is widely supported in modern browsers, though some older software may not support it."
+        "q": "Are you sure my files are not uploaded?",
+        "a": "Absolutely. This tool uses a JavaScript library called heic2any, and all conversion happens in your browser's memory. You can verify this by opening browser DevTools (F12), going to the Network tab, and watching — no file transfer will appear during conversion."
       }
     ]
   },

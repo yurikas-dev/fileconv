@@ -1,32 +1,40 @@
 import { getTranslations, getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { ConverterTool } from './ConverterTool'
-import { HowItWorks } from './HowItWorks'
-import { Faq } from './Faq'
+
+type Format = 'jpg' | 'png' | 'webp'
+
+type ConverterPageProps = {
+  heroNamespace: string
+  allowedInputs: string[]
+  allowedOutputs: Format[]
+  defaultOutput: Format
+}
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: 'FileConv',
-  description: 'Convert HEIC files to JPG/PNG — free, browser-only',
+  description: 'Convert images for free — browser-only, no server upload',
   applicationCategory: 'UtilitiesApplication',
   operatingSystem: 'Any',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'JPY' },
   featureList: [
-    'HEIC to JPG conversion',
-    'HEIC to PNG conversion',
-    'Batch conversion',
     'Browser-only processing (no server upload)',
+    'Batch conversion',
     'Quality control',
     'EXIF data removal',
   ],
 }
 
-// / と /en 両方から使われる共有コンポーネント
-// Provider をここに持つことで、どちらのルートでも正しいロケールのメッセージが渡る
-export async function ConverterPage() {
+export async function ConverterPage({
+  heroNamespace,
+  allowedInputs,
+  allowedOutputs,
+  defaultOutput,
+}: ConverterPageProps) {
   const [t, messages] = await Promise.all([
-    getTranslations('hero'),
+    getTranslations(heroNamespace),
     getMessages(),
   ])
 
@@ -53,9 +61,11 @@ export async function ConverterPage() {
           </p>
         </section>
 
-        <ConverterTool />
-        <HowItWorks />
-        <Faq />
+        <ConverterTool
+          allowedInputs={allowedInputs}
+          allowedOutputs={allowedOutputs}
+          defaultOutput={defaultOutput}
+        />
       </div>
     </NextIntlClientProvider>
   )
