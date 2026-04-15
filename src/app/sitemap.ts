@@ -13,6 +13,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const toolUrls = [
+    '/tools/converter/heic-to-jpg',
+    '/tools/converter/jpg-converter',
+    '/tools/converter/png-converter',
+  ].map(path => ({
+    url: `${BASE_URL}${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }))
+
   return [
     {
       url: BASE_URL,
@@ -26,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    ...toolUrls,
     ...blogUrls,
   ]
 }

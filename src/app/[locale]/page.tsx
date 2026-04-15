@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { ConverterPage } from '@/components/tool/ConverterPage'
+import { HomePage } from '@/components/home/HomePage'
 
 type Props = { params: { locale: string } }
 
-// /en などのメタデータ
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'meta' })
   return {
@@ -15,5 +14,5 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
 
 export default function LocaleHomePage({ params: { locale } }: Props) {
   setRequestLocale(locale)
-  return <ConverterPage />
+  return <HomePage locale={locale} />
 }
