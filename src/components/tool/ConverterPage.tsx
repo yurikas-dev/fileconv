@@ -33,8 +33,9 @@ export async function ConverterPage({
   allowedOutputs,
   defaultOutput,
 }: ConverterPageProps) {
-  const [t, messages] = await Promise.all([
+  const [t, tc, messages] = await Promise.all([
     getTranslations(heroNamespace),
+    getTranslations('heroCommon'),
     getMessages(),
   ])
 
@@ -48,16 +49,16 @@ export async function ConverterPage({
         <section className="text-center mb-10">
           <div className="inline-flex items-center gap-2 text-xs font-medium text-brand-600 bg-brand-50 border border-brand-100 px-3 py-1.5 rounded-full mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-500 inline-block" />
-            {t('badge')}
+            {tc('badge')}
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
             {t('h1')}
           </h1>
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
             {t('descPart1')}<br />
-            {t('descPart2')}
-            <strong className="text-gray-700">{t('descStrong')}</strong>
-            {t('descEnd')}
+            {tc('descPart2')}
+            <strong className="text-gray-700">{tc('descStrong')}</strong>
+            {tc('descEnd')}
           </p>
         </section>
 
@@ -65,7 +66,7 @@ export async function ConverterPage({
           allowedInputs={allowedInputs}
           allowedOutputs={allowedOutputs}
           defaultOutput={defaultOutput}
-          hideExif={!allowedOutputs.includes('jpg')}
+          hideExif={!(allowedInputs.includes('heic') && allowedOutputs.includes('jpg'))}
         />
       </div>
     </NextIntlClientProvider>

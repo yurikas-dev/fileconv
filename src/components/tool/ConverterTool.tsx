@@ -376,6 +376,12 @@ export function ConverterTool({
           )}
         </div>
       )}
+      {hideExif && (
+        <div className="mb-5 flex items-center gap-2 px-4 py-3 bg-teal-50 border border-teal-100 rounded-xl text-xs text-teal-700">
+          <MapPin className="w-3.5 h-3.5 flex-shrink-0" />
+          {t('exifAutoRemoved')}
+        </div>
+      )}
 
       {/* drop zone */}
       <div

@@ -11,29 +11,27 @@
     "toolsTitle": "Conversion Tools",
     "comingSoon": "Coming soon"
   },
-  "heicHero": {
+  "heroCommon": {
     "badge": "Free · No server upload · Fast",
-    "h1": "HEIC to JPG / PNG Converter",
-    "descPart1": "Convert iPhone HEIC photos to JPG or PNG.",
     "descPart2": "Files are processed in your browser — ",
     "descStrong": "no upload needed",
     "descEnd": ", completely private."
+  },
+  "heicHero": {
+    "h1": "HEIC to JPG / PNG Converter",
+    "descPart1": "Convert iPhone HEIC photos to JPG or PNG."
+  },
+  "webpHero": {
+    "h1": "WebP Converter",
+    "descPart1": "Convert WebP images to JPG or PNG."
   },
   "jpgHero": {
-    "badge": "Free · No server upload · Fast",
     "h1": "JPG Converter",
-    "descPart1": "Convert JPG images to PNG or WebP.",
-    "descPart2": "Files are processed in your browser — ",
-    "descStrong": "no upload needed",
-    "descEnd": ", completely private."
+    "descPart1": "Convert JPG images to PNG or WebP."
   },
   "pngHero": {
-    "badge": "Free · No server upload · Fast",
     "h1": "PNG Converter",
-    "descPart1": "Convert PNG images to JPG or WebP.",
-    "descPart2": "Files are processed in your browser — ",
-    "descStrong": "no upload needed",
-    "descEnd": ", completely private."
+    "descPart1": "Convert PNG images to JPG or WebP."
   },
   "hero": {
     "badge": "Free · No server upload · Fast",
@@ -69,7 +67,8 @@
     "statSize": "Total Size",
     "waiting": "Waiting",
     "save": "Save",
-    "error": "Error"
+    "error": "Error",
+    "exifAutoRemoved": "EXIF data is automatically removed during conversion"
   },
   "howItWorks": {
     "title": "Why This Tool Is Safe",
@@ -100,7 +99,6 @@
         "q": "What is HEIC?",
         "a": "HEIC (High Efficiency Image Container) is an image format adopted by Apple. iPhones running iOS 11 or later save photos in HEIC by default. It achieves roughly half the file size of JPG at similar quality, but is not natively supported on Windows or Android."
       },
-
       {
         "q": "What is WebP?",
         "a": "WebP is a modern image format developed by Google. It produces smaller file sizes than JPG or PNG at comparable quality, making it ideal for web performance. It is widely supported in modern browsers, though some older software may not support it."

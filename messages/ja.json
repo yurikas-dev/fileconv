@@ -11,29 +11,27 @@
     "toolsTitle": "変換ツール一覧",
     "comingSoon": "近日公開"
   },
-  "heicHero": {
+  "heroCommon": {
     "badge": "無料 · サーバー送信なし · 高速",
-    "h1": "HEIC → JPG / PNG 変換",
-    "descPart1": "iPhoneのHEIC写真をJPGやPNGに変換。",
     "descPart2": "ファイルはブラウザ内で処理されるので、",
     "descStrong": "アップロード不要で安心",
     "descEnd": "です。"
+  },
+  "heicHero": {
+    "h1": "HEIC → JPG / PNG 変換",
+    "descPart1": "iPhoneのHEIC写真をJPGやPNGに変換。"
+  },
+  "webpHero": {
+    "h1": "WebP 変換ツール",
+    "descPart1": "WebP画像をJPGやPNGに変換。"
   },
   "jpgHero": {
-    "badge": "無料 · サーバー送信なし · 高速",
     "h1": "JPG 変換ツール",
-    "descPart1": "JPG画像をPNGやWebPに変換。",
-    "descPart2": "ファイルはブラウザ内で処理されるので、",
-    "descStrong": "アップロード不要で安心",
-    "descEnd": "です。"
+    "descPart1": "JPG画像をPNGやWebPに変換。"
   },
   "pngHero": {
-    "badge": "無料 · サーバー送信なし · 高速",
     "h1": "PNG 変換ツール",
-    "descPart1": "PNG画像をJPGやWebPに変換。",
-    "descPart2": "ファイルはブラウザ内で処理されるので、",
-    "descStrong": "アップロード不要で安心",
-    "descEnd": "です。"
+    "descPart1": "PNG画像をJPGやWebPに変換。"
   },
   "hero": {
     "badge": "無料 · サーバー送信なし · 高速",
@@ -69,7 +67,8 @@
     "statSize": "合計サイズ",
     "waiting": "待機中",
     "save": "保存",
-    "error": "エラー"
+    "error": "エラー",
+    "exifAutoRemoved": "変換時にEXIF情報は自動的に除去されます"
   },
   "howItWorks": {
     "title": "このツールが安全な理由",
@@ -98,7 +97,6 @@
         "q": "対応している画像形式は何ですか？",
         "a": "HEIC・JPG・PNG・WebPの4形式に対応しています。各ツールページから変換元の形式を選んでご利用ください。"
       },
-
       {
         "q": "HEICとは何ですか？",
         "a": "HEIC（High Efficiency Image Container）はAppleが採用している画像フォーマットです。iOS 11以降のiPhoneではデフォルトでHEIC形式で写真が保存されます。JPGと比べてほぼ同画質で約半分のファイルサイズを実現できますが、WindowsやAndroidでは標準では開けません。",
