@@ -1,7 +1,7 @@
 import { getTranslations, getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
 import Link from 'next/link'
-import { ArrowRight, ImageIcon, FileImage, Layers } from 'lucide-react'
+import { ArrowRight, ImageIcon, FileImage, Layers, Globe } from 'lucide-react'
 import { HowItWorks } from '@/components/tool/HowItWorks'
 import { Faq } from '@/components/tool/Faq'
 
@@ -61,6 +61,17 @@ export async function HomePage({ locale }: HomePageProps) {
         ? 'Convert PNG images to JPG or WebP.'
         : 'PNG画像をJPGやWebPに変換します。',
       tags: ['PNG', 'JPG', 'WebP'],
+    },
+    {
+      href: `${prefix}/tools/converter/webp-converter`,
+      icon: Globe,
+      iconColor: 'text-orange-600',
+      iconBg: 'bg-orange-50',
+      title: locale === 'en' ? 'WebP Converter' : 'WebP 変換ツール',
+      desc: locale === 'en'
+        ? 'Convert WebP images to JPG or PNG.'
+        : 'WebP画像をJPGやPNGに変換します。',
+      tags: ['WebP', 'JPG', 'PNG'],
     },
   ]
 

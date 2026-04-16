@@ -42,6 +42,10 @@ export function NavMenu({ locale }: Props) {
           label: locale === 'en' ? 'PNG → JPG / WebP' : 'PNG → JPG / WebP',
           href: `${prefix}/tools/converter/png-converter`,
         },
+        {
+          label: locale === 'en' ? 'WebP → JPG / PNG' : 'WebP → JPG / PNG',
+          href: `${prefix}/tools/converter/webp-converter`,
+        },
       ],
     },
     {

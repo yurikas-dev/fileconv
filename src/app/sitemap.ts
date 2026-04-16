@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/converter/heic-to-jpg',
     '/tools/converter/jpg-converter',
     '/tools/converter/png-converter',
+    '/tools/converter/webp-converter',
   ].map(path => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
