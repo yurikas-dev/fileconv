@@ -12,13 +12,19 @@ export function LangSwitcher() {
   const enPath = isEn ? pathname : '/en' + (pathname === '/' ? '' : pathname)
 
   const isBlog = pathname.startsWith('/blog') || pathname.startsWith('/en/blog')
-  if (isBlog) return null
+
+  const jaPathFinal = isBlog
+    ? isEn ? `/blog${pathname.slice('/en/blog'.length) || ''}` : pathname
+    : jaPath
+  const enPathFinal = isBlog
+    ? isEn ? pathname : `/en/blog${pathname.slice('/blog'.length)}`
+    : enPath
 
   return (
     <div className="flex items-center gap-1 text-gray-400">
       <Globe className="w-3.5 h-3.5" />
       <Link
-        href={jaPath}
+        href={jaPathFinal}
         className={`text-xs font-semibold px-1 transition-colors ${
           !isEn ? 'text-brand-600' : 'hover:text-gray-600'
         }`}
@@ -27,7 +33,7 @@ export function LangSwitcher() {
       </Link>
       <span className="text-gray-200 text-xs">|</span>
       <Link
-        href={enPath}
+        href={enPathFinal}
         className={`text-xs font-semibold px-1 transition-colors ${
           isEn ? 'text-brand-600' : 'hover:text-gray-600'
         }`}

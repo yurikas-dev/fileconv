@@ -5,9 +5,17 @@ const BASE_URL = process.env.BASE_URL ?? 'https://fileconv.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
+  const enPosts = getAllPosts('en')
 
   const blogUrls = posts.map(post => ({
     url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  const enBlogUrls = enPosts.map(post => ({
+    url: `${BASE_URL}/en/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -38,7 +46,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: `${BASE_URL}/en/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
     ...toolUrls,
     ...blogUrls,
+    ...enBlogUrls,
   ]
 }
