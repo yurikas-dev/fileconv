@@ -66,8 +66,8 @@ async function convertToMp3(file: File): Promise<Blob> {
       document.head.appendChild(script);
     });
   }
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const Mp3Encoder = (window as any).lamejs.Mp3Encoder;
+  const lamejs = (window as unknown as Record<string, { Mp3Encoder: unknown }>).lamejs;
+  const Mp3Encoder = lamejs.Mp3Encoder as new (channels: number, sampleRate: number, kbps: number) => { encodeBuffer: (l: Int16Array, r?: Int16Array) => Int16Array; flush: () => Int16Array };
 
   const encoder = new Mp3Encoder(numChannels === 1 ? 1 : 2, sampleRate, 128);
   const mp3Chunks: Uint8Array[] = [];
