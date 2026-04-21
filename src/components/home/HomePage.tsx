@@ -1,7 +1,7 @@
 import { getTranslations, getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
 import Link from 'next/link'
-import { ArrowRight, ImageIcon, FileImage, Layers, Globe } from 'lucide-react'
+import { ArrowRight, ImageIcon, FileImage, Layers, Globe, Music } from 'lucide-react'
 import { HowItWorks } from '@/components/tool/HowItWorks'
 import { Faq } from '@/components/tool/Faq'
 
@@ -72,6 +72,17 @@ export async function HomePage({ locale }: HomePageProps) {
         ? 'Convert WebP images to JPG or PNG.'
         : 'WebP画像をJPGやPNGに変換します。',
       tags: ['WebP', 'JPG', 'PNG'],
+    },
+    {
+      href: `${prefix}/tools/audio/to-mp3`,
+      icon: Music,
+      iconColor: 'text-pink-600',
+      iconBg: 'bg-pink-50',
+      title: locale === 'en' ? 'Audio to MP3' : '音声 → MP3 変換',
+      desc: locale === 'en'
+        ? 'Convert AAC, WAV, FLAC, M4A and more to MP3.'
+        : 'AAC・WAV・FLAC・M4AなどをMP3に変換します。',
+      tags: ['MP3', 'AAC', 'WAV', 'FLAC'],
     },
   ]
 
