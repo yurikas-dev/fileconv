@@ -108,6 +108,9 @@ export async function HomePage({ locale }: HomePageProps) {
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight mb-4">
             {t('h1')}
+            <span className="hidden sm:inline"> - </span>
+            <br className="sm:hidden" />
+            {t('h1Sub')}
           </h1>
           <p className="text-gray-500 text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-2">
             {t('tagline')}

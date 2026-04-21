@@ -5,9 +5,10 @@
   },
   "home": {
     "badge": "Free · No server upload · Fast",
-    "h1": "Image Converter",
+    "h1": "FileConv",
+    "h1Sub": "Online File Tools",
     "tagline": "Processed in your browser. No upload needed.",
-    "description": "Free image converter supporting HEIC, JPG, PNG, and WebP. All files are processed locally in your browser — nothing is ever sent to a server.",
+    "description": "Convert images (HEIC, JPG, PNG, WebP) and audio (to MP3) for free. All files are processed locally in your browser — nothing is ever sent to a server.",
     "toolsTitle": "Conversion Tools",
     "comingSoon": "Coming soon"
   },
