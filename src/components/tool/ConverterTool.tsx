@@ -513,11 +513,6 @@ function FileRow({ item, format, onRemove, t }: FileRowProps) {
           </div>
         )}
       </div>
-      {item.status === 'waiting' && (
-        <span className='text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full'>
-          {t('waiting')}
-        </span>
-      )}
       {item.status === 'converting' && (
         <Loader2 className='w-4 h-4 text-brand-500 animate-spin flex-shrink-0' />
       )}

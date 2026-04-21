@@ -49,6 +49,11 @@ export function NavMenu({ locale }: Props) {
       ],
     },
     {
+      kind: 'flat',
+      label: locale === 'en' ? 'Audio' : '音声',
+      href: `${prefix}/tools/audio/to-mp3`,
+    },
+    {
       kind: 'dropdown',
       label: locale === 'en' ? 'Compressor' : '圧縮',
       subItems: [
