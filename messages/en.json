@@ -121,6 +121,26 @@
       }
     ]
   },
+  "audioConverter": {
+    "formatLabel": "Output Format",
+    "formatInputs": "Accepted: ",
+    "browserNote": "Conversion runs entirely in your browser. ",
+    "browserRecommend": "Chrome or Edge recommended",
+    "browserSafari": ". Some formats (e.g. FLAC) may not work in Safari.",
+    "dropTitle": "Drop files here",
+    "dropOr": "or",
+    "dropClick": "browse to select",
+    "converting": "Converting...",
+    "convertBtn": "Convert to MP3",
+    "doneMessage": "done. Download each file using the button next to it.",
+    "privacy": "Files are processed in your browser and never sent to a server",
+    "statFiles": "Files",
+    "statDone": "Done",
+    "statSize": "Total size",
+    "save": "Save",
+    "error": "Error",
+    "decodeError": "This format is not supported in your browser"
+  },
   "header": {
     "blog": "Tips"
   },

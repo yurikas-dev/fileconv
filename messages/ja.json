@@ -129,6 +129,26 @@
       }
     ]
   },
+  "audioConverter": {
+    "formatLabel": "変換後のフォーマット",
+    "formatInputs": "対応入力：",
+    "browserNote": "変換はブラウザの機能を使って行われます。",
+    "browserRecommend": "Chrome・Edge を推奨",
+    "browserSafari": "します。Safari では一部の形式（FLAC など）が変換できない場合があります。",
+    "dropTitle": "ここにファイルをドロップ",
+    "dropOr": "または",
+    "dropClick": "クリックして選択",
+    "converting": "変換中...",
+    "convertBtn": "MP3に変換する",
+    "doneMessage": "変換完了！各ファイルのダウンロードボタンからご利用ください。",
+    "privacy": "ファイルはブラウザ内で処理され、サーバーに送信されません",
+    "statFiles": "ファイル数",
+    "statDone": "完了",
+    "statSize": "合計サイズ",
+    "save": "保存",
+    "error": "エラー",
+    "decodeError": "このブラウザでは対応していない形式です"
+  },
   "header": {
     "blog": "記事"
   },
