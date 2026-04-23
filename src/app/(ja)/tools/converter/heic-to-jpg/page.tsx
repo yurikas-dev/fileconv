@@ -1,14 +1,10 @@
 import type { Metadata } from 'next'
-import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { setRequestLocale } from 'next-intl/server'
 import { ConverterPage } from '@/components/tool/ConverterPage'
 
-export async function generateMetadata(): Promise<Metadata> {
-  setRequestLocale('ja')
-  const t = await getTranslations('heicHero')
-  return {
-    title: 'HEIC → JPG・PNG 変換｜FileConv' + t('qualityHigh'),
-    description: 'iPhoneのHEIC写真を無料でJPGやPNGに変換。ファイルはブラウザ内で処理されるのでサーバーに送信されません。',
-  }
+export const metadata: Metadata = {
+  title: 'HEIC → JPG・PNG 変換｜FileConv',
+  description: 'iPhoneのHEIC写真を無料でJPGやPNGに変換。ファイルはブラウザ内で処理されるのでサーバーに送信されません。',
 }
 
 export default function HeicToJpgPage() {
