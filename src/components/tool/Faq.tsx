@@ -7,8 +7,10 @@ import Link from 'next/link'
 
 type FaqItem = { q: string; a: string; link?: string; linkText?: string }
 
-export function Faq() {
-  const t = useTranslations('faq')
+type Props = { namespace?: string }
+
+export function Faq({ namespace = 'faq' }: Props) {
+  const t = useTranslations(namespace)
   const [open, setOpen] = useState<number | null>(null)
   const items = t.raw('items') as FaqItem[]
 

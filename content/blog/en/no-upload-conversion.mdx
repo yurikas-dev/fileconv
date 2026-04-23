@@ -1,0 +1,103 @@
+---
+title: What Does "No Upload Required" Actually Mean?
+description: Online converters that claim "no upload" process your files differently from server-based tools. Here's how browser-based conversion works — and how to verify it yourself.
+date: "2026-02-08"
+tags: ["Privacy", "Browser Processing", "Security"]
+---
+
+There are plenty of online file conversion tools out there, and some of them claim "no upload required" or "files never leave your device." But what does that actually mean — and can you trust it? This article explains how browser-based conversion works and shows you how to verify it yourself.
+
+## How Most Online Converters Work
+
+The majority of online conversion tools work like this:
+
+```
+Your PC → [Network] → Service's server → Conversion → [Network] → Your PC
+```
+
+Your file travels to someone else's server, gets processed there, and is sent back. Depending on the service's privacy policy, your file may be stored, analyzed, or used for other purposes after conversion.
+
+The risks are real:
+
+- **Data retention:** Even if the service claims to delete files "after conversion," there's no way to verify this
+- **Third-party sharing:** Data could be used for advertising or machine learning
+- **Security breaches:** A server-side breach could expose files you uploaded
+- **EXIF data exposure:** GPS coordinates and timestamps embedded in your photos get transmitted along with the image
+
+Personal photos — especially HEIC files from an iPhone — often contain images of your home, family, or workplace. The server you upload to matters.
+
+## How Browser-Based Conversion Works
+
+"No upload required" tools work completely differently:
+
+```
+Your PC → Browser memory → Conversion → Browser memory → Your PC
+```
+
+Your file is processed entirely inside your browser (Chrome, Safari, Edge, etc.). **No network transfer occurs after the page loads.**
+
+When you open a conversion page, your browser does download the HTML and JavaScript code from the server. But after that, all conversion processing happens on your own device's CPU — nothing goes out.
+
+## The Technical Explanation
+
+This is made possible by the browser's `File API`.
+
+When you select a file with `<input type="file">`, the browser reads it into local memory as a `File` object — it does not upload it anywhere.
+
+```javascript
+// File is read into browser memory — no network request
+const file = event.target.files[0] // File object, local only
+```
+
+From there, a JavaScript library (like `heic2any` for HEIC conversion) runs entirely in your browser, processes the file, and returns the converted result — all without touching the network.
+
+## How to Verify It Yourself
+
+Don't take our word for it. Here's how to confirm that no file transfer is happening:
+
+### Using Chrome or Edge DevTools
+
+1. Open the conversion tool page
+2. Press **F12** to open Developer Tools
+3. Click the **Network** tab
+4. Select a file and run the conversion
+5. Watch the Network log
+
+If the tool is truly browser-based, you will see **no file upload request** in the log. In contrast, a server-based tool will show a `POST` request containing your file data.
+
+### The Offline Test
+
+1. Open the conversion page and wait for it to fully load
+2. Enable airplane mode (disconnect from the internet)
+3. Try converting a file
+
+If the conversion completes successfully offline, it's definitively running in your browser — because nothing could have reached a server.
+
+| Test | Browser-based | Server-based |
+|---|---|---|
+| Network tab file transfer | None | POST request visible |
+| Conversion speed | Not affected by connection speed | Slower on slow connections |
+| Works offline | Yes (after page load) | No |
+
+## Advantages and Trade-offs
+
+### Advantages
+
+- **Complete privacy:** Your files never leave your device
+- **Free to use:** No server costs means the service can offer conversion for free
+- **Fast:** Large files convert quickly regardless of your connection speed
+- **Works offline:** Once loaded, conversion works without internet
+
+### Trade-offs
+
+- **Device-dependent:** Older or low-powered devices may be slower at processing
+- **Not ideal for bulk processing:** Converting hundreds of files at once works better in native applications
+
+## Summary
+
+- Most online converters send your file to a server for processing
+- "No upload" means all conversion happens inside your browser, on your own device
+- You can verify this with browser DevTools (Network tab) or the offline test
+- Browser-based conversion is faster, private, and free
+
+FileConv processes all files entirely in your browser. From the moment you select a file to the moment you download the result, no data is sent to any server.

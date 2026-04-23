@@ -1,0 +1,91 @@
+---
+title: Sharing HEIC Photos via LINE, Email, and Other Apps
+description: What happens when you share iPhone HEIC photos through different apps and services — and when you need to convert to JPG first. A practical guide by platform.
+date: "2026-03-22"
+tags: ["HEIC", "LINE", "Email", "Sharing"]
+---
+
+Sending an iPhone photo that the recipient "can't open," or having a file rejected by an app — these problems usually come down to HEIC compatibility. Here's what actually happens when you share HEIC photos through different platforms, and when you should convert to JPG first.
+
+## LINE
+
+### Sending as a photo (usually fine)
+
+When you share a photo through LINE's photo picker in a chat, LINE automatically converts it to JPG before sending. Android and Windows recipients will have no trouble opening it.
+
+**Two things to know:**
+1. **Quality is compressed:** LINE reduces photo quality during conversion. The recipient gets a smaller, slightly lower-quality version than the original.
+2. **Photos expire after 30 days:** Images shared in LINE chats are deleted from LINE's servers after 30 days. For long-term storage, download photos elsewhere.
+
+### Sending as a file (needs conversion)
+
+If you attach a `.heic` file using LINE's file-sharing feature (not the photo picker), it's sent as-is without conversion. Android and Windows users may not be able to open it.
+
+**Fix:** Convert to JPG with FileConv before attaching as a file.
+
+### LINE Keep and Notes
+
+Saving HEIC files to LINE Keep or a Note stores them in HEIC format. When accessed from an Android device or PC, they may not open correctly. Store important photos as JPG.
+
+## Email
+
+### iPhone's built-in Mail app (usually fine)
+
+When you attach a photo in Apple's Mail app, you're prompted to choose a size (Small, Medium, Large, Actual Size). During this process, iOS automatically converts the photo to JPG. The recipient gets a JPG regardless of whether the original was HEIC.
+
+### Gmail or Outlook app on iPhone (mostly fine)
+
+Attaching photos through the Gmail or Outlook app usually triggers an automatic conversion to JPG. However, if you locate a `.heic` file in the Files app and attach it directly, it may be sent as HEIC without conversion.
+
+**Fix:** When in doubt, convert to JPG first.
+
+### Gmail on desktop/web (needs conversion)
+
+If you open Gmail in a desktop browser, drag a `.heic` file into the compose window, and send — it goes as a HEIC attachment with no conversion. The recipient may not be able to open it.
+
+**Fix:** Convert to JPG before attaching when sending from a desktop browser.
+
+## Social Media (Instagram, X/Twitter, Facebook)
+
+Major social platforms accept HEIC uploads from iPhone and convert them automatically on the server side. For posting purposes, HEIC is generally fine.
+
+**Privacy note:** Even if HEIC is converted during upload, some platforms may process the original EXIF data (including GPS coordinates) before conversion. If your photo was taken at home and contains location data, your home address could potentially be read from the file. Removing EXIF data before uploading is a good habit, especially for photos taken at private locations.
+
+FileConv removes EXIF data automatically when converting HEIC to JPG — no extra steps needed.
+
+## Marketplace Apps (eBay, Facebook Marketplace, etc.)
+
+Most marketplace apps handle HEIC by converting it during upload. However, this varies by app and platform version.
+
+**The bigger concern is EXIF data.** Photos taken at home to list an item contain GPS coordinates in the EXIF metadata that point to your home address. Some marketplace apps strip this, but not all do.
+
+Best practice: convert to JPG and remove EXIF data before uploading product photos. You can do both in one step with FileConv.
+
+## Google Photos
+
+Uploading HEIC to Google Photos works well — Google converts and stores it in a compatible format. Shared links work for anyone, including Android and PC users.
+
+**Storage note:** Google Photos uses your Google account's free 15 GB storage (shared with Gmail and Drive). Heavy photo use can fill this quickly.
+
+**Downloading:** When you download from Google Photos, you typically get a JPG or WebP — not the original HEIC.
+
+## Cloud Storage (iCloud, Dropbox, Google Drive)
+
+Cloud services generally store HEIC files as-is. If you share a HEIC file link with a Windows or Android user, they may not be able to open it.
+
+**Fix:** Convert to JPG before uploading if the file needs to be accessible to non-Apple users.
+
+## Summary
+
+| Method | Auto-converts? | Key consideration |
+|---|---|---|
+| LINE photo (chat) | Yes | Quality compressed; expires in 30 days |
+| LINE file attachment | No | Recipient may not open HEIC |
+| iPhone Mail app | Yes | Safe to use directly |
+| Gmail/Outlook app | Usually | Direct .heic attachment may not convert |
+| Gmail desktop browser | No | Convert to JPG first |
+| Instagram / X / Facebook | Yes | EXIF data may still be read before conversion |
+| Marketplace apps | Usually | EXIF location data may be exposed |
+| Google Photos | Yes | 15 GB storage limit |
+
+When in doubt, converting to JPG — and removing EXIF data — before sharing is always the safest approach. FileConv handles both in one step.

@@ -5,7 +5,7 @@ date: "2026-03-01"
 tags: ["JPG", "PNG", "Image Format"]
 ---
 
-When converting HEIC to JPG or PNG, many people wonder: which one should I choose? This article breaks down the differences and explains which format fits each use case.
+When converting HEIC to JPG or PNG, many people wonder: which one should I choose? The short answer is "photos → JPG, logos and screenshots → PNG" — but understanding why helps you make the right call every time.
 
 ## Key Differences Between JPG and PNG
 
@@ -13,15 +13,15 @@ When converting HEIC to JPG or PNG, many people wonder: which one should I choos
 |---|---|---|
 | Compression | Lossy | Lossless |
 | File size | Small | Large |
-| Quality loss | Yes (degrades each save) | No |
+| Quality loss | Yes (degrades with each save) | No |
 | Transparency | Not supported | Supported |
 | Best for | Photos | Logos, illustrations, screenshots |
 
 ## Lossy vs. Lossless Compression
 
-**JPG (lossy compression):** Reduces file size by permanently discarding some image data. Every time you save a JPG, a small amount of quality is lost — and that loss accumulates over multiple saves.
+**JPG (lossy compression):** Reduces file size by permanently discarding image data that's difficult for the human eye to notice. Every time you save a JPG, a small amount of quality is lost — and that loss accumulates over multiple saves. Artifacts appear most visibly around high-contrast edges and fine text, producing a characteristic blur sometimes called "mosquito noise."
 
-**PNG (lossless compression):** Compresses the image while retaining all data. No matter how many times you save it, quality never degrades. The trade-off is a larger file size.
+**PNG (lossless compression):** Compresses the image while retaining all data. No matter how many times you save it, quality never degrades. The trade-off is a significantly larger file size.
 
 ## Choosing by Use Case
 
@@ -30,34 +30,53 @@ When converting HEIC to JPG or PNG, many people wonder: which one should I choos
 Landscape shots, portraits, food photos, and other everyday photos taken on your iPhone are well-suited to JPG.
 
 - Smaller file sizes save storage and bandwidth
-- Great for social media and websites
-- Works for printing too
+- Photos have many colors, so JPG compression artifacts are less noticeable
+- Works great for social media, websites, and printing
+
+JPG quality can be set from high (less compression) to low (more compression). Use high quality for printing or archiving, standard for social media and email, and light for web publishing or messaging.
 
 ### Logos, Icons, and Illustrations → PNG
 
-Images with text, sharp lines, or flat shapes are better as PNG.
+Images with text, sharp lines, or flat shapes look much better as PNG.
 
-- Edges and lines stay crisp
-- Supports transparent backgrounds
-- Can actually be smaller than JPG for images with few colors
+- Hard edges and fine lines stay crisp — no blurring around text
+- Supports transparent backgrounds (great for logos used over different colors)
+- Can actually produce smaller files than JPG for images with few distinct colors
 
 ### Screenshots → PNG
 
-Screen captures belong in PNG. Screenshots contain a lot of text and fine lines that become blurry when saved as JPG.
+Screen captures belong in PNG. Screenshots contain a lot of text and fine lines that become noticeably blurry when saved as JPG, making them hard to read.
+
+### A Third Option: WebP
+
+WebP is a modern format developed by Google that sits between JPG and PNG. It produces smaller files than JPG while also supporting transparency like PNG. It's increasingly used for web publishing, though some older software may not support it. FileConv can convert to WebP as well.
+
+## Quality Settings When Converting
+
+When converting to JPG with FileConv, you can choose from three quality levels:
+
+| Setting | Compression | Typical file size | Best for |
+|---|---|---|---|
+| High | Low | 3–5 MB | Printing, archiving |
+| Standard | Medium | 1–2 MB | Social media, email |
+| Light | High | Under 500 KB | Web publishing, messaging |
+
+The visual difference between Standard and High is barely perceptible on screen. Use Light for anything that doesn't need to be printed.
 
 ## Which Format for HEIC Conversions?
 
 For photos taken on an iPhone, **JPG is the right choice in most cases.**
 
 - Photos look great at JPG quality
-- File sizes are dramatically smaller than PNG
+- File sizes are dramatically smaller than PNG (the same photo in PNG can be 3–5× larger)
 - Works across web, email, and print
 
-Only choose PNG if you specifically need a transparent background or absolutely cannot tolerate any quality loss.
+Only choose PNG if you specifically need a transparent background, or if the image contains a lot of text or graphics where sharpness matters.
 
 ## Summary
 
-- **Photos and everyday snapshots** → JPG
+- **Photos and everyday snapshots** → JPG (Standard or High quality)
 - **Logos, icons, images needing transparency** → PNG
-- **Screenshots** → PNG
-- **Not sure?** → JPG (high quality setting) works fine
+- **Screenshots and documents** → PNG
+- **Web publishing** → WebP (or JPG at Light setting)
+- **Not sure?** → JPG (High quality) works fine in most cases

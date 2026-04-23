@@ -15,6 +15,7 @@ export default function WebpConverterPage() {
       allowedInputs={['webp']}
       allowedOutputs={['jpg', 'png']}
       defaultOutput="jpg"
+      faqNamespace="faqWebp"
     />
   )
 }

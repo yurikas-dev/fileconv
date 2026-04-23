@@ -20,19 +20,27 @@
   },
   "heicHero": {
     "h1": "HEIC to JPG / PNG Converter",
-    "descPart1": "Convert iPhone HEIC photos to JPG or PNG."
+    "descPart1": "Convert iPhone HEIC photos to JPG or PNG.",
+    "noteTitle": "What is HEIC and why convert it?",
+    "noteBody": "HEIC (High Efficiency Image Container) is the image format Apple has used since iOS 11. It achieves roughly half the file size of JPG at similar quality — great for iPhone storage, but a problem for compatibility. Windows and Android devices cannot open HEIC files by default. Converting to JPG ensures your photos can be viewed, printed, or shared anywhere without issues. This tool processes files entirely in your browser, so nothing is ever sent to a server."
   },
   "webpHero": {
     "h1": "WebP Converter",
-    "descPart1": "Convert WebP images to JPG or PNG."
+    "descPart1": "Convert WebP images to JPG or PNG.",
+    "noteTitle": "What is WebP and when do you need to convert it?",
+    "noteBody": "WebP is a modern image format developed by Google, designed for efficient web delivery. It produces smaller file sizes than JPG or PNG at comparable quality, making it ideal for websites. However, some older software, print services, and image editors do not support WebP. Converting WebP to JPG or PNG gives you maximum compatibility across all applications and platforms. All conversion happens locally in your browser — files are never uploaded."
   },
   "jpgHero": {
     "h1": "JPG Converter",
-    "descPart1": "Convert JPG images to PNG or WebP."
+    "descPart1": "Convert JPG images to PNG or WebP.",
+    "noteTitle": "When to convert JPG to PNG or WebP",
+    "noteBody": "JPG is the standard format for photographs, but there are times when PNG or WebP is the better choice. Convert to PNG when you need a transparent background or lossless quality — PNG preserves every pixel without compression artifacts, making it ideal for logos, diagrams, and graphics. Convert to WebP when optimizing images for a website — WebP typically reduces file size by 25–35% compared to JPG at the same visual quality, improving page load speed. Batch conversion of multiple files is supported."
   },
   "pngHero": {
     "h1": "PNG Converter",
-    "descPart1": "Convert PNG images to JPG or WebP."
+    "descPart1": "Convert PNG images to JPG or WebP.",
+    "noteTitle": "When to convert PNG to JPG or WebP",
+    "noteBody": "PNG (Portable Network Graphics) uses lossless compression, making it the go-to format for logos, screenshots, and images with transparency. For photographs and general sharing, however, PNG files are often much larger than necessary. Converting to JPG reduces file size significantly, making photos easier to email or print. Converting to WebP gives you the best of both worlds — smaller files than JPG with better quality retention. Files are processed locally in your browser, never sent to a server."
   },
   "hero": {
     "badge": "Free · No server upload · Fast",
@@ -97,6 +105,10 @@
         "a": "FileConv supports HEIC, JPG, PNG, and WebP. Visit the tool page for your input format to get started."
       },
       {
+        "q": "What audio formats are supported?",
+        "a": "The tool accepts MP3, AAC, WAV, FLAC, and M4A. Decoding relies on the browser's built-in audio engine, so support may vary slightly by browser. Chrome and Edge offer the broadest format compatibility."
+      },
+      {
         "q": "What is HEIC?",
         "a": "HEIC (High Efficiency Image Container) is an image format adopted by Apple. iPhones running iOS 11 or later save photos in HEIC by default. It achieves roughly half the file size of JPG at similar quality, but is not natively supported on Windows or Android."
       },
@@ -122,6 +134,147 @@
       }
     ]
   },
+  "faqHeic": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Is HEIC or JPG better quality?",
+        "a": "At equivalent settings, the visual quality is nearly identical. HEIC uses a more efficient compression algorithm, so it achieves the same quality at roughly half the file size of JPG. However, JPG wins on compatibility — it opens on Windows, Android, and virtually every app and service without any issues."
+      },
+      {
+        "q": "Can I convert multiple HEIC files at once?",
+        "a": "Yes. Select multiple HEIC files in the file picker or drag and drop them all at once. The tool will convert them in batch and let you download each file individually."
+      },
+      {
+        "q": "What is EXIF data and should I remove it?",
+        "a": "EXIF is metadata embedded in your photo — it includes the date and time, GPS coordinates, camera model, and more. When sharing photos online, EXIF data can expose your home address or other private details. We recommend enabling EXIF removal before converting. The option is on by default when converting to JPG.",
+        "link": "/en/blog/what-is-exif",
+        "linkText": "Learn more about EXIF data"
+      },
+      {
+        "q": "Can Live Photos be converted?",
+        "a": "Yes, but only the still image portion is converted. The motion (video) component of a Live Photo is not included in the output."
+      },
+      {
+        "q": "Are you sure my files are not uploaded?",
+        "a": "Absolutely. This tool uses a JavaScript library called heic2any, and all conversion happens in your browser's memory. You can verify this by opening browser DevTools (F12), going to the Network tab — no file transfer will appear during conversion.",
+        "link": "/en/blog/no-upload-conversion",
+        "linkText": "How browser-based conversion works"
+      }
+    ]
+  },
+  "faqJpg": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Does converting JPG to PNG improve quality?",
+        "a": "No. JPG compression artifacts are baked into the pixel data — converting to PNG preserves those pixels exactly but cannot recover lost detail. The benefit of converting to PNG is that future edits will not introduce additional compression artifacts, and you gain support for transparency."
+      },
+      {
+        "q": "Should I convert to WebP or PNG?",
+        "a": "It depends on your use case. For websites, WebP is the better choice — it typically reduces file size by 15–30% compared to JPG at the same quality. If you need transparency or are working with design software that does not support WebP, choose PNG."
+      },
+      {
+        "q": "What happens to file size when converting JPG to PNG?",
+        "a": "File size generally increases. JPG uses lossy compression (discards some data to achieve small files), while PNG uses lossless compression (preserves every pixel). For the same image, PNG is typically 3–5× larger than JPG."
+      },
+      {
+        "q": "Can I convert multiple files at once?",
+        "a": "Yes. Drag and drop multiple JPG files or select them all in the file picker. Each converted file can be downloaded individually."
+      },
+      {
+        "q": "Are my files kept private?",
+        "a": "Yes. All conversion happens locally in your browser — no files are sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while converting.",
+        "link": "/en/blog/no-upload-conversion",
+        "linkText": "How browser-based conversion works"
+      }
+    ]
+  },
+  "faqPng": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What happens to transparency when converting PNG to JPG?",
+        "a": "JPG does not support transparency (alpha channel), so transparent areas are replaced with a white background. If you need to keep transparency, convert to WebP instead — it fully supports transparent backgrounds."
+      },
+      {
+        "q": "How can I reduce the file size of a PNG?",
+        "a": "For photos and images with gradients, converting to JPG gives the biggest size reduction. For web use, WebP is the most efficient — it can be 25–35% smaller than an equivalent JPG. If you need transparency, WebP achieves smaller sizes than PNG while keeping the transparent areas intact."
+      },
+      {
+        "q": "Which is better for printing, PNG or JPG?",
+        "a": "Both work for printing. For photographs, JPG at high quality is fine. For logos, text, or technical drawings where sharpness matters, PNG is preferable since it has no compression artifacts."
+      },
+      {
+        "q": "Can I convert multiple files at once?",
+        "a": "Yes. Drag and drop multiple PNG files or select them all in the file picker. Each converted file can be downloaded individually."
+      },
+      {
+        "q": "Are my files kept private?",
+        "a": "Yes. All conversion happens locally in your browser — no files are sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while converting.",
+        "link": "/en/blog/no-upload-conversion",
+        "linkText": "How browser-based conversion works"
+      }
+    ]
+  },
+  "faqWebp": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Will the file size increase when converting WebP to JPG?",
+        "a": "Usually yes. WebP is more efficient than JPG, so converting to JPG typically results in a larger file at the same quality level. The trade-off is vastly better compatibility — JPG opens everywhere, including older software and print services."
+      },
+      {
+        "q": "Is transparency preserved when converting WebP to JPG?",
+        "a": "No. JPG does not support transparency, so transparent areas are replaced with a white background. To preserve transparency, convert to PNG instead."
+      },
+      {
+        "q": "What software doesn't support WebP?",
+        "a": "Older versions of Photoshop (before CC 2021), some print services, older Windows image viewers, and some email clients may not display WebP. Converting to JPG or PNG ensures the file opens anywhere without issues."
+      },
+      {
+        "q": "Can I convert multiple files at once?",
+        "a": "Yes. Drag and drop multiple WebP files or select them all in the file picker. Each converted file can be downloaded individually."
+      },
+      {
+        "q": "Are my files kept private?",
+        "a": "Yes. All conversion happens locally in your browser — no files are sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while converting.",
+        "link": "/en/blog/no-upload-conversion",
+        "linkText": "How browser-based conversion works"
+      }
+    ]
+  },
+  "faqAudio": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What audio formats are supported?",
+        "a": "The tool accepts MP3, AAC, WAV, FLAC, and M4A. Decoding relies on the browser's built-in audio engine, so support may vary slightly by browser. Chrome and Edge offer the broadest format compatibility."
+      },
+      {
+        "q": "What quality will the output MP3 be?",
+        "a": "Files are encoded at 128 kbps MP3, which is suitable for general listening and voice recordings. Since MP3 is lossy, converting from a lossless format (WAV or FLAC) means some audio data is discarded — the result will be smaller but not bit-for-bit identical to the original."
+      },
+      {
+        "q": "FLAC conversion doesn't work in Safari",
+        "a": "Safari's audio engine does not support FLAC decoding, so FLAC → MP3 conversion will fail in Safari. Use Chrome or Edge for FLAC files. WAV, AAC, and M4A work fine in Safari."
+      },
+      {
+        "q": "Can I convert multiple files at once?",
+        "a": "Yes. Drag and drop multiple audio files or select them all in the file picker. Each file is converted and can be downloaded individually."
+      },
+      {
+        "q": "Are my files kept private?",
+        "a": "Yes. Conversion uses the browser's Web Audio API and the lamejs JavaScript library entirely in your browser. No audio data is sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while converting.",
+        "link": "/en/blog/no-upload-conversion",
+        "linkText": "How browser-based conversion works"
+      }
+    ]
+  },
+  "audioHero": {
+    "noteTitle": "About the MP3 Converter",
+    "noteBody": "MP3 is the most widely supported audio format, compatible with virtually every device, app, and platform. Convert M4A or AAC files recorded on iPhone, lossless WAV or FLAC files, and other audio formats to MP3 for universal playback. All conversion runs entirely in your browser using the Web Audio API — files are never sent to a server. Multiple files can be converted in one session."
+  },
   "audioConverter": {
     "formatLabel": "Output Format",
     "formatInputs": "Accepted: ",
@@ -141,6 +294,48 @@
     "save": "Save",
     "error": "Error",
     "decodeError": "This format is not supported in your browser"
+  },
+  "blogPost": {
+    "backLink": "Articles",
+    "readingTime": "{minutes} min read"
+  },
+  "blogCta": {
+    "default": {
+      "title": "Free file tools that run in your browser",
+      "desc": "Files are never sent to a server. Browse all available tools from the home page.",
+      "href": "/en",
+      "btn": "View all tools →"
+    },
+    "what-is-exif": {
+      "title": "Remove EXIF Data and Convert to JPG",
+      "desc": "Strip GPS location, timestamps, and camera info while converting. All processing happens in your browser.",
+      "href": "/en/tools/converter/heic-to-jpg",
+      "btn": "Try EXIF removal + converter →"
+    },
+    "heic-share-tips": {
+      "title": "Remove EXIF and Convert to JPG Before Sharing",
+      "desc": "Protect your privacy by stripping location data before sending photos. Conversion and EXIF removal in one step.",
+      "href": "/en/tools/converter/heic-to-jpg",
+      "btn": "Try EXIF removal + converter →"
+    },
+    "jpg-vs-png": {
+      "title": "Convert HEIC to JPG or PNG",
+      "desc": "Choose your output format and quality level. Files are processed entirely in your browser.",
+      "href": "/en/tools/converter/heic-to-jpg",
+      "btn": "Try the converter →"
+    },
+    "reduce-image-size": {
+      "title": "Convert with Quality Control",
+      "desc": "Choose from High, Standard, or Light quality when converting to JPG. Processed in your browser.",
+      "href": "/en/tools/converter/heic-to-jpg",
+      "btn": "Try the converter →"
+    },
+    "iphone-save-as-jpg": {
+      "title": "Convert Existing HEIC Photos to JPG",
+      "desc": "Batch convert photos taken before your settings change. Everything runs in your browser.",
+      "href": "/en/tools/converter/heic-to-jpg",
+      "btn": "Try the converter →"
+    }
   },
   "header": {
     "blog": "Tips"

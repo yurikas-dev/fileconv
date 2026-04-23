@@ -19,6 +19,7 @@ export default function PngConverterPage({ params: { locale } }: Props) {
       allowedInputs={['png']}
       allowedOutputs={['jpg', 'webp']}
       defaultOutput="jpg"
+      faqNamespace="faqPng"
     />
   )
 }

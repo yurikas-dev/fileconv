@@ -19,6 +19,7 @@ export default function JpgConverterPage({ params: { locale } }: Props) {
       allowedInputs={['jpg']}
       allowedOutputs={['png', 'webp']}
       defaultOutput="png"
+      faqNamespace="faqJpg"
     />
   )
 }

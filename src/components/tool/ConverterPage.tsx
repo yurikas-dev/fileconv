@@ -1,6 +1,8 @@
 import { getTranslations, getMessages } from 'next-intl/server'
 import { NextIntlClientProvider } from 'next-intl'
 import { ConverterTool } from './ConverterTool'
+import { HowItWorks } from './HowItWorks'
+import { Faq } from './Faq'
 
 type Format = 'jpg' | 'png' | 'webp'
 
@@ -9,6 +11,7 @@ type ConverterPageProps = {
   allowedInputs: string[]
   allowedOutputs: Format[]
   defaultOutput: Format
+  faqNamespace?: string
 }
 
 const jsonLd = {
@@ -32,6 +35,7 @@ export async function ConverterPage({
   allowedInputs,
   allowedOutputs,
   defaultOutput,
+  faqNamespace = 'faq',
 }: ConverterPageProps) {
   const [t, tc, messages] = await Promise.all([
     getTranslations(heroNamespace),
@@ -68,6 +72,14 @@ export async function ConverterPage({
           defaultOutput={defaultOutput}
           hideExif={!(allowedInputs.includes('heic') && allowedOutputs.includes('jpg'))}
         />
+        <div className="mt-10 p-6 bg-gray-50 border border-gray-100 rounded-2xl">
+          <h2 className="text-base font-semibold text-gray-800 mb-2">{t('noteTitle')}</h2>
+          <p className="text-sm text-gray-600 leading-relaxed">{t('noteBody')}</p>
+        </div>
+        <div className="mt-14">
+          <HowItWorks />
+          <Faq namespace={faqNamespace} />
+        </div>
       </div>
     </NextIntlClientProvider>
   )

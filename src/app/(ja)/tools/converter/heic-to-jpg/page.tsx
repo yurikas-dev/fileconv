@@ -17,6 +17,7 @@ export default function HeicToJpgPage() {
       allowedInputs={['heic']}
       allowedOutputs={['jpg', 'png']}
       defaultOutput="jpg"
+      faqNamespace="faqHeic"
     />
   )
 }

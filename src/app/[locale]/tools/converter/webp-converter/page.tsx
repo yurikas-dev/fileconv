@@ -19,6 +19,7 @@ export default function WebpConverterPage({ params: { locale } }: Props) {
       allowedInputs={['webp']}
       allowedOutputs={['jpg', 'png']}
       defaultOutput="jpg"
+      faqNamespace="faqWebp"
     />
   )
 }

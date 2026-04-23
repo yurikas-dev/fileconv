@@ -15,6 +15,7 @@ export default function JpgConverterPage() {
       allowedInputs={['jpg']}
       allowedOutputs={['png', 'webp']}
       defaultOutput="png"
+      faqNamespace="faqJpg"
     />
   )
 }

@@ -15,6 +15,7 @@ export default function PngConverterPage() {
       allowedInputs={['png']}
       allowedOutputs={['jpg', 'webp']}
       defaultOutput="jpg"
+      faqNamespace="faqPng"
     />
   )
 }

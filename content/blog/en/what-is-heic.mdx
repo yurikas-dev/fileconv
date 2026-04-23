@@ -5,11 +5,13 @@ date: "2026-02-01"
 tags: ["HEIC", "Image Format", "Basics"]
 ---
 
+If you've ever sent an iPhone photo to a friend or colleague only to hear "I can't open it," the culprit is almost certainly **HEIC format**. This article explains what HEIC is, why Apple adopted it, and what you can do about it.
+
 ## What Is HEIC?
 
 HEIC (High Efficiency Image Container) is an image format introduced by Apple with iOS 11 in 2017.
 
-When you go to **Settings → Camera → Formats** on your iPhone and select "High Efficiency," all photos you take are saved in HEIC format.
+When you go to **Settings → Camera → Formats** on your iPhone and select "High Efficiency," all photos you take are saved in HEIC format. In many countries, iPhones ship with this setting enabled by default, which means most iPhone users are shooting in HEIC without realizing it.
 
 ## Why Did Apple Switch from JPG to HEIC?
 
@@ -17,20 +19,55 @@ The reason is simple: **smaller file sizes**.
 
 HEIC achieves roughly the **same image quality as JPG at about half the file size**. For smartphone users who take thousands of photos, this translates to significant storage savings.
 
-| Format | Compression | Compatibility | Transparency |
-|---|---|---|---|
-| HEIC | ◎ Excellent | △ Apple-centric | ○ |
-| JPG | ○ Standard | ◎ Universal | × |
-| PNG | △ Lower | ◎ Universal | ◎ |
+For example, a photo that would be 5 MB as a JPG becomes roughly 2–3 MB in HEIC. Across 1,000 photos, that's a difference of 2–3 GB — a meaningful amount on a phone with limited storage.
+
+The technical foundation of HEIC is H.265 (the same codec used for video compression), which is far more efficient than the JFIF standard JPG relies on.
+
+| Format | Compression | Compatibility | Transparency | Best For |
+|---|---|---|---|---|
+| HEIC | ◎ Excellent | △ Apple-centric | ○ | iPhone photo storage |
+| JPG | ○ Standard | ◎ Universal | × | Web, print, email |
+| PNG | △ Lower | ◎ Universal | ◎ | Logos, screenshots |
 
 ## Why Can't Windows Open HEIC Files?
 
-HEIC is a relatively new format, and Windows and Android do not support it by default. This is the root cause of the demand to convert HEIC files to JPG.
+HEIC is a relatively new format, and Windows and Android do not support it by default.
+
+When you try to open a HEIC file in Windows Photos, you'll see an error like "You need an app to open this file." While Microsoft offers a free "HEIF Image Extensions" package in the Microsoft Store that adds HEIC support, it's an extra step that most users don't know about.
+
+Android devices have a similar problem — many stock gallery apps can't open HEIC files either.
+
+This is the root cause of the widespread need to convert HEIC files to JPG.
+
+## What Happens When You Send HEIC Files?
+
+The experience varies depending on what the recipient is using:
+
+- **iPhone to iPhone** — No problem; HEIC is displayed natively
+- **iPhone to Android** — May not display; depends on the device and app
+- **iPhone to Windows PC** — Can't open without the HEIF extension installed
+- **Uploading to print services** — Many services don't accept HEIC
+- **Posting to marketplace apps** — Some apps auto-convert; others don't
+
+## How to Convert HEIC to JPG
+
+There are a few ways to handle HEIC files:
+
+### Change the iPhone camera setting
+
+Go to **Settings → Camera → Formats → Most Compatible**. Future photos will be saved as JPG. This doesn't affect photos already taken.
+
+### Transfer via AirDrop or iCloud
+
+When transferring photos from iPhone to a Mac or PC through certain methods, iOS may automatically convert to JPG for compatibility — though this behavior depends on your settings.
+
+### Use a browser-based conversion tool
+
+Tools like FileConv convert HEIC to JPG or PNG directly in your browser. No software to install, no files sent to a server. You can convert multiple files at once and download them immediately.
 
 ## Summary
 
-- HEIC is Apple's high-efficiency image format — roughly half the size of JPG
-- Near-identical quality with significantly less storage usage
+- HEIC is Apple's high-efficiency image format, introduced in iOS 11 (2017)
+- Roughly half the file size of JPG at near-identical quality
 - Not natively supported on Windows or Android, driving the need for conversion
-
-If you need to convert HEIC files right now, use the free tool on this site.
+- Three main solutions: change iPhone settings, use transfer auto-conversion, or use a browser tool

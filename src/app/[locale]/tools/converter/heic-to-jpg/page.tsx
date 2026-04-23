@@ -19,6 +19,7 @@ export default function HeicToJpgPage({ params: { locale } }: Props) {
       allowedInputs={['heic']}
       allowedOutputs={['jpg', 'png']}
       defaultOutput="jpg"
+      faqNamespace="faqHeic"
     />
   )
 }
