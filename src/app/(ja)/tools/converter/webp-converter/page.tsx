@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
 import { ConverterPage } from '@/components/tool/ConverterPage'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -9,6 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function WebpConverterPage() {
+  setRequestLocale('ja')
   return (
     <ConverterPage
       heroNamespace="webpHero"

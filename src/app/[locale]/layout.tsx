@@ -1,5 +1,4 @@
 import { setRequestLocale } from 'next-intl/server'
-import { routing } from '@/i18n/routing'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 
@@ -9,7 +8,7 @@ type Props = {
 }
 
 export function generateStaticParams() {
-  return routing.locales.map(locale => ({ locale }))
+  return [{ locale: 'en' }]
 }
 
 export default function LocaleLayout({ children, params: { locale } }: Props) {

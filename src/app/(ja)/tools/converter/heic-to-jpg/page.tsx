@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ConverterPage } from '@/components/tool/ConverterPage'
 
 export async function generateMetadata(): Promise<Metadata> {
+  setRequestLocale('ja')
   const t = await getTranslations('heicHero')
   return {
     title: 'HEIC → JPG・PNG 変換｜FileConv' + t('qualityHigh'),
@@ -11,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function HeicToJpgPage() {
+  setRequestLocale('ja')
   return (
     <ConverterPage
       heroNamespace="heicHero"

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
 import { AudioConverterPage } from '@/components/tool/AudioConverterPage'
 
 export const metadata: Metadata = {
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
 }
 
 export default function ToMp3Page() {
+  setRequestLocale('ja')
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <div className="mb-8 text-center">
