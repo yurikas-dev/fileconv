@@ -352,6 +352,7 @@
   },
   "footer": {
     "tagline": "FileConv — ファイルはサーバーに送信されません",
+    "about": "このサービスについて",
     "blog": "記事",
     "privacy": "プライバシー",
     "contact": "お問い合わせ"

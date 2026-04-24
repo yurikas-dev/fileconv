@@ -19,6 +19,9 @@ export async function Footer({ locale }: Props) {
               {t('blog')}
             </Link>
           )}
+          <Link href={locale === 'en' ? '/en/about' : '/about'} className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
+            {t('about')}
+          </Link>
           <Link href={locale === 'en' ? '/en/privacy' : '/privacy'} className="text-xs text-gray-400 hover:text-gray-600 transition-colors">
             {t('privacy')}
           </Link>
