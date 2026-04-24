@@ -13,8 +13,7 @@ export default function AboutPage({ params: { locale } }: Props) {
   setRequestLocale(locale)
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-2xl font-bold text-gray-900 mb-1">About FileConv</h1>
-      <p className="text-xs text-gray-400 mb-10">FileConvについて</p>
+      <h1 className="text-2xl font-bold text-gray-900 mb-10">About FileConv</h1>
 
       <div className="space-y-10 text-sm text-gray-700 leading-relaxed">
         <section>
@@ -34,8 +33,9 @@ export default function AboutPage({ params: { locale } }: Props) {
         <section>
           <h2 className="text-base font-semibold text-gray-900 mb-3">Why we built this</h2>
           <p>
-            The idea came from a simple frustration: trying to open an iPhone HEIC photo on a
-            Windows PC and feeling uneasy about uploading personal photos to an unknown conversion service.
+            The idea came from a familiar frustration: wanting to open an iPhone HEIC photo on
+            Windows, feeling uneasy about uploading it anywhere, and not knowing which conversion
+            service to trust.
           </p>
           <p className="mt-3">
             Photos often contain sensitive metadata — GPS location, timestamps, and more.
