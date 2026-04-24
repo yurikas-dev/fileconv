@@ -13,6 +13,7 @@
     "@types/piexifjs": "^1.0.0",
     "gray-matter": "^4.0.3",
     "heic2any": "^0.0.4",
+    "jszip": "^3.10.1",
     "lamejs": "^1.2.1",
     "lucide-react": "^0.383.0",
     "next": "^14.2.35",
@@ -24,6 +25,7 @@
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@types/jszip": "^3.4.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

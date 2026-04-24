@@ -293,6 +293,7 @@
     "statDone": "Done",
     "statSize": "Total size",
     "save": "Save",
+    "saveAll": "Save All",
     "error": "Error",
     "decodeError": "This format is not supported in your browser"
   },

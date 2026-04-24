@@ -301,6 +301,7 @@
     "statDone": "完了",
     "statSize": "合計サイズ",
     "save": "保存",
+    "saveAll": "まとめて保存",
     "error": "エラー",
     "decodeError": "このブラウザでは対応していない形式です"
   },

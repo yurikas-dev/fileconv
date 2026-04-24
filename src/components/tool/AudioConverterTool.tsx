@@ -167,6 +167,21 @@ export function AudioConverterTool() {
   const doneCount = files.filter((f) => f.status === 'done').length;
   const totalSize = files.reduce((s, f) => s + f.file.size, 0);
 
+  const saveAll = async () => {
+    const JSZip = (await import('jszip')).default
+    const zip = new JSZip()
+    for (const item of files) {
+      if (item.status !== 'done' || !item.url) continue
+      const blob = await fetch(item.url).then(r => r.blob())
+      zip.file(`${item.file.name.replace(/\.[^.]+$/, '')}.mp3`, blob)
+    }
+    const zipBlob = await zip.generateAsync({ type: 'blob' })
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(zipBlob)
+    a.download = 'converted.zip'
+    a.click()
+  }
+
   return (
     <div className='bg-white border border-gray-200 rounded-2xl p-6 shadow-sm mb-12'>
       {/* 出力フォーマット */}
@@ -282,7 +297,16 @@ export function AudioConverterTool() {
       {allDone && (
         <div className='flex items-center gap-3 bg-teal-50 border border-teal-200 rounded-xl px-4 py-3 mb-4 text-sm font-medium text-teal-700'>
           <ShieldCheck className='w-4 h-4 flex-shrink-0' />
-          {t('doneMessage')}
+          <span className='flex-1'>{t('doneMessage')}</span>
+          {doneCount > 1 && (
+            <button
+              onClick={saveAll}
+              className='flex items-center gap-1.5 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-700 px-3 py-1.5 rounded-lg transition-colors flex-shrink-0'
+            >
+              <Download className='w-3.5 h-3.5' />
+              {t('saveAll')}
+            </button>
+          )}
         </div>
       )}
 

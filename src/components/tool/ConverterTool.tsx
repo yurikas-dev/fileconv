@@ -266,14 +266,19 @@ export function ConverterTool({
     !hasWaiting &&
     files.every((f) => f.status === 'done' || f.status === 'error');
 
-  const saveAll = () => {
-    files.forEach((item, i) => {
-      if (item.status !== 'done' || !item.url) return
-      const a = document.createElement('a')
-      a.href = item.url
-      a.download = `${item.file.name.replace(/\.[^.]+$/, '')}.${format}`
-      setTimeout(() => a.click(), i * 200)
-    })
+  const saveAll = async () => {
+    const JSZip = (await import('jszip')).default
+    const zip = new JSZip()
+    for (const item of files) {
+      if (item.status !== 'done' || !item.url) continue
+      const blob = await fetch(item.url).then(r => r.blob())
+      zip.file(`${item.file.name.replace(/\.[^.]+$/, '')}.${format}`, blob)
+    }
+    const zipBlob = await zip.generateAsync({ type: 'blob' })
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(zipBlob)
+    a.download = 'converted.zip'
+    a.click()
   }
 
   return (
