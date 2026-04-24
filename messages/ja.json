@@ -76,6 +76,7 @@
     "statSize": "合計サイズ",
     "waiting": "待機中",
     "save": "保存",
+    "saveAll": "まとめて保存",
     "error": "エラー",
     "exifAutoRemoved": "変換時にEXIF情報は自動的に除去されます"
   },

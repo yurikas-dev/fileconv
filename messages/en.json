@@ -76,6 +76,7 @@
     "statSize": "Total Size",
     "waiting": "Waiting",
     "save": "Save",
+    "saveAll": "Save All",
     "error": "Error",
     "exifAutoRemoved": "EXIF data is automatically removed during conversion"
   },

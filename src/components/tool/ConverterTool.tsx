@@ -266,6 +266,16 @@ export function ConverterTool({
     !hasWaiting &&
     files.every((f) => f.status === 'done' || f.status === 'error');
 
+  const saveAll = () => {
+    files.forEach((item, i) => {
+      if (item.status !== 'done' || !item.url) return
+      const a = document.createElement('a')
+      a.href = item.url
+      a.download = `${item.file.name.replace(/\.[^.]+$/, '')}.${format}`
+      setTimeout(() => a.click(), i * 200)
+    })
+  }
+
   return (
     <div className='bg-white border border-gray-200 rounded-2xl p-6 shadow-sm mb-12'>
       {/* format selection */}
@@ -434,7 +444,16 @@ export function ConverterTool({
       {allDone && (
         <div className='flex items-center gap-3 bg-teal-50 border border-teal-200 rounded-xl px-4 py-3 mb-4 text-sm font-medium text-teal-700'>
           <ShieldCheck className='w-4 h-4 flex-shrink-0' />
-          {t('doneMessage')}
+          <span className='flex-1'>{t('doneMessage')}</span>
+          {doneCount > 1 && (
+            <button
+              onClick={saveAll}
+              className='flex items-center gap-1.5 text-xs font-semibold text-white bg-teal-600 hover:bg-teal-700 px-3 py-1.5 rounded-lg transition-colors flex-shrink-0'
+            >
+              <Download className='w-3.5 h-3.5' />
+              {t('saveAll')}
+            </button>
+          )}
         </div>
       )}
 
