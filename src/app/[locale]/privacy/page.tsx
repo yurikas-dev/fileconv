@@ -13,7 +13,7 @@ export default function PrivacyPageEn({ params: { locale } }: Props) {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900 mb-1">Privacy Policy</h1>
-      <p className="text-xs text-gray-400 mb-10">Last updated: April 2026</p>
+      <p className="text-xs text-gray-400 mb-10">Last updated: April 24, 2026</p>
 
       <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
 
@@ -28,7 +28,7 @@ export default function PrivacyPageEn({ params: { locale } }: Props) {
         <section>
           <h2 className="text-base font-semibold text-gray-900 mb-2">Analytics</h2>
           <p>
-            We may use Google Analytics to help us understand how visitors use this service.
+            We use Google Analytics (Google Analytics 4) to help us understand how visitors use this service.
             Google Analytics collects anonymous data such as page views and usage patterns using cookies.
             No personally identifiable information is collected.
             For more details, see{' '}

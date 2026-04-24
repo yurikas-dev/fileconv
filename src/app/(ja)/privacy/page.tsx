@@ -9,7 +9,7 @@ export default function PrivacyPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900 mb-1">プライバシーポリシー</h1>
-      <p className="text-xs text-gray-400 mb-10">最終更新：2026年4月</p>
+      <p className="text-xs text-gray-400 mb-10">最終更新：2026年4月24日</p>
 
       <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
         <section>
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-base font-semibold text-gray-900 mb-2">アクセス解析</h2>
           <p>
-            当サービスでは、サービス改善を目的として Google アナリティクスを使用する場合があります。
+            当サービスでは、サービス改善を目的として Google アナリティクス（Google Analytics 4）を使用しています。
             Google アナリティクスは Cookie を使用し、ページビューや利用状況などの匿名データを収集します。
             収集されるデータに個人を特定できる情報は含まれません。
             詳細は{' '}
