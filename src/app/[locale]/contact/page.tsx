@@ -21,8 +21,18 @@ export default function ContactPageEn({ params: { locale } }: Props) {
       <div className="bg-white border border-gray-100 rounded-2xl p-8 text-sm text-gray-700 leading-relaxed space-y-6">
         <p>
           Have a question, found a bug, or want to share feedback about FileConv?
-          We&apos;d love to hear from you — please use the form below.
+          We review all messages and use your input to keep improving the service.
         </p>
+
+        <div className="space-y-3 bg-gray-50 rounded-xl p-4 text-gray-600">
+          <p className="font-semibold text-gray-800 text-xs uppercase tracking-wider">Common reasons to reach out</p>
+          <ul className="space-y-1.5">
+            <li>· Conversion not working or returning an error</li>
+            <li>· Request for a new file format to be supported</li>
+            <li>· Questions about our privacy policy or terms of use</li>
+            <li>· General feedback or suggestions</li>
+          </ul>
+        </div>
 
         <div className="pt-2">
           <a
@@ -41,7 +51,7 @@ export default function ContactPageEn({ params: { locale } }: Props) {
         </div>
 
         <p className="text-xs text-gray-400 pt-2 border-t border-gray-100">
-          We will do our best to respond promptly.
+          We aim to respond within 2–3 business days.
         </p>
       </div>
     </div>
