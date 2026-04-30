@@ -71,3 +71,45 @@ Tools like FileConv convert HEIC to JPG or PNG directly in your browser. No soft
 - Roughly half the file size of JPG at near-identical quality
 - Not natively supported on Windows or Android, driving the need for conversion
 - Three main solutions: change iPhone settings, use transfer auto-conversion, or use a browser tool
+
+## HEIC vs. HEIF: Are They the Same?
+
+You'll often see both terms used, but they refer to slightly different things:
+
+- **HEIF (High Efficiency Image Format)** — The container format specification defined as an ISO standard. It's a flexible "wrapper" that can hold still images, image sequences, and more using different codecs
+- **HEIC (High Efficiency Image Container)** — Apple's specific file extension for HEIF files encoded using H.265 (HEVC). The `.heic` files on your iPhone fall into this category
+
+In practice, most people use HEIC and HEIF interchangeably, and that's fine. HEIF is the broader standard; HEIC is Apple's version of it.
+
+## What Happens to Live Photos in HEIC?
+
+iPhone Live Photos are stored as two files: a still image (`.heic`) and a short video clip (`.mov`). When you convert a Live Photo's HEIC file to JPG using a tool like FileConv, **only the still image portion is converted**. The motion (video) component is not included in the output.
+
+If you need to preserve the Live Photo motion, share the photo directly from your iPhone, or use a dedicated app that supports Live Photo export.
+
+## Is It Fine to Keep Shooting in HEIC?
+
+From a storage efficiency standpoint, keeping HEIC is the smart choice. Your iPhone uses significantly less space per photo without sacrificing quality.
+
+The only times conversion becomes necessary:
+
+- Moving photos to a Windows or Android device
+- Uploading to a print service or marketplace app
+- Editing in software that doesn't support HEIC
+- Sharing with someone whose device can't open HEIC
+
+If you primarily view your photos on an iPhone or Mac, there's no reason to change. Convert only when you need to use photos outside the Apple ecosystem.
+
+## Frequently Asked Questions
+
+### Is HEIC only for Apple devices?
+
+Not technically. HEIF is an ISO open standard, not an Apple-proprietary format. However, Apple is by far the biggest adopter, which is why HEIC is strongly associated with iPhones. Other camera manufacturers have started supporting HEIF too, but iPhone remains the most common source.
+
+### Does converting HEIC to JPG reduce quality?
+
+The quality difference is negligible in practice. Converting to JPG at high quality preserves nearly all visible detail. Since JPG uses lossy compression, avoid re-saving the same JPG multiple times — each save introduces a small amount of additional compression. Convert once and keep the result.
+
+### If I change iPhone settings to JPG, do my existing HEIC files get converted?
+
+No. Changing **Settings → Camera → Formats → Most Compatible** only affects new photos. Photos already stored as HEIC remain as HEIC. To convert existing photos, use FileConv's batch conversion feature — you can drop in multiple files at once and download them all as JPG.

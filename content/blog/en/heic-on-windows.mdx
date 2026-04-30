@@ -83,3 +83,45 @@ With "Automatic" selected, iOS detects that it's connected to a Windows PC and c
 | iPhone transfer setting | Low (once) | No | ⭐⭐⭐ |
 
 For a one-time batch of photos, use a conversion tool. For ongoing Windows use, install the HEIF extension. For regular iPhone-to-PC transfers, change the iPhone setting — and combine approaches as needed.
+
+## Common Troubleshooting
+
+### Installed the codec but HEIC files still won't open
+
+If files still won't open after installing "HEIF Image Extensions," try these steps:
+
+- **Restart Windows** — Some codec installations require a reboot to take effect
+- **Update the Photos app** — Open the Microsoft Store, search for "Photos," and install any available updates
+- **Test with a different file** — The original file may be corrupted; try another HEIC photo
+- **Install HEVC Video Extensions too** — Some systems need both packages. Search for "HEVC Video Extensions" in the Microsoft Store
+
+### Thumbnails appear but files won't open
+
+This usually means the codec is partially installed. Uninstall "HEIF Image Extensions," restart your PC, then reinstall it from the Microsoft Store.
+
+### Converted JPG colors look wrong or oversaturated
+
+HEIC files often use the "Display P3" wide color profile. Some conversion tools don't handle this profile accurately, resulting in shifted or oversaturated colors. FileConv uses the browser's native image APIs, which convert color profiles correctly.
+
+### Transferred photos are missing in File Explorer
+
+When connecting via USB, navigate here in File Explorer:
+
+```
+This PC → Apple iPhone → Internal Storage → DCIM → [numbered folder]
+```
+
+HEIC files use a `.heic` or `.HEIC` extension. If extensions aren't visible, enable them under **View → Show → File name extensions**.
+
+## HEIC vs. HEIF: What's the Difference?
+
+These terms are often used interchangeably, but they're technically distinct:
+
+- **HEIF (High Efficiency Image Format)** — The container specification. A broad standard that can hold still images, image sequences, and video using various codecs
+- **HEIC (High Efficiency Image Container)** — The specific file extension Apple uses for HEIF files encoded with H.265 (HEVC). The `.heic` files on your iPhone are this format
+
+In everyday usage, HEIC and HEIF mean the same thing. Technically, HEIF is the broader standard and HEIC is Apple's implementation of it.
+
+## Does Android Have the Same Problem?
+
+Yes. Android doesn't support HEIC natively either. Sending HEIC photos from an iPhone to an Android device via email or messaging often results in files that won't open or display only as icons. When sharing with Android users, convert to JPG first to guarantee compatibility.
