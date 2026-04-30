@@ -12,8 +12,8 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: 'https://fileconv.app/',
       languages: {
         'ja': 'https://fileconv.app/',
-        'en': 'https://fileconv.app/en',
-        'x-default': 'https://fileconv.app/en',
+        'en': 'https://fileconv.app/en/',
+        'x-default': 'https://fileconv.app/en/',
       },
     },
   }

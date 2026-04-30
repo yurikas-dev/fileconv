@@ -8,14 +8,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const enPosts = getAllPosts('en')
 
   const blogUrls = posts.map(post => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
+    url: `${BASE_URL}/blog/${post.slug}/`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
   const enBlogUrls = enPosts.map(post => ({
-    url: `${BASE_URL}/en/blog/${post.slug}`,
+    url: `${BASE_URL}/en/blog/${post.slug}/`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
@@ -30,14 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const toolUrls = toolPaths.map(path => ({
-    url: `${BASE_URL}${path}`,
+    url: `${BASE_URL}${path}/`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }))
 
   const enToolUrls = toolPaths.map(path => ({
-    url: `${BASE_URL}/en${path}`,
+    url: `${BASE_URL}/en${path}/`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
@@ -51,19 +51,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${BASE_URL}/en`,
+      url: `${BASE_URL}/en/`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     {
-      url: `${BASE_URL}/blog`,
+      url: `${BASE_URL}/blog/`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/en/blog`,
+      url: `${BASE_URL}/en/blog/`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
