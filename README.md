@@ -2,7 +2,7 @@
 
 Free browser-based file converter. Convert images (HEIC, JPG, PNG, WebP) and audio files (to MP3) — entirely in your browser, with no file uploads.
 
-**Live site:** [fileconv.app](https://fileconv.app)
+**Live site:** [fileconv.app](https://fileconv.app/en/)
 
 ## Why Browser-Only?
 
