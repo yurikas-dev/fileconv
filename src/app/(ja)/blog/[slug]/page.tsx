@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { setRequestLocale } from 'next-intl/server'
 import { getPost, getAllPosts } from '@/lib/blog'
 import { BlogPost } from '@/components/blog/BlogPost'
 
@@ -10,6 +11,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  setRequestLocale('ja')
   const { slug } = await params
   const post = getPost(slug)
   if (!post) return {}
@@ -21,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params }: Props) {
+  setRequestLocale('ja')
   const { slug } = await params
   const post = getPost(slug)
   if (!post) notFound()

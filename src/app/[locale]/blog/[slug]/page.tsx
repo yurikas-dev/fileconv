@@ -11,6 +11,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { slug, locale } }: Props): Promise<Metadata> {
+  setRequestLocale(locale)
   const post = getPost(slug, locale)
   if (!post) return {}
   return {
