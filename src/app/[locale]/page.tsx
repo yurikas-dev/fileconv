@@ -9,6 +9,14 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   return {
     title: t('title'),
     description: t('description'),
+    alternates: {
+      canonical: `https://fileconv.app/${locale}`,
+      languages: {
+        'ja': 'https://fileconv.app/',
+        'en': 'https://fileconv.app/en',
+        'x-default': 'https://fileconv.app/en',
+      },
+    },
   }
 }
 
