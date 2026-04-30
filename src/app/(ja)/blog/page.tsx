@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 import { Clock, Tag } from 'lucide-react';
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  setRequestLocale('ja')
   const posts = getAllPosts();
   return (
     <div className='max-w-3xl mx-auto px-4 py-10'>

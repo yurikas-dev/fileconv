@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'プライバシーポリシー・利用規約',
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
 }
 
 export default function PrivacyPage() {
+  setRequestLocale('ja')
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900 mb-1">プライバシーポリシー・利用規約</h1>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { setRequestLocale } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'お問い合わせ',
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 const CONTACT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfs5i9sBVMfU-LCYe_GfAgeXeFak-z3Qua6hL3YQEDbDxmySg/viewform'
 
 export default function ContactPage() {
+  setRequestLocale('ja')
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900 mb-1">お問い合わせ</h1>
@@ -17,10 +19,24 @@ export default function ContactPage() {
       <div className="bg-white border border-gray-100 rounded-2xl p-8 text-sm text-gray-700 leading-relaxed space-y-6">
         <p>
           FileConv に関するご質問・ご意見・不具合のご報告は、以下のフォームからお気軽にご連絡ください。
+          サービスの改善に役立てるため、いただいたフィードバックはすべて確認しています。
         </p>
+
+        <div className="space-y-3 bg-gray-50 rounded-xl p-4 text-gray-600">
+          <p className="font-semibold text-gray-800 text-xs uppercase tracking-wider">よくあるお問い合わせ内容</p>
+          <ul className="space-y-1.5">
+            <li>・ 変換がうまくいかない・エラーが出る</li>
+            <li>・ 対応してほしいファイル形式のリクエスト</li>
+            <li>・ プライバシーポリシーや利用規約に関するご質問</li>
+            <li>・ サービスの改善提案・ご意見</li>
+          </ul>
+        </div>
+
         <p className="text-gray-500">
+          英語でのお問い合わせも同じフォームでお受けしています。<br />
           For inquiries in English, please use the same form below.
         </p>
+
         <div className="pt-2">
           <a
             href={CONTACT_FORM_URL}
@@ -36,9 +52,9 @@ export default function ContactPage() {
             </svg>
           </a>
         </div>
+
         <p className="text-xs text-gray-400 pt-2 border-t border-gray-100">
-          ※ 返信にお時間をいただく場合があります。<br />
-          We will do our best to respond promptly.
+          ※ 返信にお時間をいただく場合があります。通常2〜3営業日以内にご返信します。
         </p>
       </div>
     </div>
