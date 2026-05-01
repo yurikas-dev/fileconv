@@ -329,34 +329,58 @@
       "btn": "変換ツールを使う →"
     },
     "iphone-backup-to-pc": {
-      "title": "HEICをJPGまたはPNGに変換する",
-      "desc": "高画質・標準・軽量の3段階から画質を選んで変換できます。ブラウザ内で処理されます。",
+      "title": "バックアップしたHEIC写真をJPGに変換する",
+      "desc": "PCに保存したiPhoneのHEIC写真を一括でJPGに変換。Windowsでも問題なく開けるようになります。",
       "href": "/tools/converter/heic-to-jpg",
-      "btn": "変換ツールを使う →"
-    },
-    "jpg-vs-png": {
-      "title": "HEICをJPGまたはPNGに変換する",
-      "desc": "高画質・標準・軽量の3段階から画質を選んで変換できます。ブラウザ内で処理されます。",
-      "href": "/tools/converter/heic-to-jpg",
-      "btn": "変換ツールを使う →"
-    },
-    "mp3-quality-guide": {
-      "title": "音声ファイルをMP3に変換する",
-      "desc": "AAC・WAV・FLAC・M4AなどをMP3に変換。ファイルはブラウザ内で処理されます。",
-      "href": "/tools/audio/to-mp3/",
-      "btn": "変換ツールを使う →"
-    },
-    "reduce-image-size": {
-      "title": "画質を選んでJPGに変換する",
-      "desc": "高画質・標準・軽量の3段階から選べます。ファイルはブラウザ内で処理されます。",
-      "href": "/tools/converter/heic-to-jpg",
-      "btn": "変換ツールを使う →"
+      "btn": "HEIC変換ツールを使う →"
     },
     "iphone-save-as-jpg": {
       "title": "既存のHEIC写真をJPGに一括変換する",
       "desc": "設定変更前に撮影した写真もまとめて変換できます。ブラウザ内で処理されます。",
       "href": "/tools/converter/heic-to-jpg",
       "btn": "変換ツールを使う →"
+    },
+    "mp3-quality-guide": {
+      "title": "音声ファイルをMP3に変換する",
+      "desc": "WAV・FLAC・AAC・M4AなどをMP3に変換。ブラウザのWeb Audio APIで処理されるためファイル送信は不要です。",
+      "href": "/tools/audio/to-mp3",
+      "btn": "MP3変換ツールを使う →"
+    },
+    "reduce-image-size": {
+      "title": "画像ファイルをブラウザ内で圧縮する",
+      "desc": "JPG・PNG・WebPのファイルサイズを削減。画質スライダーで圧縮率を調整でき、削減率がリアルタイムで確認できます。",
+      "href": "/tools/converter/image-compressor",
+      "btn": "画像圧縮ツールを使う →"
+    },
+    "what-is-heic": {
+      "title": "HEICをJPGに変換してみる",
+      "desc": "iPhoneのHEIC写真をすぐ変換。ブラウザ内で処理されるのでサーバーに送信されません。",
+      "href": "/tools/converter/heic-to-jpg",
+      "btn": "HEIC変換ツールを使う →"
+    },
+    "heic-on-windows": {
+      "title": "HEICをJPGに変換してWindowsで開く",
+      "desc": "iPhoneのHEIC写真をJPGに変換するだけでWindowsやAndroidでも開けます。ブラウザ内で処理されます。",
+      "href": "/tools/converter/heic-to-jpg",
+      "btn": "HEIC変換ツールを使う →"
+    },
+    "what-is-webp": {
+      "title": "WebP画像をJPGやPNGに変換する",
+      "desc": "対応していないソフトで開けないWebP画像をJPGまたはPNGに変換。ブラウザ内で処理されます。",
+      "href": "/tools/converter/webp-converter",
+      "btn": "WebP変換ツールを使う →"
+    },
+    "audio-formats-guide": {
+      "title": "音声ファイルをMP3に変換する",
+      "desc": "AAC・WAV・FLAC・M4AなどをMP3に変換。ブラウザ内で処理されるためファイルの送信は不要です。",
+      "href": "/tools/audio/to-mp3",
+      "btn": "MP3変換ツールを使う →"
+    },
+    "image-resolution-dpi": {
+      "title": "画像形式を変換する（JPG・PNG・WebP）",
+      "desc": "印刷ならJPG、Web掲載ならWebP、透過が必要ならPNGへの変換が便利です。ブラウザ内で処理されます。",
+      "href": "/",
+      "btn": "ツール一覧を見る →"
     }
   },
   "header": {

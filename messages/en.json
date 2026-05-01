@@ -320,23 +320,59 @@
       "href": "/en/tools/converter/heic-to-jpg",
       "btn": "Try EXIF removal + converter →"
     },
-    "jpg-vs-png": {
-      "title": "Convert HEIC to JPG or PNG",
-      "desc": "Choose your output format and quality level. Files are processed entirely in your browser.",
-      "href": "/en/tools/converter/heic-to-jpg",
-      "btn": "Try the converter →"
-    },
     "reduce-image-size": {
-      "title": "Convert with Quality Control",
-      "desc": "Choose from High, Standard, or Light quality when converting to JPG. Processed in your browser.",
-      "href": "/en/tools/converter/heic-to-jpg",
-      "btn": "Try the converter →"
+      "title": "Compress Images in Your Browser",
+      "desc": "Reduce JPG, PNG, and WebP file sizes with a quality slider. See the size reduction for each file in real time.",
+      "href": "/en/tools/converter/image-compressor",
+      "btn": "Try the Image Compressor →"
     },
     "iphone-save-as-jpg": {
       "title": "Convert Existing HEIC Photos to JPG",
       "desc": "Batch convert photos taken before your settings change. Everything runs in your browser.",
       "href": "/en/tools/converter/heic-to-jpg",
       "btn": "Try the converter →"
+    },
+    "what-is-heic": {
+      "title": "Convert HEIC to JPG — Right in Your Browser",
+      "desc": "Convert iPhone HEIC photos instantly. All processing happens locally — files are never sent to a server.",
+      "href": "/en/tools/converter/heic-to-jpg",
+      "btn": "Try the HEIC converter →"
+    },
+    "heic-on-windows": {
+      "title": "Convert HEIC to JPG to Open on Windows or Android",
+      "desc": "Converting to JPG is the simplest way to open iPhone photos on Windows and Android. Processed entirely in your browser.",
+      "href": "/en/tools/converter/heic-to-jpg",
+      "btn": "Try the HEIC converter →"
+    },
+    "what-is-webp": {
+      "title": "Convert WebP to JPG or PNG",
+      "desc": "Open WebP images in any app by converting to JPG or PNG. All processing happens locally in your browser.",
+      "href": "/en/tools/converter/webp-converter",
+      "btn": "Try the WebP converter →"
+    },
+    "audio-formats-guide": {
+      "title": "Convert Audio Files to MP3",
+      "desc": "Convert AAC, WAV, FLAC, M4A and more to MP3 — processed entirely in your browser using the Web Audio API.",
+      "href": "/en/tools/audio/to-mp3",
+      "btn": "Try the MP3 converter →"
+    },
+    "iphone-backup-to-pc": {
+      "title": "Convert Backed-Up HEIC Photos to JPG",
+      "desc": "Batch convert HEIC photos from your iPhone backup to JPG — opens on any Windows PC without extra software.",
+      "href": "/en/tools/converter/heic-to-jpg",
+      "btn": "Try the HEIC converter →"
+    },
+    "mp3-quality-guide": {
+      "title": "Convert Audio Files to MP3",
+      "desc": "Convert WAV, FLAC, AAC, M4A and more to MP3. Processed in your browser using the Web Audio API — no upload needed.",
+      "href": "/en/tools/audio/to-mp3",
+      "btn": "Try the MP3 converter →"
+    },
+    "image-resolution-dpi": {
+      "title": "Browse All Free Image Tools",
+      "desc": "Convert between JPG, PNG, and WebP — or compress images to reduce file size. All processing happens in your browser.",
+      "href": "/en",
+      "btn": "View all tools →"
     }
   },
   "header": {
