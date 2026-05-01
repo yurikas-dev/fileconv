@@ -72,7 +72,7 @@ export function NavMenu({ locale }: Props) {
     },
     {
       kind: 'flat',
-      label: locale === 'en' ? 'Tips' : '記事',
+      label: locale === 'en' ? 'Articles' : '記事',
       href: `${prefix}/blog`,
     },
   ];

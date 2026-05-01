@@ -5,9 +5,9 @@ import { getAllPosts } from '@/lib/blog';
 import { Clock, Tag } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'ブログ｜HEICと画像形式について学ぶ',
+  title: 'ブログ｜画像・音声フォーマットをわかりやすく解説',
   description:
-    'HEICとは何か、JPGやPNGとの違い、変換方法など画像フォーマットに関する情報をわかりやすく解説します。',
+    'HEIC・JPG・PNG・WebPの変換方法、MP3などの音声フォーマット、EXIFのプライバシーリスクなど、ファイル変換にまつわる情報をわかりやすく解説します。',
 };
 
 export default function BlogPage() {
@@ -18,7 +18,7 @@ export default function BlogPage() {
       <div className='mb-8'>
         <h1 className='text-2xl font-bold text-gray-900 mb-2'>記事一覧</h1>
         <p className='text-sm text-gray-500'>
-          HEIC・画像形式・プライバシーについてわかりやすく解説します。
+          画像・音声フォーマット、ファイル変換、プライバシーについてわかりやすく解説します。
         </p>
       </div>
       {posts.length === 0 ? (

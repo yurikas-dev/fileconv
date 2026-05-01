@@ -9,8 +9,8 @@ type Props = { params: { locale: string } }
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
   if (locale === 'en') {
     return {
-      title: 'Blog | Learn About Image Formats',
-      description: 'Articles about HEIC, JPG, PNG, EXIF data, and image conversion — explained clearly.',
+      title: 'Blog | Image Formats, Audio Conversion & More',
+      description: 'Clear explanations of image formats (HEIC, JPG, PNG, WebP), audio conversion, EXIF privacy risks, and file management tips.',
     }
   }
   return {}
@@ -25,7 +25,7 @@ export default function LocaleBlogPage({ params: { locale } }: Props) {
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Articles</h1>
         <p className="text-sm text-gray-500">
-          Clear explanations of HEIC, image formats, privacy, and more.
+          Image formats, audio conversion, privacy, and file management — explained clearly.
         </p>
       </div>
       {posts.length === 0 ? (
