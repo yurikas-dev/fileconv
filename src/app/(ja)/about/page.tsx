@@ -23,9 +23,9 @@ export default function AboutPage() {
           </h2>
           <p>
             FileConv
-            は、画像・音声ファイルをブラウザ内で変換できる無料のオンラインツールです。
-            HEIC・JPG・PNG・WebP の相互変換や、各種音声ファイルの MP3
-            変換に対応しています。
+            は、画像・音声ファイルをブラウザ内で変換・圧縮できる無料のオンラインツールです。
+            HEIC・JPG・PNG・WebP の相互変換、各種音声ファイルの MP3
+            変換、画像ファイルの圧縮に対応しています。
           </p>
           <p className='mt-3'>
             最大の特徴は、
@@ -104,6 +104,17 @@ export default function AboutPage() {
               </Link>
               <span className='text-gray-400 ml-2'>
                 AAC・WAV・FLAC・M4AをMP3に変換
+              </span>
+            </li>
+            <li>
+              <Link
+                href='/tools/converter/image-compressor'
+                className='text-brand-600 hover:underline font-medium'
+              >
+                画像圧縮ツール
+              </Link>
+              <span className='text-gray-400 ml-2'>
+                JPG・PNG・WebPのファイルサイズを削減
               </span>
             </li>
           </ul>

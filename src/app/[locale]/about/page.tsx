@@ -19,9 +19,9 @@ export default function AboutPage({ params: { locale } }: Props) {
         <section>
           <h2 className="text-base font-semibold text-gray-900 mb-3">What is FileConv?</h2>
           <p>
-            FileConv is a free, browser-based file conversion tool. It supports image conversion
-            between HEIC, JPG, PNG, and WebP formats, as well as audio conversion to MP3 from
-            formats like AAC, WAV, FLAC, and M4A.
+            FileConv is a free, browser-based file tool. It supports image conversion between
+            HEIC, JPG, PNG, and WebP formats, audio conversion to MP3 from formats like AAC,
+            WAV, FLAC, and M4A, and image compression to reduce file size.
           </p>
           <p className="mt-3">
             The key feature is that <strong className="text-gray-900">your files are never sent to a server</strong>.
@@ -75,6 +75,12 @@ export default function AboutPage({ params: { locale } }: Props) {
                 Audio to MP3
               </Link>
               <span className="text-gray-400 ml-2">Convert AAC, WAV, FLAC, M4A to MP3</span>
+            </li>
+            <li>
+              <Link href="/en/tools/converter/image-compressor" className="text-brand-600 hover:underline font-medium">
+                Image Compressor
+              </Link>
+              <span className="text-gray-400 ml-2">Reduce file size of JPG, PNG, and WebP images</span>
             </li>
           </ul>
         </section>
