@@ -8,6 +8,7 @@ import {
   Layers,
   Globe,
   Music,
+  Minimize2,
 } from 'lucide-react';
 import { HowItWorks } from '@/components/tool/HowItWorks';
 import { Faq } from '@/components/tool/Faq';
@@ -95,6 +96,18 @@ export async function HomePage({ locale }: HomePageProps) {
           ? 'Convert AAC, WAV, FLAC, M4A and more to MP3.'
           : 'AAC・WAV・FLAC・M4AなどをMP3に変換します。',
       tags: ['MP3', 'AAC', 'WAV', 'FLAC'],
+    },
+    {
+      href: `${prefix}/tools/converter/image-compressor`,
+      icon: Minimize2,
+      iconColor: 'text-emerald-600',
+      iconBg: 'bg-emerald-50',
+      title: locale === 'en' ? 'Image Compressor' : '画像圧縮ツール',
+      desc:
+        locale === 'en'
+          ? 'Reduce JPG, PNG, and WebP file sizes in your browser.'
+          : 'JPG・PNG・WebPのファイルサイズをブラウザ内で削減します。',
+      tags: ['JPG', 'PNG', 'WebP'],
     },
   ];
 

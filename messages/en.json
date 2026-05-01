@@ -348,5 +348,58 @@
     "blog": "Tips",
     "privacy": "Privacy & Terms",
     "contact": "Contact"
+  },
+  "compressorHero": {
+    "h1": "Image Compressor",
+    "descPart1": "Reduce the file size of JPG, PNG, and WebP images in your browser.",
+    "noteTitle": "About Image Compression",
+    "noteBody": "Large image files slow down email delivery, social media uploads, and website load times. This tool compresses JPG, PNG, and WebP images directly in your browser using the Canvas API. Adjust the quality slider to balance file size and visual quality — each file shows the original size, compressed size, and percentage reduction in real time. All processing happens locally; files are never sent to a server."
+  },
+  "compressor": {
+    "formatLabel": "Output Format",
+    "qualityLabel": "Quality",
+    "qualitySmall": "Smaller file",
+    "qualityHigh": "Higher quality",
+    "dropTitle": "Drop image files here",
+    "dropOr": "or",
+    "dropClick": "click to select",
+    "dropFormats": "JPG · PNG · WebP",
+    "startCompress": "Compress Images",
+    "compressing": "Compressing...",
+    "doneMessage": "All done! Download each file using the button next to it.",
+    "privacy": "Files are never sent to a server. All processing happens locally in your browser.",
+    "statFiles": "Selected",
+    "statDone": "Compressed",
+    "statSaved": "Saved",
+    "save": "Save",
+    "saveAll": "Save All",
+    "error": "Error"
+  },
+  "faqCompressor": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What image formats are supported?",
+        "a": "The compressor accepts JPG, PNG, and WebP files. HEIC (iPhone format) is not supported for direct compression — convert HEIC to JPG first using the HEIC Converter, then compress the result."
+      },
+      {
+        "q": "How should I set the quality slider?",
+        "a": "Higher values produce better image quality with larger files; lower values reduce file size at the cost of some quality. A setting of 70–80 works well for most purposes. For social media or web use, 60–70 is a good balance. For email attachments where size matters most, try 50–60. The actual compressed size and percentage reduction are shown for each file after compression."
+      },
+      {
+        "q": "Can I compress PNG files to JPG?",
+        "a": "Yes — select JPG as the output format and the tool will convert your PNG to JPG while applying compression. Note that if your PNG has transparent areas, they will be replaced with a white background in the JPG output. To preserve transparency, use WebP output instead."
+      },
+      {
+        "q": "Can the compressed file end up larger than the original?",
+        "a": "Occasionally, yes. If the source file is already heavily compressed (e.g. a JPG exported at low quality), re-encoding it at a high quality setting can slightly increase the file size. If this happens, try lowering the quality slider."
+      },
+      {
+        "q": "Are my files kept private?",
+        "a": "Yes. Compression uses the browser's Canvas API — all processing happens in your device's memory. No files are sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while compressing.",
+        "link": "/en/blog/no-upload-conversion",
+        "linkText": "How browser-based processing works"
+      }
+    ]
   }
 }

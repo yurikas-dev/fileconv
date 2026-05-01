@@ -65,20 +65,11 @@ export function NavMenu({ locale }: Props) {
       label: locale === 'en' ? 'Audio' : '音声',
       href: `${prefix}/tools/audio/to-mp3`,
     },
-    // {
-    //   kind: 'dropdown',
-    //   label: locale === 'en' ? 'Compressor' : '圧縮',
-    //   subItems: [
-    //     { label: locale === 'en' ? 'Image Compressor' : '画像圧縮', href: '#', comingSoon: true },
-    //   ],
-    // },
-    // {
-    //   kind: 'dropdown',
-    //   label: locale === 'en' ? 'BG Remover' : '背景削除',
-    //   subItems: [
-    //     { label: locale === 'en' ? 'Background Remover' : '背景削除', href: '#', comingSoon: true },
-    //   ],
-    // },
+    {
+      kind: 'flat',
+      label: locale === 'en' ? 'Compressor' : '圧縮',
+      href: `${prefix}/tools/converter/image-compressor`,
+    },
     {
       kind: 'flat',
       label: locale === 'en' ? 'Tips' : '記事',
@@ -93,7 +84,7 @@ export function NavMenu({ locale }: Props) {
     setMobileExpanded(null);
   }, [pathname]);
 
-  // メニュー外クリックでドロップダウンを閉じる
+  // Clicking outside the menu will close the dropdown
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {

@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/converter/jpg-converter',
     '/tools/converter/png-converter',
     '/tools/converter/webp-converter',
+    '/tools/converter/image-compressor',
     '/tools/audio/to-mp3',
   ]
 
