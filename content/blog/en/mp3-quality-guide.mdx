@@ -1,0 +1,112 @@
+---
+title: How Much Quality Do You Lose Converting to MP3? Bitrate Guide
+description: Converting FLAC or WAV to MP3 does reduce quality — but how much? This guide explains bitrate, what you actually hear, and which setting to choose for each use case.
+date: "2026-04-29"
+tags: ["MP3", "audio quality", "bitrate", "FLAC", "WAV"]
+---
+
+"Converting to MP3 degrades the audio quality." You've probably heard this — but how much does it actually matter? And at what bitrate does the difference become irrelevant for practical listening? Here's a clear breakdown.
+
+## What Is Bitrate?
+
+Bitrate is the single most important factor determining MP3 audio quality. Measured in kilobits per second (kbps), it describes **how much audio data is stored per second**. Higher bitrate = more data retained = better quality.
+
+Common MP3 bitrates:
+
+| Bitrate | Quality description | File size (3 min track) |
+|---|---|---|
+| 128 kbps | Acceptable — compression is sometimes audible | ~2.8 MB |
+| 192 kbps | Good — compression rarely noticeable | ~4.2 MB |
+| 256 kbps | Very good — hard to distinguish from lossless | ~5.6 MB |
+| 320 kbps | Excellent — close to CD quality | ~7.2 MB |
+
+## What Happens When You Convert FLAC or WAV to MP3
+
+FLAC and WAV are both **lossless** formats — they preserve audio data completely. Converting either one to MP3 applies **lossy compression**, which works by removing audio information that the human auditory system is least likely to notice:
+
+- Very high frequencies (above ~16–20 kHz)
+- Quiet sounds immediately following loud ones (auditory masking)
+- Redundant data between stereo channels (joint stereo)
+
+This process can reduce file size by 90% or more while minimizing the perceptible impact on sound quality.
+
+## How Noticeable Is the Quality Difference?
+
+In typical listening conditions (smartphone, earbuds, standard speakers):
+
+| Bitrate | Perceptibility |
+|---|---|
+| 128 kbps | Some listeners notice "harshness" or "thinness," especially in treble |
+| 192 kbps | Difference from lossless is barely detectable without focused comparison |
+| 256 kbps | Even trained listeners struggle to tell apart from FLAC in blind tests |
+| 320 kbps | Essentially indistinguishable from CD quality in most listening setups |
+
+Blind listening tests (ABX tests) consistently show that **192 kbps and above is transparent for most listeners** under normal conditions. At 256–320 kbps, even audiophiles in controlled environments have difficulty reliably identifying MP3 compression.
+
+## Recommended Bitrate by Use Case
+
+| Use case | Recommended bitrate |
+|---|---|
+| Podcasts and spoken word | 128 kbps (voice doesn't need high bitrate) |
+| Everyday music on earbuds/phone | 192 kbps |
+| High-quality headphones or speakers | 256–320 kbps |
+| Archiving music at near-CD quality | 320 kbps |
+| Storage-constrained devices | 128 kbps |
+
+## MP3 Conversion Is Irreversible
+
+This is the most important thing to understand: **once you convert to MP3, the removed audio data is gone forever**. Converting an MP3 back to FLAC or WAV produces a large file with MP3-level quality — it doesn't restore the original audio.
+
+This means you should:
+- **Always keep your original FLAC or WAV files** as a master copy
+- Treat MP3 as a "distribution copy" for sharing, streaming, or device playback
+
+Never delete the originals after converting.
+
+## When MP3 Conversion Makes Sense
+
+Even if you care about audio quality, there are practical situations where MP3 is the right choice:
+
+**Compatibility requirements**
+Older car stereos, portable music players, and some smart speakers only support MP3. If your device can't play FLAC or M4A, MP3 is the practical solution.
+
+**Sharing audio files with others**
+MP3 is the most universally compatible audio format. When sending a recording or music clip to someone whose setup you don't know, MP3 guarantees they can open it — on any device or app.
+
+**Podcast and audio content distribution**
+Most podcast platforms use MP3 as their standard format. For voice-focused content, 128 kbps is entirely sufficient and keeps file sizes manageable.
+
+**Importing into video editing software**
+Some video editors have limited codec support. MP3 is accepted by virtually all editing tools.
+
+## About FileConv's MP3 Conversion
+
+FileConv converts AAC, WAV, FLAC, and M4A to MP3 entirely within your browser using the lamejs library. Your audio files are never uploaded to any server — all processing happens locally on your device.
+
+This matters because audio files often contain sensitive content: personal voice recordings, meeting audio, or music drafts you don't want shared with a third-party server.
+
+## Frequently Asked Questions
+
+### Does converting from a higher-quality MP3 to a lower-quality MP3 cause extra damage?
+
+Yes. Re-encoding an MP3 at any bitrate applies another round of lossy compression to already-compressed audio. This causes **generation loss** — the audio degrades further with each encode. Always re-encode from the original lossless file (FLAC/WAV) when possible, not from an existing MP3.
+
+### Is 320 kbps MP3 the same as lossless?
+
+No. 320 kbps MP3 sounds very close to lossless in most listening environments, but it's not technically identical. Some ultra-high-frequency content is still removed. That said, for practical listening purposes, the difference is negligible for the vast majority of people.
+
+### What bitrate does Spotify use?
+
+Spotify streams at different bitrates depending on the plan and quality setting:
+- Free: 128 kbps (mobile), 160 kbps (desktop)
+- Premium: up to 320 kbps
+
+Note: Spotify downloads are DRM-protected and cannot be converted to MP3 with FileConv or any standard tool.
+
+## Summary
+
+- **Bitrate is the key variable**: 192 kbps is sufficient for most use cases; 320 kbps approaches CD quality
+- Converting from FLAC/WAV to MP3 permanently removes some audio data — keep your originals
+- In typical listening conditions, 192 kbps and above is transparent for most listeners
+- MP3 is the right choice for compatibility, sharing, and distribution — not for long-term archiving
+- FileConv converts audio to MP3 entirely in the browser, so your files stay private

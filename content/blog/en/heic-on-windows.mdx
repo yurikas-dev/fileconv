@@ -1,127 +1,151 @@
 ---
-title: How to Open iPhone HEIC Photos on Windows
-description: iPhone photos won't open on Windows because of the HEIC format. Here are three ways to fix the problem — from one-click conversion to a permanent settings change.
+title: How to Open iPhone HEIC Photos on Windows and Android
+description: HEIC photos from iPhone often can't be opened on Windows or Android. Here's why it happens and the best solutions for each platform.
 date: "2026-02-22"
-tags: ["HEIC", "Windows", "Conversion"]
+tags: ["HEIC", "Windows", "Android", "convert"]
 ---
 
-Transferred iPhone photos to your Windows PC only to find they won't open — or show up as blank thumbnails? This happens because iPhones save photos in HEIC format, which Windows doesn't support by default. Here are three ways to fix it.
+Transferred photos from your iPhone to a Windows PC or Android device, only to find they won't open? This is a common problem caused by Apple's HEIC image format. Here's how to fix it on each platform.
 
-## Why Windows Can't Open HEIC Files
+## Why HEIC Files Won't Open
 
-HEIC is Apple's high-efficiency image format, introduced with iOS 11 in 2017. While it's great for saving storage space on your iPhone, Windows doesn't include built-in support for it. The Photos app and File Explorer only handle JPG, PNG, BMP, GIF, and similar widely-supported formats.
+iPhones save photos in HEIC (High Efficiency Image Container) format by default. HEIC achieves about half the file size of JPG at equivalent visual quality — great for iPhone storage — but Windows and Android don't support it natively.
 
-When you try to open a HEIC file on Windows, you'll either get an error like "You need an app for this" or the file will appear as a blank white thumbnail in File Explorer.
+When you transfer or send a HEIC file to a non-Apple device, you'll typically see errors like "no app to open this file" or "unsupported format."
 
-## Solution 1: Convert to JPG or PNG (Easiest)
+---
 
-The most straightforward fix is to convert your HEIC files to JPG or PNG before using them. FileConv does this directly in your browser — no installation required, and files are never sent to a server.
+## Opening HEIC on Windows
 
-You can convert multiple files at once, which is useful if you're dealing with a batch of vacation photos or a camera roll export.
+### Option 1: Convert to JPG Using a Browser Tool (Easiest)
 
-**When this approach works best:**
-- You need to share, print, or upload photos to a service
-- You want to edit photos in software that doesn't support HEIC
-- You're converting a large batch of existing photos
+FileConv lets you convert HEIC to JPG or PNG directly in your browser — no software to install. Batch conversion is supported, so you can handle an entire album at once. The resulting JPG files open in any Windows app.
 
-### What to do with converted files
+**Best for:**
+- Converting large numbers of photos at once
+- Avoiding software installation
+- Preparing photos for printing or third-party services
 
-Once converted to JPG, photos open in Windows Photos, Paint, older Photoshop versions, and any other image software without issues. They'll also display proper thumbnails in File Explorer.
+### Option 2: Install the HEIC Codec from Microsoft Store
 
-## Solution 2: Install the HEIF Extension from Microsoft Store
+Installing "HEIF Image Extensions" adds native HEIC support to Windows, letting you open HEIC files without converting them.
 
-Windows can be extended to support HEIC natively by installing a free codec package.
+1. Open Microsoft Store (search "Microsoft Store" in the Start menu)
+2. Search for **HEIF Image Extensions**
+3. Install for free
 
-1. Open the **Microsoft Store** (search for it in the Start menu)
-2. Search for **"HEIF Image Extensions"**
-3. Click **Get** to install it for free
+After installation, double-clicking any HEIC file opens it in the Photos app, and thumbnails display correctly in File Explorer.
 
-After installation, HEIC files open directly in the Photos app with a double-click, and thumbnails appear correctly in File Explorer.
+**Note:** Some print services and older photo editing software still don't support HEIC. In those cases, convert to JPG first.
 
-**Limitations to be aware of:**
-- Some printing services, older photo editing apps, and certain web services still won't accept HEIC files even after installation
-- If you need to share files with others, they may not have this extension — convert to JPG first for maximum compatibility
+### Option 3: Set iPhone to Transfer as JPG
 
-## Solution 3: Change Your iPhone's Transfer Setting
+Configure your iPhone to automatically convert photos to JPG when transferring to a Windows PC via USB:
 
-You can configure your iPhone to automatically deliver JPG files when connecting to a Windows PC via USB — while keeping HEIC on the iPhone itself (saving storage).
+1. Open **Settings** → **Photos**
+2. Under "Transfer to Mac or PC", select **Automatic**
 
-1. Open **Settings** on your iPhone
-2. Tap **Photos**
-3. Scroll down to **Transfer to Mac or PC**
-4. Select **Automatic**
+iOS will send HEIC to Macs (which support it) and JPG to Windows PCs automatically.
 
-With "Automatic" selected, iOS detects that it's connected to a Windows PC and converts photos to JPG on the fly during transfer. Your iPhone still stores HEIC internally, but Windows receives JPG.
+**Note:** This setting applies to USB transfers only — not email, LINE, or other apps.
 
-**Important:** This only applies to USB cable transfers. It does not affect AirDrop, email, or direct app sharing.
+### Common Windows Troubleshooting
 
-## When to Use Each Approach
+**Installed the codec but files still won't open**
+- Restart Windows after installation
+- Update the Photos app via Microsoft Store
+- Also install "HEVC Video Extensions" if the issue persists
 
-| Situation | Best solution |
+**Converted JPG colors look wrong**
+HEIC files often use the "Display P3" wide color profile. FileConv uses the browser's built-in APIs, which handle color profile conversion correctly.
+
+**Can't find transferred files in File Explorer**
+When connected via USB cable, look here:
+```
+This PC → Apple iPhone → Internal Storage → DCIM → (numbered folder)
+```
+
+---
+
+## Opening and Sharing HEIC on Android
+
+### Current Android Support for HEIC
+
+HEIC support on Android is inconsistent:
+
+- **Samsung Galaxy** (S10 and later): Some models open HEIC in the native Gallery app
+- **Google Pixel** (Android 12+): May show thumbnails but can't always fully open files
+- **Google Photos** (Android app): Can display HEIC images from iPhone
+
+Because support varies by device and OS version, **converting to JPG before sharing is the most reliable approach.**
+
+### Option 1: Convert to JPG Before Sending (Most Reliable)
+
+Convert HEIC photos to JPG with FileConv, then send the JPG. Every Android device can open JPG — no configuration needed on the recipient's end.
+
+### Option 2: Send as a Photo via LINE or WhatsApp (Auto-Converted)
+
+Major messaging apps automatically convert HEIC to JPG when you use the standard photo-sharing flow:
+
+- **LINE**: Photos sent via the photo icon are converted automatically
+- **WhatsApp**: HEIC is converted to JPG during send
+
+**Caveat**: The image is compressed during conversion. For full-quality delivery, convert manually first and send as a file attachment.
+
+### Option 3: Share via Google Photos
+
+For sharing large batches of photos, Google Photos is convenient:
+
+1. Install Google Photos on your iPhone and enable backup
+2. HEIC photos are converted server-side during backup
+3. Send the Android recipient a shared album link
+4. They can view and download photos in JPG/WebP from Google Photos
+
+**Note:** Free Google storage is limited to 15 GB shared with Gmail and Drive.
+
+### Option 4: Use iCloud Shared Albums
+
+Share an iCloud album link with Android users — they can view and download photos as JPG from a browser, without needing an Apple ID.
+
+---
+
+## Before You Share: Remove EXIF Data
+
+When converting HEIC to JPG, embedded EXIF metadata (including GPS coordinates) carries over to the new file. If a photo was taken at home or work, the precise location may be recorded.
+
+Before posting photos publicly or sharing on marketplace apps, it's worth stripping EXIF data. FileConv removes it automatically during HEIC-to-JPG conversion (the "Remove EXIF data" option is on by default).
+
+### Quick Reference Table
+
+| Situation | Best approach |
 |---|---|
-| Need to convert photos you already have | Conversion tool (Solution 1) |
-| Want to view HEIC files regularly in Windows | HEIF extension (Solution 2) |
-| Frequently transfer photos from iPhone to PC | iPhone transfer setting (Solution 3) |
-| Need to share photos or use them in other apps | Conversion to JPG (Solution 1) |
+| View HEIC files on Windows | Install HEIF Image Extensions from Microsoft Store |
+| Save HEIC as JPG on Windows | Convert with FileConv |
+| Send to Android via LINE | Send as photo (auto-converted) |
+| Share at full quality | Convert to JPG first, then send as file |
+| Share a large batch | Use Google Photos |
+| Stop using HEIC going forward | Settings → Camera → Formats → Most Compatible |
 
-## Viewing vs. Editing vs. Sharing
+---
 
-**Just viewing:** The HEIF extension (Solution 2) is sufficient. Install it once and HEIC files open normally.
+## Frequently Asked Questions
 
-**Editing:** Older versions of Photoshop, Lightroom, and other editors may not read HEIC even with the extension installed. Convert to JPG first.
+### What's the difference between HEIC and HEIF?
 
-**Printing:** Most print services don't accept HEIC. Convert to JPG before uploading.
+**HEIF** (High Efficiency Image Format) is the container format standard. **HEIC** (High Efficiency Image Container) is the specific file extension iPhone uses when saving HEIF images with H.265 compression. The terms are often used interchangeably — technically HEIF is the broader standard and HEIC is Apple's implementation.
 
-**Sharing with others:** Don't assume the recipient can open HEIC. Convert to JPG to guarantee compatibility, regardless of what device they're on.
+### Does converting HEIC to JPG reduce quality?
+
+At high quality settings, the difference is nearly imperceptible. JPG is a lossy format, so each re-save degrades quality slightly — but a single conversion is perfectly fine for practical purposes.
+
+### If I switch iPhone to JPG mode, what happens to existing HEIC photos?
+
+Photos already saved as HEIC remain unchanged. Only new photos taken after the setting change (Settings → Camera → Formats → Most Compatible) will be saved as JPG. Use FileConv's batch conversion to handle existing HEIC files.
 
 ## Summary
 
-| Solution | Effort | Install required | Best rating |
-|---|---|---|---|
-| Conversion tool (FileConv) | Low | No | ⭐⭐⭐ |
-| HEIF extension | Medium (once) | Yes | ⭐⭐ |
-| iPhone transfer setting | Low (once) | No | ⭐⭐⭐ |
-
-For a one-time batch of photos, use a conversion tool. For ongoing Windows use, install the HEIF extension. For regular iPhone-to-PC transfers, change the iPhone setting — and combine approaches as needed.
-
-## Common Troubleshooting
-
-### Installed the codec but HEIC files still won't open
-
-If files still won't open after installing "HEIF Image Extensions," try these steps:
-
-- **Restart Windows** — Some codec installations require a reboot to take effect
-- **Update the Photos app** — Open the Microsoft Store, search for "Photos," and install any available updates
-- **Test with a different file** — The original file may be corrupted; try another HEIC photo
-- **Install HEVC Video Extensions too** — Some systems need both packages. Search for "HEVC Video Extensions" in the Microsoft Store
-
-### Thumbnails appear but files won't open
-
-This usually means the codec is partially installed. Uninstall "HEIF Image Extensions," restart your PC, then reinstall it from the Microsoft Store.
-
-### Converted JPG colors look wrong or oversaturated
-
-HEIC files often use the "Display P3" wide color profile. Some conversion tools don't handle this profile accurately, resulting in shifted or oversaturated colors. FileConv uses the browser's native image APIs, which convert color profiles correctly.
-
-### Transferred photos are missing in File Explorer
-
-When connecting via USB, navigate here in File Explorer:
-
-```
-This PC → Apple iPhone → Internal Storage → DCIM → [numbered folder]
-```
-
-HEIC files use a `.heic` or `.HEIC` extension. If extensions aren't visible, enable them under **View → Show → File name extensions**.
-
-## HEIC vs. HEIF: What's the Difference?
-
-These terms are often used interchangeably, but they're technically distinct:
-
-- **HEIF (High Efficiency Image Format)** — The container specification. A broad standard that can hold still images, image sequences, and video using various codecs
-- **HEIC (High Efficiency Image Container)** — The specific file extension Apple uses for HEIF files encoded with H.265 (HEVC). The `.heic` files on your iPhone are this format
-
-In everyday usage, HEIC and HEIF mean the same thing. Technically, HEIF is the broader standard and HEIC is Apple's implementation of it.
-
-## Does Android Have the Same Problem?
-
-Yes. Android doesn't support HEIC natively either. Sending HEIC photos from an iPhone to an Android device via email or messaging often results in files that won't open or display only as icons. When sharing with Android users, convert to JPG first to guarantee compatibility.
+- HEIC is iPhone's default format, but Windows and Android don't support it natively
+- **The most reliable fix: convert to JPG before sharing**
+- On Windows, installing the HEIF Image Extensions codec lets you open HEIC without converting
+- On Android, send photos via LINE (auto-converted) or convert to JPG first
+- FileConv removes EXIF location data during conversion — protecting your privacy

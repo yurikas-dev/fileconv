@@ -1,0 +1,87 @@
+---
+title: JPG vs JPEG — Are They the Same? Why Two Names Exist
+description: JPG and JPEG are exactly the same image format. Find out why two names exist, which one to use, and what actually affects image quality.
+date: "2026-04-25"
+tags: ["JPG", "JPEG", "image format"]
+---
+
+If you've ever looked at a folder full of images and noticed some files end in `.jpg` while others end in `.jpeg`, you might have wondered whether there's a difference. The short answer: **JPG and JPEG are completely identical**. Here's the story behind the two names and everything else you need to know.
+
+## What Is JPEG?
+
+JPEG stands for "Joint Photographic Experts Group" — the committee that developed and standardized the format in 1992. It's a lossy compression format designed for photographs and images with smooth gradients, and it remains one of the most widely used image formats in the world.
+
+## Why Are There Two Names?
+
+The answer lies in an old operating system limitation.
+
+### The 8.3 Filename Rule in MS-DOS / Windows 3.1
+
+In the early 1990s, the dominant operating system was **MS-DOS / Windows 3.1**, which used a file system with a strict rule: **file names could be at most 8 characters, and extensions at most 3 characters** (the so-called "8.3 format").
+
+Because of this 3-character extension limit, the proper 4-character extension `.jpeg` couldn't be used on Windows. So the abbreviated version **`.jpg`** was adopted instead.
+
+Meanwhile, **Macintosh** and **Unix/Linux** systems had no such restriction, so they continued using the full `.jpeg` extension.
+
+### Both Extensions Stuck Around
+
+When Windows eventually lifted the 8.3 limitation, longer extensions became technically possible. But by then, `.jpg` was deeply embedded in Windows culture. The result is that both extensions coexist today:
+
+- **Windows environments**: `.jpg` is the dominant convention
+- **Mac/Linux environments**: Both `.jpg` and `.jpeg` are used
+- **Software save dialogs**: Most tools pick one and stick with it
+
+## The Contents Are Identical
+
+Regardless of extension, the file format, compression algorithm, and data structure are exactly the same. If you rename a `.jpg` file to `.jpeg` (or vice versa), the file won't break — it will open normally on any device.
+
+```
+image.jpg  ←→  image.jpeg  (completely identical contents)
+```
+
+Both extensions work fine on Windows, Mac, Android, and iPhone.
+
+## Common Points of Confusion
+
+### Different software uses different extensions
+
+Even though it's the same format, different apps may save JPEG files with different extensions:
+
+| App / Service | Saved extension |
+|---|---|
+| Windows Paint | `.jpg` |
+| iPhone camera (JPEG mode) | `.jpg` |
+| Photoshop | `.jpg` or `.jpeg` (user's choice) |
+| macOS Preview | `.jpg` |
+| Some web services | `.jpeg` |
+
+The extension doesn't affect how the file behaves.
+
+### No difference in file size or quality
+
+`.jpg` files are not more compressed than `.jpeg` files, and vice versa. The extension has zero impact on image quality or file size. What determines quality is the **compression quality setting** chosen at the time of saving (e.g., "High quality," "Medium," "Low").
+
+## Converting JPG Files to Other Formats
+
+If you need to convert a JPG (or JPEG) file to PNG or WebP, FileConv can do that directly in your browser. Files are processed locally — nothing is sent to any server.
+
+## Frequently Asked Questions
+
+### Can I rename .jpg to .jpeg without breaking the file?
+
+Yes. Changing just the extension doesn't modify the file's contents. The image will open normally after renaming. Some apps may show a warning when you manually rename a file's extension, but you can safely confirm and proceed.
+
+### Which is better — JPG or PNG?
+
+It depends on the use case. JPG is better for photographs and images with gradients. PNG is better for screenshots, logos, and images that need transparency. For more detail, see our [JPG vs PNG comparison](/en/blog/jpg-vs-png).
+
+### What's the difference between JPG and WebP?
+
+WebP is Google's newer web format — typically 25–35% smaller than JPG at similar quality. For website use, WebP is the better choice. For email, printing, or broad compatibility, JPG remains the safer option. See our [WebP explainer](/en/blog/what-is-webp) for more.
+
+## Summary
+
+- JPG and JPEG are the exact same image format — no difference whatsoever
+- The two names exist because Windows 3.1 had a 3-character extension limit, forcing the use of `.jpg`
+- Renaming between `.jpg` and `.jpeg` has no effect on the file's quality or compatibility
+- Image quality is determined by the compression quality setting at save time, not the extension

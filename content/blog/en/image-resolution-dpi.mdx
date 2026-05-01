@@ -1,0 +1,90 @@
+---
+title: What Is Image Resolution (DPI/PPI)? Print vs. Screen Explained
+description: DPI and PPI measure image sharpness, but what you need depends on whether you're printing or displaying on screen. Here's a clear breakdown with practical print size examples.
+date: "2026-04-27"
+tags: ["resolution", "DPI", "PPI", "print", "image"]
+---
+
+"Your image resolution is too low." "Please submit at 300 DPI." If you've ever been confused by these instructions, you're not alone. DPI and PPI come up constantly when working with images, but many people aren't quite sure what they mean. Here's a clear, practical explanation — including why the numbers that matter for printing are completely different from what you need for screens.
+
+## DPI and PPI: What They Mean
+
+### DPI (Dots Per Inch)
+
+DPI refers to the number of ink dots a **printer** places per inch. Higher DPI means finer, smoother printed output. This is a property of the printing device.
+
+### PPI (Pixels Per Inch)
+
+PPI refers to the number of pixels per inch in a **digital image or display**. Higher PPI means finer image detail. This is a property of the image file or screen.
+
+### In practice, they're used interchangeably
+
+While technically distinct, "DPI" and "PPI" are used interchangeably in most photography, design, and printing contexts. When a print service says "submit at 300 DPI," they mean the image should have 300 pixels per inch at the intended print size.
+
+## Why Resolution Matters
+
+The same 1000×1000 pixel image will look very different at different print sizes:
+
+- **Printed small (2"×2")** → Fine, crisp detail
+- **Printed large (12"×12")** → The same pixels are stretched — it looks blurry
+
+Resolution (DPI) describes how densely those pixels are packed into the printed space. A higher DPI at the same pixel count means a smaller but sharper print.
+
+## Resolution Guidelines for Printing
+
+| Use case | Recommended resolution |
+|---|---|
+| Photo prints (4"×6", 5"×7") | **300 DPI** |
+| Large-format posters (viewed from a distance) | 150–200 DPI |
+| Business cards, flyers | **350 DPI** |
+| Web/screen display only | **72–96 DPI** (printing not applicable) |
+
+**300 DPI is the standard baseline** for photo printing. Below this, you'll start to see softness or pixelation in printed results.
+
+## Why Screen Images Only Need 72–96 DPI
+
+Monitors and smartphone screens have their own fixed pixel density (PPI). A standard desktop monitor might be 96 PPI; modern smartphones can exceed 400 PPI. But here's the key point: **web browsers ignore DPI metadata entirely and display images based solely on pixel dimensions**.
+
+Setting a web image to 300 DPI instead of 72 DPI doesn't make it look sharper on screen — the browser still renders it at the same pixel size. For web use, pixel dimensions (width × height) are all that matter.
+
+## Calculating the Pixels You Need for Print
+
+**Formula:** Required pixels = Print size (inches) × DPI
+
+For a 4"×6" photo at 300 DPI:
+- Width: 4 × 300 = **1,200 pixels**
+- Height: 6 × 300 = **1,800 pixels**
+
+So you need at least 1,200 × 1,800 pixels for a sharp 4"×6" print at 300 DPI.
+
+### iPhone photos have more than enough pixels
+
+The latest iPhones shoot at 48 megapixels (approximately 8,000 × 6,000 pixels). At 300 DPI, that's enough to print a sharp image at roughly **26" × 20"** — far larger than most consumer print needs. For everyday photo printing, iPhone resolution is not a limiting factor.
+
+## HEIC and DPI
+
+HEIC files from iPhone embed DPI information in their EXIF metadata. When you convert a HEIC file to JPG using FileConv, the DPI metadata carries over to the new file. The pixel dimensions — and therefore the printable size — remain unchanged.
+
+Some print services may display "72 DPI" even for high-resolution photos. This is often a display quirk. What matters is the actual pixel count — if it meets the minimum pixels-per-inch requirement at your intended print size, the print will come out sharp.
+
+## "Your Resolution Is Too Low" — What to Do
+
+### First: check the actual pixel dimensions
+
+Increasing the DPI setting in software doesn't add new pixels — it just changes how the image is interpreted. An image with 800 × 600 pixels set to 300 DPI is still an 800 × 600 pixel image; it just prints at a smaller physical size.
+
+The only real fix is to have more pixels to begin with.
+
+### Options when you don't have enough pixels
+
+1. **Retake the photo** at a higher resolution if possible
+2. **Reduce the print size** — the same image at a smaller size will meet the DPI requirement
+3. **Use AI upscaling** — tools like Adobe Lightroom or Topaz Gigapixel AI can intelligently increase pixel count, though results vary
+
+## Summary
+
+- **DPI/PPI** measures how densely pixels are packed into a printed inch
+- **Printing**: 300 DPI is the standard target; below this, prints look soft
+- **Screen/web display**: DPI metadata is ignored by browsers — pixel dimensions are what matter
+- iPhone photos have ample pixels for virtually all consumer printing needs
+- "Low resolution" means not enough pixels — raising the DPI setting alone doesn't fix this
