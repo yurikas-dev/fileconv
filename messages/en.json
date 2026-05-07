@@ -1,14 +1,14 @@
 {
   "meta": {
-    "title": "FileConv | Free Image Converter — No Upload Required",
-    "description": "Convert HEIC, JPG, PNG, and WebP images for free. All processing happens in your browser — files are never sent to a server."
+    "title": "FileConv | Free Image Converter, Compressor & Audio to MP3",
+    "description": "Convert images (HEIC, JPG, PNG, WebP), compress images, and convert audio to MP3 for free. All processing happens in your browser — files are never sent to a server."
   },
   "home": {
     "badge": "Free · No server upload · Fast",
     "h1": "FileConv",
     "h1Sub": "Online File Tools",
     "tagline": "Processed in your browser. No upload needed.",
-    "description": "Convert images (HEIC, JPG, PNG, WebP) and audio (to MP3) for free. All files are processed locally in your browser — nothing is ever sent to a server.",
+    "description": "Convert images (HEIC, JPG, PNG, WebP), compress images and audio (to MP3) for free. All files are processed locally in your browser — nothing is ever sent to a server.",
     "toolsTitle": "Conversion Tools",
     "comingSoon": "Coming soon"
   },
