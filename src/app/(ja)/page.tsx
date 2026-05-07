@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
       languages: {
         'ja': 'https://fileconv.app/',
         'en': 'https://fileconv.app/en/',
-        'x-default': 'https://fileconv.app/en/',
+        'x-default': 'https://fileconv.app/',
       },
     },
   }
