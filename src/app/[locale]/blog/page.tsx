@@ -37,7 +37,7 @@ export default function LocaleBlogPage({ params: { locale } }: Props) {
           {posts.map((post) => (
             <Link
               key={post.slug}
-              href={`/en/blog/${post.slug}`}
+              href={`/en/blog/${post.slug}/`}
               className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-brand-300 hover:shadow-sm transition-all group"
             >
               <div className="flex items-center gap-2 mb-2">
