@@ -10,7 +10,7 @@ export async function Header({ locale }: Props) {
     <header className='bg-white border-b border-gray-100 sticky top-0 z-50'>
       <div className='max-w-3xl mx-auto px-4 h-14 flex items-center justify-between'>
         <Link
-          href={locale === 'en' ? '/en' : '/'}
+          href={locale === 'en' ? '/en/' : '/'}
           className='flex items-center hover:opacity-80 transition-opacity'
         >
           <Image

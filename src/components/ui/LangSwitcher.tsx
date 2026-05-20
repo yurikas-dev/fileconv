@@ -9,7 +9,7 @@ export function LangSwitcher() {
   const isEn = pathname.startsWith('/en')
 
   const jaPath = isEn ? pathname.slice(3) || '/' : pathname
-  const enPath = isEn ? pathname : '/en' + (pathname === '/' ? '' : pathname)
+  const enPath = isEn ? pathname : '/en' + (pathname === '/' ? '/' : pathname)
 
   const isBlog = pathname.startsWith('/blog') || pathname.startsWith('/en/blog')
 

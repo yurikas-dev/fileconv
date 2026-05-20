@@ -14,19 +14,19 @@ export async function Footer({ locale }: Props) {
         </p>
         <nav className='flex gap-4'>
           <Link
-            href={locale === 'en' ? '/en/about' : '/about'}
+            href={locale === 'en' ? '/en/about/' : '/about/'}
             className='text-xs text-gray-400 hover:text-gray-600 transition-colors'
           >
             {t('about')}
           </Link>
           <Link
-            href={locale === 'en' ? '/en/privacy' : '/privacy'}
+            href={locale === 'en' ? '/en/privacy/' : '/privacy/'}
             className='text-xs text-gray-400 hover:text-gray-600 transition-colors'
           >
             {t('privacy')}
           </Link>
           <Link
-            href={locale === 'en' ? '/en/contact' : '/contact'}
+            href={locale === 'en' ? '/en/contact/' : '/contact/'}
             className='text-xs text-gray-400 hover:text-gray-600 transition-colors'
           >
             {t('contact')}

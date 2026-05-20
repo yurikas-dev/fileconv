@@ -22,7 +22,7 @@ export async function BlogPost({ post, slug, locale }: Props) {
   const blogCta = messages.blogCta as Record<string, CtaConfig>
   const cta = blogCta[slug] ?? blogCta.default
 
-  const blogListHref = locale === 'en' ? '/en/blog' : '/blog'
+  const blogListHref = locale === 'en' ? '/en/blog/' : '/blog/'
 
   const jsonLd = {
     '@context': 'https://schema.org',

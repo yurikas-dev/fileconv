@@ -44,36 +44,36 @@ export function NavMenu({ locale }: Props) {
       subItems: [
         {
           label: 'HEIC → JPG / PNG',
-          href: `${prefix}/tools/converter/heic-to-jpg`,
+          href: `${prefix}/tools/converter/heic-to-jpg/`,
         },
         {
           label: 'JPG → PNG / WebP',
-          href: `${prefix}/tools/converter/jpg-converter`,
+          href: `${prefix}/tools/converter/jpg-converter/`,
         },
         {
           label: 'PNG → JPG / WebP',
-          href: `${prefix}/tools/converter/png-converter`,
+          href: `${prefix}/tools/converter/png-converter/`,
         },
         {
           label: 'WebP → JPG / PNG',
-          href: `${prefix}/tools/converter/webp-converter`,
+          href: `${prefix}/tools/converter/webp-converter/`,
         },
       ],
     },
     {
       kind: 'flat',
       label: locale === 'en' ? 'Audio' : '音声',
-      href: `${prefix}/tools/audio/to-mp3`,
+      href: `${prefix}/tools/audio/to-mp3/`,
     },
     {
       kind: 'flat',
       label: locale === 'en' ? 'Compressor' : '圧縮',
-      href: `${prefix}/tools/converter/image-compressor`,
+      href: `${prefix}/tools/converter/image-compressor/`,
     },
     {
       kind: 'flat',
       label: locale === 'en' ? 'Articles' : '記事',
-      href: `${prefix}/blog`,
+      href: `${prefix}/blog/`,
     },
   ];
 

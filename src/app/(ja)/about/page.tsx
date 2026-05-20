@@ -59,7 +59,7 @@ export default function AboutPage() {
           <ul className='space-y-2'>
             <li>
               <Link
-                href='/tools/converter/heic-to-jpg'
+                href='/tools/converter/heic-to-jpg/'
                 className='text-brand-600 hover:underline font-medium'
               >
                 HEIC → JPG / PNG 変換
@@ -70,7 +70,7 @@ export default function AboutPage() {
             </li>
             <li>
               <Link
-                href='/tools/converter/jpg-converter'
+                href='/tools/converter/jpg-converter/'
                 className='text-brand-600 hover:underline font-medium'
               >
                 JPG 変換ツール
@@ -79,7 +79,7 @@ export default function AboutPage() {
             </li>
             <li>
               <Link
-                href='/tools/converter/png-converter'
+                href='/tools/converter/png-converter/'
                 className='text-brand-600 hover:underline font-medium'
               >
                 PNG 変換ツール
@@ -88,7 +88,7 @@ export default function AboutPage() {
             </li>
             <li>
               <Link
-                href='/tools/converter/webp-converter'
+                href='/tools/converter/webp-converter/'
                 className='text-brand-600 hover:underline font-medium'
               >
                 WebP 変換ツール
@@ -97,7 +97,7 @@ export default function AboutPage() {
             </li>
             <li>
               <Link
-                href='/tools/audio/to-mp3'
+                href='/tools/audio/to-mp3/'
                 className='text-brand-600 hover:underline font-medium'
               >
                 音声 → MP3 変換
@@ -108,7 +108,7 @@ export default function AboutPage() {
             </li>
             <li>
               <Link
-                href='/tools/converter/image-compressor'
+                href='/tools/converter/image-compressor/'
                 className='text-brand-600 hover:underline font-medium'
               >
                 画像圧縮ツール
@@ -133,7 +133,7 @@ export default function AboutPage() {
           <p className='mt-3'>
             詳しくは
             <Link
-              href='/privacy'
+              href='/privacy/'
               className='text-brand-600 hover:underline mx-1'
             >
               プライバシーポリシー
@@ -149,7 +149,7 @@ export default function AboutPage() {
           <p>
             ご意見・不具合のご報告は
             <Link
-              href='/contact'
+              href='/contact/'
               className='text-brand-600 hover:underline mx-1'
             >
               お問い合わせフォーム

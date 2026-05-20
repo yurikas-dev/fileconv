@@ -47,37 +47,37 @@ export default function AboutPage({ params: { locale } }: Props) {
           <h2 className="text-base font-semibold text-gray-900 mb-3">Available Tools</h2>
           <ul className="space-y-2">
             <li>
-              <Link href="/en/tools/converter/heic-to-jpg" className="text-brand-600 hover:underline font-medium">
+              <Link href="/en/tools/converter/heic-to-jpg/" className="text-brand-600 hover:underline font-medium">
                 HEIC to JPG / PNG
               </Link>
               <span className="text-gray-400 ml-2">Convert iPhone photos to JPG or PNG</span>
             </li>
             <li>
-              <Link href="/en/tools/converter/jpg-converter" className="text-brand-600 hover:underline font-medium">
+              <Link href="/en/tools/converter/jpg-converter/" className="text-brand-600 hover:underline font-medium">
                 JPG Converter
               </Link>
               <span className="text-gray-400 ml-2">Convert JPG to PNG or WebP</span>
             </li>
             <li>
-              <Link href="/en/tools/converter/png-converter" className="text-brand-600 hover:underline font-medium">
+              <Link href="/en/tools/converter/png-converter/" className="text-brand-600 hover:underline font-medium">
                 PNG Converter
               </Link>
               <span className="text-gray-400 ml-2">Convert PNG to JPG or WebP</span>
             </li>
             <li>
-              <Link href="/en/tools/converter/webp-converter" className="text-brand-600 hover:underline font-medium">
+              <Link href="/en/tools/converter/webp-converter/" className="text-brand-600 hover:underline font-medium">
                 WebP Converter
               </Link>
               <span className="text-gray-400 ml-2">Convert WebP to JPG or PNG</span>
             </li>
             <li>
-              <Link href="/en/tools/audio/to-mp3" className="text-brand-600 hover:underline font-medium">
+              <Link href="/en/tools/audio/to-mp3/" className="text-brand-600 hover:underline font-medium">
                 Audio to MP3
               </Link>
               <span className="text-gray-400 ml-2">Convert AAC, WAV, FLAC, M4A to MP3</span>
             </li>
             <li>
-              <Link href="/en/tools/converter/image-compressor" className="text-brand-600 hover:underline font-medium">
+              <Link href="/en/tools/converter/image-compressor/" className="text-brand-600 hover:underline font-medium">
                 Image Compressor
               </Link>
               <span className="text-gray-400 ml-2">Reduce file size of JPG, PNG, and WebP images</span>
@@ -94,7 +94,7 @@ export default function AboutPage({ params: { locale } }: Props) {
           </p>
           <p className="mt-3">
             See our
-            <Link href="/en/privacy" className="text-brand-600 hover:underline mx-1">Privacy Policy</Link>
+            <Link href="/en/privacy/" className="text-brand-600 hover:underline mx-1">Privacy Policy</Link>
             for full details.
           </p>
         </section>
@@ -103,7 +103,7 @@ export default function AboutPage({ params: { locale } }: Props) {
           <h2 className="text-base font-semibold text-gray-900 mb-3">Contact</h2>
           <p>
             For feedback, bug reports, or questions, please use our
-            <Link href="/en/contact" className="text-brand-600 hover:underline mx-1">contact form</Link>.
+            <Link href="/en/contact/" className="text-brand-600 hover:underline mx-1">contact form</Link>.
           </p>
         </section>
       </div>

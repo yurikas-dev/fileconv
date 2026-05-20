@@ -124,7 +124,7 @@ export default function PrivacyPageEn({ params: { locale } }: Props) {
           <h2 className="text-base font-semibold text-gray-900 mb-2">Contact</h2>
           <p>
             For questions about this policy or these terms, please visit our{' '}
-            <a href="/en/contact" className="text-brand-600 hover:underline">contact page</a>.
+            <a href="/en/contact/" className="text-brand-600 hover:underline">contact page</a>.
           </p>
         </section>
 
