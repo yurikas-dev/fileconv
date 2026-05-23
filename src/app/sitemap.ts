@@ -26,7 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/converter/jpg-converter',
     '/tools/converter/png-converter',
     '/tools/converter/webp-converter',
-    '/tools/converter/image-compressor',
     '/tools/audio/to-mp3',
   ]
 
@@ -68,6 +67,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/privacy/`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/en/privacy/`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/contact/`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/en/contact/`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly' as const,
+      priority: 0.3,
     },
     ...toolUrls,
     ...enToolUrls,
