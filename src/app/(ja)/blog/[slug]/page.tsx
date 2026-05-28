@@ -20,6 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.description,
     alternates: {
       canonical: `https://fileconv.app/blog/${slug}/`,
+      languages: {
+        'ja': `https://fileconv.app/blog/${slug}/`,
+        'en': `https://fileconv.app/en/blog/${slug}/`,
+        'x-default': `https://fileconv.app/blog/${slug}/`,
+      },
     },
     openGraph: { title: post.title, description: post.description, type: 'article', publishedTime: post.date },
   }

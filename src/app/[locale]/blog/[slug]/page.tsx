@@ -19,6 +19,11 @@ export async function generateMetadata({ params: { slug, locale } }: Props): Pro
     description: post.description,
     alternates: {
       canonical: `https://fileconv.app/en/blog/${slug}/`,
+      languages: {
+        'ja': `https://fileconv.app/blog/${slug}/`,
+        'en': `https://fileconv.app/en/blog/${slug}/`,
+        'x-default': `https://fileconv.app/blog/${slug}/`,
+      },
     },
     openGraph: { title: post.title, description: post.description, type: 'article', publishedTime: post.date },
   }
