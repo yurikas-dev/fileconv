@@ -149,7 +149,7 @@
       {
         "q": "What is EXIF data and should I remove it?",
         "a": "EXIF is metadata embedded in your photo — it includes the date and time, GPS coordinates, camera model, and more. When sharing photos online, EXIF data can expose your home address or other private details. We recommend enabling EXIF removal before converting. The option is on by default when converting to JPG.",
-        "link": "/en/blog/what-is-exif",
+        "link": "/en/blog/what-is-exif/",
         "linkText": "Learn more about EXIF data"
       },
       {
@@ -159,7 +159,7 @@
       {
         "q": "Are you sure my files are not uploaded?",
         "a": "Absolutely. This tool uses a JavaScript library called heic2any, and all conversion happens in your browser's memory. You can verify this by opening browser DevTools (F12), going to the Network tab — no file transfer will appear during conversion.",
-        "link": "/en/blog/no-upload-conversion",
+        "link": "/en/blog/no-upload-conversion/",
         "linkText": "How browser-based conversion works"
       }
     ]
@@ -186,7 +186,7 @@
       {
         "q": "Are my files kept private?",
         "a": "Yes. All conversion happens locally in your browser — no files are sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while converting.",
-        "link": "/en/blog/no-upload-conversion",
+        "link": "/en/blog/no-upload-conversion/",
         "linkText": "How browser-based conversion works"
       }
     ]
@@ -213,7 +213,7 @@
       {
         "q": "Are my files kept private?",
         "a": "Yes. All conversion happens locally in your browser — no files are sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while converting.",
-        "link": "/en/blog/no-upload-conversion",
+        "link": "/en/blog/no-upload-conversion/",
         "linkText": "How browser-based conversion works"
       }
     ]
@@ -240,7 +240,7 @@
       {
         "q": "Are my files kept private?",
         "a": "Yes. All conversion happens locally in your browser — no files are sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while converting.",
-        "link": "/en/blog/no-upload-conversion",
+        "link": "/en/blog/no-upload-conversion/",
         "linkText": "How browser-based conversion works"
       }
     ]
@@ -267,7 +267,7 @@
       {
         "q": "Are my files kept private?",
         "a": "Yes. Conversion uses the browser's Web Audio API and the lamejs JavaScript library entirely in your browser. No audio data is sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while converting.",
-        "link": "/en/blog/no-upload-conversion",
+        "link": "/en/blog/no-upload-conversion/",
         "linkText": "How browser-based conversion works"
       }
     ]
@@ -433,7 +433,7 @@
       {
         "q": "Are my files kept private?",
         "a": "Yes. Compression uses the browser's Canvas API — all processing happens in your device's memory. No files are sent to any server. You can verify this by checking the Network tab in browser DevTools (F12) while compressing.",
-        "link": "/en/blog/no-upload-conversion",
+        "link": "/en/blog/no-upload-conversion/",
         "linkText": "How browser-based processing works"
       }
     ]
