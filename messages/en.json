@@ -22,25 +22,81 @@
     "h1": "HEIC to JPG / PNG Converter",
     "descPart1": "Convert iPhone HEIC photos to JPG or PNG.",
     "noteTitle": "What is HEIC and why convert it?",
-    "noteBody": "HEIC (High Efficiency Image Container) is the image format Apple has used since iOS 11. It achieves roughly half the file size of JPG at similar quality — great for iPhone storage, but a problem for compatibility. Windows and Android devices cannot open HEIC files by default. Converting to JPG ensures your photos can be viewed, printed, or shared anywhere without issues. This tool processes files entirely in your browser, so nothing is ever sent to a server."
+    "noteBody": "HEIC (High Efficiency Image Container) is the image format Apple has used since iOS 11. It achieves roughly half the file size of JPG at similar quality — great for iPhone storage, but a problem for compatibility. Windows and Android devices cannot open HEIC files by default. Converting to JPG ensures your photos can be viewed, printed, or shared anywhere without issues. This tool processes files entirely in your browser, so nothing is ever sent to a server.",
+    "usageTitle": "How to Use",
+    "usageSteps": [
+      "Drag and drop HEIC files, or click to select (multiple files supported)",
+      "Choose output format: JPG or PNG",
+      "Set quality and EXIF removal options as needed",
+      "Click \"Start Converting\" — then download your converted files"
+    ],
+    "useCasesTitle": "When to Use This Tool",
+    "useCases": [
+      "Opening iPhone photos on Windows or Android devices",
+      "Sharing photos via email, social media, or print services that require JPG or PNG",
+      "Removing GPS location and timestamp (EXIF data) from photos before sharing",
+      "Converting a batch of photos to a consistent format for storage or backup"
+    ]
   },
   "webpHero": {
     "h1": "WebP Converter",
     "descPart1": "Convert WebP images to JPG or PNG.",
     "noteTitle": "What is WebP and when do you need to convert it?",
-    "noteBody": "WebP is a modern image format developed by Google, designed for efficient web delivery. It produces smaller file sizes than JPG or PNG at comparable quality, making it ideal for websites. However, some older software, print services, and image editors do not support WebP. Converting WebP to JPG or PNG gives you maximum compatibility across all applications and platforms. All conversion happens locally in your browser — files are never uploaded."
+    "noteBody": "WebP is a modern image format developed by Google, designed for efficient web delivery. It produces smaller file sizes than JPG or PNG at comparable quality, making it ideal for websites. However, some older software, print services, and image editors do not support WebP. Converting WebP to JPG or PNG gives you maximum compatibility across all applications and platforms. All conversion happens locally in your browser — files are never uploaded.",
+    "usageTitle": "How to Use",
+    "usageSteps": [
+      "Drag and drop WebP files, or click to select (multiple files supported)",
+      "Choose output format: JPG or PNG",
+      "For JPG output, select image quality",
+      "Click \"Start Converting\" and download your files"
+    ],
+    "useCasesTitle": "When to Use This Tool",
+    "useCases": [
+      "Opening web-downloaded images in photo editing software that does not support WebP",
+      "Sending images to print services or apps that require JPG or PNG",
+      "Converting to JPG or PNG for broader compatibility across devices and platforms",
+      "Viewing images in gallery apps or software that does not support WebP"
+    ]
   },
   "jpgHero": {
     "h1": "JPG Converter",
     "descPart1": "Convert JPG images to PNG or WebP.",
     "noteTitle": "When to convert JPG to PNG or WebP",
-    "noteBody": "JPG is the standard format for photographs, but there are times when PNG or WebP is the better choice. Convert to PNG when you need a transparent background or lossless quality — PNG preserves every pixel without compression artifacts, making it ideal for logos, diagrams, and graphics. Convert to WebP when optimizing images for a website — WebP typically reduces file size by 25–35% compared to JPG at the same visual quality, improving page load speed. Batch conversion of multiple files is supported."
+    "noteBody": "JPG is the standard format for photographs, but there are times when PNG or WebP is the better choice. Convert to PNG when you need a transparent background or lossless quality — PNG preserves every pixel without compression artifacts, making it ideal for logos, diagrams, and graphics. Convert to WebP when optimizing images for a website — WebP typically reduces file size by 25–35% compared to JPG at the same visual quality, improving page load speed. Batch conversion of multiple files is supported.",
+    "usageTitle": "How to Use",
+    "usageSteps": [
+      "Drag and drop JPG files, or click to select (multiple files supported)",
+      "Choose output format: PNG or WebP",
+      "Click \"Start Converting\"",
+      "Download converted files individually or all at once"
+    ],
+    "useCasesTitle": "When to Use This Tool",
+    "useCases": [
+      "Converting to PNG when you need a transparent background",
+      "Converting to WebP to reduce image size for faster website loading",
+      "Converting to PNG before further editing to prevent quality loss from re-compression",
+      "Batch converting multiple JPGs to a consistent format"
+    ]
   },
   "pngHero": {
     "h1": "PNG Converter",
     "descPart1": "Convert PNG images to JPG or WebP.",
     "noteTitle": "When to convert PNG to JPG or WebP",
-    "noteBody": "PNG (Portable Network Graphics) uses lossless compression, making it the go-to format for logos, screenshots, and images with transparency. For photographs and general sharing, however, PNG files are often much larger than necessary. Converting to JPG reduces file size significantly, making photos easier to email or print. Converting to WebP gives you the best of both worlds — smaller files than JPG with better quality retention. Files are processed locally in your browser, never sent to a server."
+    "noteBody": "PNG (Portable Network Graphics) uses lossless compression, making it the go-to format for logos, screenshots, and images with transparency. For photographs and general sharing, however, PNG files are often much larger than necessary. Converting to JPG reduces file size significantly, making photos easier to email or print. Converting to WebP gives you the best of both worlds — smaller files than JPG with better quality retention. Files are processed locally in your browser, never sent to a server.",
+    "usageTitle": "How to Use",
+    "usageSteps": [
+      "Drag and drop PNG files, or click to select (multiple files supported)",
+      "Choose output format: JPG or WebP",
+      "For JPG output, select image quality (High, Standard, or Light)",
+      "Click \"Start Converting\" and download your files"
+    ],
+    "useCasesTitle": "When to Use This Tool",
+    "useCases": [
+      "Reducing file size of screenshots or graphics for email or social media → JPG",
+      "Optimizing website images for faster page loading → WebP",
+      "Converting non-transparent PNGs to JPG to reduce storage space",
+      "Batch converting PNG images to WebP format"
+    ]
   },
   "hero": {
     "badge": "Free · No server upload · Fast",
@@ -274,7 +330,20 @@
   },
   "audioHero": {
     "noteTitle": "About the MP3 Converter",
-    "noteBody": "MP3 is the most widely supported audio format, compatible with virtually every device, app, and platform. Convert M4A or AAC files recorded on iPhone, lossless WAV or FLAC files, and other audio formats to MP3 for universal playback. All conversion runs entirely in your browser using the Web Audio API — files are never sent to a server. Multiple files can be converted in one session."
+    "noteBody": "MP3 is the most widely supported audio format, compatible with virtually every device, app, and platform. Convert M4A or AAC files recorded on iPhone, lossless WAV or FLAC files, and other audio formats to MP3 for universal playback. All conversion runs entirely in your browser using the Web Audio API — files are never sent to a server. Multiple files can be converted in one session.",
+    "usageTitle": "How to Use",
+    "usageSteps": [
+      "Drag and drop audio files, or click to select (multiple files supported)",
+      "Click \"Convert to MP3\" (Chrome or Edge recommended for best compatibility)",
+      "Download the converted MP3 files"
+    ],
+    "useCasesTitle": "When to Use This Tool",
+    "useCases": [
+      "Converting iPhone voice memos (M4A) to MP3 for sharing",
+      "Converting FLAC or WAV files to MP3 to reduce file size",
+      "Converting AAC files for use with MP3-compatible players or editing software",
+      "Standardizing audio files to the widely-supported MP3 format"
+    ]
   },
   "audioConverter": {
     "formatLabel": "Output Format",
@@ -389,7 +458,21 @@
     "h1": "Image Compressor",
     "descPart1": "Reduce the file size of JPG, PNG, and WebP images in your browser.",
     "noteTitle": "About Image Compression",
-    "noteBody": "Large image files slow down email delivery, social media uploads, and website load times. This tool compresses JPG, PNG, and WebP images directly in your browser using the Canvas API. Adjust the quality slider to balance file size and visual quality — each file shows the original size, compressed size, and percentage reduction in real time. All processing happens locally; files are never sent to a server."
+    "noteBody": "Large image files slow down email delivery, social media uploads, and website load times. This tool compresses JPG, PNG, and WebP images directly in your browser using the Canvas API. Adjust the quality slider to balance file size and visual quality — each file shows the original size, compressed size, and percentage reduction in real time. All processing happens locally; files are never sent to a server.",
+    "usageTitle": "How to Use",
+    "usageSteps": [
+      "Drag and drop JPG, PNG, or WebP files (multiple files supported)",
+      "Adjust compression quality with the slider (80 is a good starting point)",
+      "Click \"Start Compressing\"",
+      "Check the file size reduction and download your compressed files"
+    ],
+    "useCasesTitle": "When to Use This Tool",
+    "useCases": [
+      "Reducing image file sizes to improve website loading speed",
+      "Shrinking photos before attaching them to emails or messages",
+      "Compressing a batch of images to save storage space",
+      "Optimizing images to improve Google PageSpeed Insights scores"
+    ]
   },
   "compressor": {
     "formatLabel": "Output Format",
