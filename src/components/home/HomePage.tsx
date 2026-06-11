@@ -9,6 +9,7 @@ import {
   Globe,
   Music,
   Minimize2,
+  FileText,
 } from 'lucide-react';
 import { HowItWorks } from '@/components/tool/HowItWorks';
 import { Faq } from '@/components/tool/Faq';
@@ -108,6 +109,18 @@ export async function HomePage({ locale }: HomePageProps) {
           ? 'Reduce JPG, PNG, and WebP file sizes in your browser.'
           : 'JPG・PNG・WebPのファイルサイズをブラウザ内で削減します。',
       tags: ['JPG', 'PNG', 'WebP'],
+    },
+    {
+      href: `${prefix}/tools/pdf/images-to-pdf`,
+      icon: FileText,
+      iconColor: 'text-red-600',
+      iconBg: 'bg-red-50',
+      title: locale === 'en' ? 'Image to PDF' : '画像 → PDF 変換',
+      desc:
+        locale === 'en'
+          ? 'Combine JPG, PNG, and WebP images into a single PDF.'
+          : 'JPG・PNG・WebP画像をまとめて1つのPDFに変換します。',
+      tags: ['JPG', 'PNG', 'PDF'],
     },
   ];
 

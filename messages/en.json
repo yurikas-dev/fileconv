@@ -494,6 +494,64 @@
     "saveAll": "Save All",
     "error": "Error"
   },
+  "imageToPdfHero": {
+    "h1": "Image to PDF Converter",
+    "descPart1": "Convert JPG, PNG, and WebP images into a single PDF file.",
+    "noteTitle": "About Image to PDF Conversion",
+    "noteBody": "Combining multiple images into one PDF makes it easy to share documents and send them for printing. Choose from A4, Letter, or original image size. All processing happens entirely in your browser — no files are ever sent to a server.",
+    "usageTitle": "How to use",
+    "usageSteps": [
+      "Drag & drop your JPG, PNG, or WebP files, or click to select (multiple files supported)",
+      "Choose a page size: A4, Letter, or original image dimensions",
+      "Click \"Convert to PDF\"",
+      "Download the generated PDF when conversion is complete"
+    ],
+    "useCasesTitle": "Common use cases",
+    "useCases": [
+      "Combining multiple scanned document images into a single PDF",
+      "Converting photos taken on your phone into a printable or submittable PDF",
+      "Saving downloaded images as a PDF for archiving",
+      "Bundling multiple images into one PDF to share via email"
+    ]
+  },
+  "imageToPdf": {
+    "pageSizeLabel": "Page size",
+    "pageSizeOriginal": "Original",
+    "dropTitle": "Drop image files here",
+    "dropOr": "or",
+    "dropClick": "click to select",
+    "dropFormats": "JPG, PNG, WebP supported",
+    "convert": "Convert to PDF",
+    "converting": "Converting...",
+    "download": "Download PDF",
+    "doneMessage": "Done! Your PDF was created entirely in your browser.",
+    "privacy": "Files are never uploaded — all processing happens in your browser.",
+    "statFiles": "Files",
+    "statPages": "Pages"
+  },
+  "faqImageToPdf": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Is there a limit on how many images I can combine?",
+        "a": "There is no hard limit. However, combining a large number of high-resolution images may use significant browser memory and take longer to process."
+      },
+      {
+        "q": "Can I reorder the images?",
+        "a": "Pages are added in the order you select the files. To change the order, remove the files and re-add them in the desired sequence, or sort them by name in your OS file picker before selecting."
+      },
+      {
+        "q": "What is the difference between the page size options?",
+        "a": "A4 (210×297mm) is the standard in Japan and Europe; Letter is the US standard. \"Original\" uses each image's own pixel dimensions as the page size. Use A4 or Letter for printing."
+      },
+      {
+        "q": "Are my files really never uploaded?",
+        "a": "Correct — nothing is ever sent to a server. All conversion is handled in your browser by the pdf-lib JavaScript library. Your files never leave your device.",
+        "link": "/en/blog/no-upload-conversion/",
+        "linkText": "Learn how browser-side processing works"
+      }
+    ]
+  },
   "faqCompressor": {
     "title": "Frequently Asked Questions",
     "items": [

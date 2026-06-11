@@ -72,6 +72,11 @@ export function NavMenu({ locale }: Props) {
     },
     {
       kind: 'flat',
+      label: locale === 'en' ? 'PDF' : 'PDF',
+      href: `${prefix}/tools/pdf/images-to-pdf/`,
+    },
+    {
+      kind: 'flat',
       label: locale === 'en' ? 'Articles' : '記事',
       href: `${prefix}/blog/`,
     },
