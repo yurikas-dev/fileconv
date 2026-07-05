@@ -8,6 +8,14 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Convert Audio to MP3 | FileConv',
     description: 'Convert AAC, WAV, FLAC, M4A and more to MP3 for free. Files are processed entirely in your browser — never sent to a server.',
+    alternates: {
+      canonical: 'https://fileconv.app/en/tools/audio/to-mp3/',
+      languages: {
+        ja: 'https://fileconv.app/tools/audio/to-mp3/',
+        en: 'https://fileconv.app/en/tools/audio/to-mp3/',
+        'x-default': 'https://fileconv.app/tools/audio/to-mp3/',
+      },
+    },
   }
 }
 

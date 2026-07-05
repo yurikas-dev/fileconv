@@ -27,6 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/converter/png-converter',
     '/tools/converter/webp-converter',
     '/tools/audio/to-mp3',
+    '/tools/converter/image-compressor',
+    '/tools/pdf/images-to-pdf',
   ]
 
   const toolUrls = toolPaths.map(path => ({

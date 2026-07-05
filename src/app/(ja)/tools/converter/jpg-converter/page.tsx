@@ -6,6 +6,14 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'JPG 変換ツール（PNG・WebP）｜FileConv',
     description: 'JPG画像を無料でPNGやWebPに変換。ファイルはブラウザ内で処理されるのでサーバーに送信されません。',
+    alternates: {
+      canonical: 'https://fileconv.app/tools/converter/jpg-converter/',
+      languages: {
+        ja: 'https://fileconv.app/tools/converter/jpg-converter/',
+        en: 'https://fileconv.app/en/tools/converter/jpg-converter/',
+        'x-default': 'https://fileconv.app/tools/converter/jpg-converter/',
+      },
+    },
   }
 }
 

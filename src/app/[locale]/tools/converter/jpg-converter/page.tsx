@@ -8,6 +8,14 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   return {
     title: 'JPG Converter (PNG / WebP) | FileConv',
     description: 'Convert JPG images to PNG or WebP for free. Files are processed in your browser — never sent to a server.',
+    alternates: {
+      canonical: 'https://fileconv.app/en/tools/converter/jpg-converter/',
+      languages: {
+        ja: 'https://fileconv.app/tools/converter/jpg-converter/',
+        en: 'https://fileconv.app/en/tools/converter/jpg-converter/',
+        'x-default': 'https://fileconv.app/tools/converter/jpg-converter/',
+      },
+    },
   }
 }
 

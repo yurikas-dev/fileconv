@@ -11,6 +11,14 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
     return {
       title: 'Blog | Image Formats, Audio Conversion & More',
       description: 'Clear explanations of image formats (HEIC, JPG, PNG, WebP), audio conversion, EXIF privacy risks, and file management tips.',
+      alternates: {
+        canonical: 'https://fileconv.app/en/blog/',
+        languages: {
+          ja: 'https://fileconv.app/blog/',
+          en: 'https://fileconv.app/en/blog/',
+          'x-default': 'https://fileconv.app/blog/',
+        },
+      },
     }
   }
   return {}

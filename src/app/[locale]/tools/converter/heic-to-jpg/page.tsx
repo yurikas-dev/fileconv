@@ -8,6 +8,14 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   return {
     title: 'HEIC to JPG / PNG Converter | FileConv',
     description: 'Convert iPhone HEIC photos to JPG or PNG for free. Files are processed in your browser — never sent to a server.',
+    alternates: {
+      canonical: 'https://fileconv.app/en/tools/converter/heic-to-jpg/',
+      languages: {
+        ja: 'https://fileconv.app/tools/converter/heic-to-jpg/',
+        en: 'https://fileconv.app/en/tools/converter/heic-to-jpg/',
+        'x-default': 'https://fileconv.app/tools/converter/heic-to-jpg/',
+      },
+    },
   }
 }
 

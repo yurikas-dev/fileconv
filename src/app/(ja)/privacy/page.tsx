@@ -4,6 +4,14 @@ import { setRequestLocale } from 'next-intl/server'
 export const metadata: Metadata = {
   title: 'プライバシーポリシー・利用規約',
   description: 'FileConv のプライバシーポリシーと利用規約。ファイルはすべてブラウザ内で処理され、サーバーに送信されません。',
+  alternates: {
+    canonical: 'https://fileconv.app/privacy/',
+    languages: {
+      ja: 'https://fileconv.app/privacy/',
+      en: 'https://fileconv.app/en/privacy/',
+      'x-default': 'https://fileconv.app/privacy/',
+    },
+  },
 }
 
 export default function PrivacyPage() {

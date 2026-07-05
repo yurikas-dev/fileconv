@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: 'ブログ｜画像・音声フォーマットをわかりやすく解説',
   description:
     'HEIC・JPG・PNG・WebPの変換方法、MP3などの音声フォーマット、EXIFのプライバシーリスクなど、ファイル変換にまつわる情報をわかりやすく解説します。',
+  alternates: {
+    canonical: 'https://fileconv.app/blog/',
+    languages: {
+      ja: 'https://fileconv.app/blog/',
+      en: 'https://fileconv.app/en/blog/',
+      'x-default': 'https://fileconv.app/blog/',
+    },
+  },
 };
 
 export default function BlogPage() {

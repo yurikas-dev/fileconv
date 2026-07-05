@@ -5,6 +5,14 @@ import { AudioConverterPage } from '@/components/tool/AudioConverterPage'
 export const metadata: Metadata = {
   title: '音声ファイルをMP3に変換｜無料オンラインツール',
   description: 'AAC・WAV・FLAC・M4AなどをMP3に変換。ファイルはブラウザ内で処理されるのでサーバーに送信されません。無料・登録不要。',
+  alternates: {
+    canonical: 'https://fileconv.app/tools/audio/to-mp3/',
+    languages: {
+      ja: 'https://fileconv.app/tools/audio/to-mp3/',
+      en: 'https://fileconv.app/en/tools/audio/to-mp3/',
+      'x-default': 'https://fileconv.app/tools/audio/to-mp3/',
+    },
+  },
 }
 
 export default function ToMp3Page() {
